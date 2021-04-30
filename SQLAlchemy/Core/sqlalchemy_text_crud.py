@@ -9,7 +9,7 @@ def create():
                 """)
     connection_string = "sqlite:///Northwind_small.sqlite"
     engine = create_engine(connection_string, echo=False)
-    with engine.connect() as con:
+    with engine.begin() as con:
         con.execute(insert, {"last":"Davolio","first":"Nancy","title":"Sales","dob":"1980-05-29"})
         new_id = con.execute(text("SELECT last_insert_rowid() AS Id;")).first()
         print(new_id)    
@@ -25,10 +25,11 @@ def read(id):
     
     connection_string = "sqlite:///Northwind_small.sqlite"
     engine = create_engine(connection_string, echo=False)
-    with engine.connect() as con:
+    with engine.begin() as con:
         for row in con.execute(select, {"last":"Davolio", "first":"Robert", "id":id}):
             print(row)
             print(row['LastName'])
+
 
 def update(id):
     update = text("""
@@ -40,10 +41,10 @@ def update(id):
     
     connection_string = "sqlite:///Northwind_small.sqlite"
     engine = create_engine(connection_string, echo=False)
-    with engine.connect() as con:
+    with engine.begin() as con:
         con.execute(update, {"last":"D'Avolio","first":"Patricia","id":id})
     
-    with engine.connect() as con2:
+    with engine.begin() as con2:
         for row in con2.execute("SELECT Id, LastName, FirstName FROM Employee WHERE id = :id", {"id":id}):
             print(row)
 
@@ -55,10 +56,10 @@ def delete(id):
 
     connection_string = "sqlite:///Northwind_small.sqlite"
     engine = create_engine(connection_string, echo=False)
-    with engine.connect() as con:
+    with engine.begin() as con:
         con.execute(delete, {"id":id})
         
-    with engine.connect() as con2:
+    with engine.begin() as con2:
         for row in con2.execute("SELECT Id, LastName, FirstName FROM Employee WHERE id = :id", {"id":id}):
             print(row)
         else:
