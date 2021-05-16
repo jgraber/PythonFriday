@@ -1,4 +1,4 @@
-from sqlalchemy import MetaData, Table, Column, String, Integer, Text, DateTime, Boolean, create_engine, select, insert, update, delete
+from sqlalchemy import MetaData, Table, Column, String, Integer, Text, DateTime, Boolean, create_engine, select, insert, update, delete, or_
 
 metadata = MetaData()
 
@@ -66,6 +66,98 @@ def select_by_id(id):
             print(f"no rows found with Id == {id}")
 
 
+def select_by_first_and_last_name():
+    stmt = select(employees).\
+        where((employees.c.LastName == "Leverling") & (employees.c.FirstName == "Janet"))
+    
+    connection_string = "sqlite:///Northwind_small.sqlite"
+    engine = create_engine(connection_string, echo=True)
+    with engine.begin() as con:
+        results = con.execute(stmt).all()
+        for result in results:
+            print(result)            
+
+def select_multiple_where():
+    stmt = select(employees).\
+        where(employees.c.LastName == "Leverling").\
+        where(employees.c.FirstName == "Janet")
+    
+    connection_string = "sqlite:///Northwind_small.sqlite"
+    engine = create_engine(connection_string, echo=True)
+    with engine.begin() as con:
+        results = con.execute(stmt).all()
+        for result in results:
+            print(result) 
+
+
+def select_by_first_or_last_name():
+    stmt = select(employees).\
+        where((employees.c.LastName == "Leverling") | (employees.c.FirstName == "Andrew"))
+    
+    connection_string = "sqlite:///Northwind_small.sqlite"
+    engine = create_engine(connection_string, echo=True)
+    with engine.begin() as con:
+        results = con.execute(stmt).all()
+        for result in results:
+            print(result)    
+
+
+def select_or_():
+    stmt = select(employees).\
+        where(
+            or_(
+                employees.c.LastName == "Leverling", employees.c.FirstName == "Andrew")
+            )
+    
+    connection_string = "sqlite:///Northwind_small.sqlite"
+    engine = create_engine(connection_string, echo=True)
+    with engine.begin() as con:
+        results = con.execute(stmt).all()
+        for result in results:
+            print(result)    
+
+
+def select_contains():
+    stmt = select(employees).\
+        where(
+            employees.c.LastName.contains("u")
+            )
+    
+    connection_string = "sqlite:///Northwind_small.sqlite"
+    engine = create_engine(connection_string, echo=True)
+    with engine.begin() as con:
+        results = con.execute(stmt).all()
+        for result in results:
+            print(result) 
+
+def select_startswith():
+    stmt = select(employees).\
+        where(
+            employees.c.LastName.startswith("D")
+            )
+    
+    connection_string = "sqlite:///Northwind_small.sqlite"
+    engine = create_engine(connection_string, echo=True)
+    with engine.begin() as con:
+        results = con.execute(stmt).all()
+        for result in results:
+            print(result) 
+            
+            
+def select_endswith():
+    stmt = select(employees).\
+        where(
+            employees.c.LastName.endswith("n")
+            )
+    
+    connection_string = "sqlite:///Northwind_small.sqlite"
+    engine = create_engine(connection_string, echo=True)
+    with engine.begin() as con:
+        results = con.execute(stmt).all()
+        for result in results:
+            print(result) 
+            
+
 def do_update(id):
     stmt = update(employees).values(
         FirstName="Michael"
@@ -102,6 +194,20 @@ if __name__ == '__main__':
     print("---- do_delete() ----")   
     do_delete(id) 
     select_by_id(id)
+    print("---- select_by_first_and_last_name() ----")  
+    select_by_first_and_last_name()
+    print("---- select_multiple_where() ----")
+    select_multiple_where()
+    print("---- select_by_first_or_last_name() ----")
+    select_by_first_or_last_name()
+    print("---- select_or_() ----")
+    select_or_()
+    print("---- select_contains() ----")
+    select_contains()
+    print("---- select_startswith() ----")
+    select_startswith()
+    print("---- select_endswith() ----")
+    select_endswith()
     # print("---- select_all() ----")
     # select_all()
     # print("---- select_by_id() ----")   
