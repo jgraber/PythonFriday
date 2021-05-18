@@ -116,7 +116,7 @@ def select_with_python_and():
         where(
             (employees.c.LastName == "Leverling") & (employees.c.FirstName == "Janet")
             )
-    
+
     print_result(stmt)           
 
 

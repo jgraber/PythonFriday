@@ -1,4 +1,4 @@
-from sqlalchemy import MetaData, Table, Column, String, Integer, Text, DateTime, Boolean, create_engine, select, insert, update, delete, or_
+from sqlalchemy import MetaData, Table, Column, String, Integer, Text, DateTime, Boolean, create_engine, select, insert, update, delete
 
 metadata = MetaData()
 
