@@ -114,7 +114,7 @@ def select_not_in():
 def select_with_python_and():
     stmt = select(employees).\
         where(
-            (employees.c.LastName == "Leverling") & (employees.c.FirstName == "Janet")
+            (employees.c.Id == 7) & (employees.c.LastName == "King")
             )
 
     print_result(stmt)           
@@ -124,7 +124,7 @@ def select_and_():
     stmt = select(employees).\
         where(
             and_(
-                (employees.c.LastName == "Leverling"), (employees.c.FirstName == "Janet")
+                (employees.c.Id == 7), (employees.c.LastName == "King")
                 )
             )
     
@@ -133,15 +133,15 @@ def select_and_():
 
 def select_multiple_where():
     stmt = select(employees).\
-        where(employees.c.LastName == "Leverling").\
-        where(employees.c.FirstName == "Janet")
+        where(employees.c.Id == 7).\
+        where(employees.c.LastName == "King")
     
     print_result(stmt)
 
 
 def select_with_pyton_or():
     stmt = select(employees).\
-        where((employees.c.LastName == "Leverling") | (employees.c.FirstName == "Andrew"))
+        where((employees.c.Id == 2) | (employees.c.Id == 3))
     
     print_result(stmt) 
 
@@ -150,7 +150,7 @@ def select_or_():
     stmt = select(employees).\
         where(
             or_(
-                employees.c.LastName == "Leverling", employees.c.FirstName == "Andrew"
+                employees.c.Id == 2, employees.c.Id == 3
                 )
             )
     
