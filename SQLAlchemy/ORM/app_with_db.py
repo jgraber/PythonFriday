@@ -7,17 +7,6 @@ import data.db_session as db_session
 from data.employee import Employee
 
 
-def main():
-    print("--- setup_db() ---")
-    setup_db()
-    print("--- add_employee() ---")
-    id = add_employee()
-    print("--- load_employee() ---")
-    load_employee(id)
-    print("--- update_employee() ---")
-    update_employee(id)
-    print("--- delete_employee() ---")
-    delete_employee(id)
     
 def setup_db():
     db_file = os.path.join(
@@ -52,6 +41,7 @@ def load_employee(id):
     
     session.close()    
     
+    
 def update_employee(id):
     session = db_session.factory()
     employee = session.query(Employee) \
@@ -79,4 +69,14 @@ def delete_employee(id):
 
     
 if __name__ == '__main__':
-    main()
+    print("--- setup_db() ---")
+    setup_db()
+    print("--- add_employee() ---")
+    id = add_employee()
+    print("--- load_employee() ---")
+    load_employee(id)
+    print("--- update_employee() ---")
+    update_employee(id)
+    print("--- delete_employee() ---")
+    delete_employee(id)
+    load_employee(id)

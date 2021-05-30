@@ -1,6 +1,6 @@
 import sqlalchemy as sa
 import sqlalchemy.orm as orm
-from data.modelbase import SqlAlchemyBase
+from data.modelbase import ModelBase
 
 factory = None
 
@@ -20,4 +20,4 @@ def global_init(db_file):
     factory = orm.sessionmaker(bind=engine)
     
     import data.__all_models
-    SqlAlchemyBase.metadata.create_all(engine)
+    ModelBase.metadata.create_all(engine)
