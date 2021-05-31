@@ -4,3 +4,5 @@
 # (like creating tables or for migrations)
 
 from data.employee import Employee
+from data.publisher import Publisher
+from data.book import Book
