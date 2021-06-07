@@ -1,8 +1,8 @@
 import os
-from datetime import datetime
+
+from sqlalchemy.orm import joinedload
 import data.db_session as db_session
-from data.__all_models import Book, Publisher
-from sqlalchemy import or_, and_
+from data.__all_models import Book, Publisher, Author, BookDetails
     
 def setup_db():
     db_file = os.path.join(
@@ -10,7 +10,10 @@ def setup_db():
         'db',
         'Bookstore.sqlite')
     db_session.global_init(db_file)
-    
+
+# if __name__ == '__main__':
+#     print("\n--- setup_db() ---\n")
+#     setup_db()    
     
 def create_publisher(name):
     publisher = Publisher()
@@ -24,42 +27,112 @@ def create_book(title, isbn, pages, publisher):
     book.title = title
     book.isbn = isbn
     book.pages = pages
-    # book.published_by = publisher.id
     book.publisher = publisher
-
-    
+        
     return book
 
 
-def show_book_and_publisher():
+def create_author(first, last):
+    author = Author()
+    author.first_name = first
+    author.last_name = last
+    
+    return author
+
+
+def  create_book_details(cover, book):
+    details = BookDetails()
+    details.book = book
+    details.cover = cover
+    
+    return details
+
+
+def create_example_data():
     session = db_session.factory()
+    
     manning = create_publisher("Manning Publications")
     session.add(manning)
-    print(manning)
     
+    # one-to-many
     bookA = create_book("The Mikado Method", "9781617291210", 245, manning)
     session.add(bookA)
-    print(bookA)
     
     bookB = create_book("Specification by Example", "9781617290084", 249, manning)
     session.add(bookB)
-    print(bookB)
+    
+    # many-to-many
+    authorA = create_author("Ola", "Ellnestam")
+    session.add(authorA)
+    authorB = create_author("Daniel", "Brolund")
+    session.add(authorB)
+    authorC = create_author("Gojko", "Adzic")
+    session.add(authorC)
+    
+    bookA.authors.append(authorA)
+    bookA.authors.append(authorB)
+    bookB.authors.append(authorC)
+    
+    # one-to-one
+    detail = create_book_details("477597.jpg", bookA)
+    session.add(detail)
     
     session.commit()
+
+    return manning.id, bookA.id, bookB.id
+
+
+def show_book_and_publisher(publisher_id):
+    session = db_session.factory()
     
-    print(manning)
-    print(bookA)
-    print(bookB)   
-    
-    print("\n-----\n")
-    
-    publisher = session.query(Publisher).filter(Publisher.id == manning.id).first()
+    publisher = session.query(Publisher).\
+        options(joinedload("books")).\
+        filter(Publisher.id == publisher_id).first()
     for b in publisher.books:
-        print(f"{b.title} publiyhed by {b.publisher}")
+        print(f"{b.title} published by {b.publisher}")
+    
+    session.close()
     
 
+def show_authors_of_book(bookA_id, bookB_id):
+    session = db_session.factory()
+    
+    books = session.query(Book).\
+        options(joinedload("authors")).\
+        filter(Book.id.in_([bookA_id, bookB_id])).all()
+    for b in books:
+        print(b)
+        for a in b.authors:
+            print(f"\t{a}")   
+            
+    session.close()
+        
+        
+def show_book_details(bookA_id):
+    session = db_session.factory()
+       
+    books = session.query(Book).\
+        options(joinedload("details")).\
+        filter(Book.id == bookA_id).all()
+    for b in books:
+        print(b)
+        print(b.details)
+      
+    session.close()
+          
+    
 if __name__ == '__main__':
-    print("--- setup_db() ---")
+    print("\n--- setup_db() ---\n")
     setup_db()
-    print("--- show_book_and_publisher() ---")
-    show_book_and_publisher()
+    
+    print("\n--- create_example_data() ---\n")
+    publisher_id, bookA_id, bookB_id = create_example_data()
+    
+    print("\n--- show_book_and_publisher() ---\n")
+    show_book_and_publisher(publisher_id)
+    
+    print("\n--- show_authors_of_book() ---\n")
+    show_authors_of_book(bookA_id, bookB_id)
+    
+    print("\n--- show_book_details() ---\n")
+    show_book_details(bookA_id)
