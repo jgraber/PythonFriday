@@ -5,4 +5,7 @@
 
 from data.employee import Employee
 from data.publisher import Publisher
+from data.book_author import BookAuthor
 from data.book import Book
+from data.author import Author
+from data.book_details import BookDetails
