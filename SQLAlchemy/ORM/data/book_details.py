@@ -7,6 +7,7 @@ class BookDetails(ModelBase):
     book_id = sa.Column('Id', sa.Integer, sa.ForeignKey('Book.Id'), primary_key=True)
     cover = sa.Column('Cover', sa.String)
     book = sa.orm.relationship("Book", back_populates="details")
+    description = sa.Column('Description', sa.String, nullable=True)
    
     
     def __repr__(self):

@@ -19,5 +19,5 @@ def global_init(db_file):
     engine = sa.create_engine(connection_string, echo=False)
     factory = orm.sessionmaker(bind=engine)
     
-    import data.__all_models
-    ModelBase.metadata.create_all(engine)
+    # import data.__all_models
+    # ModelBase.metadata.create_all(engine)
