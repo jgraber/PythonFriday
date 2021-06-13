@@ -24,7 +24,6 @@ folder = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.insert(0, folder)
 
 from data.modelbase import ModelBase
-# noinspection PyUnresolvedReferences
 import data.__all_models
 
 target_metadata = ModelBase.metadata
@@ -53,6 +52,7 @@ def run_migrations_offline():
         target_metadata=target_metadata,
         literal_binds=True,
         dialect_opts={"paramstyle": "named"},
+        render_as_batch=True
     )
 
     with context.begin_transaction():
@@ -74,7 +74,8 @@ def run_migrations_online():
 
     with connectable.connect() as connection:
         context.configure(
-            connection=connection, target_metadata=target_metadata
+            connection=connection, target_metadata=target_metadata,
+            render_as_batch=True
         )
 
         with context.begin_transaction():
