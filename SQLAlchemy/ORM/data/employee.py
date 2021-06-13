@@ -11,5 +11,9 @@ class Employee(ModelBase):
     birth_date = sa.Column('BirthDate', sa.String)
     #created_date = sa.Column(sa.DateTime, default=datetime.datetime.now)
     
+    __table_args__ = (
+        sa.Index('my_index', "LastName", "FirstName"), 
+    )
+    
     def __repr__(self):
         return f'<Employee {self.id} ({self.first_name} {self.last_name}) {self.birth_date}>'
