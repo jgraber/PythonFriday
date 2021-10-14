@@ -24,4 +24,11 @@ for commit in Repository('..\..\PythonFriday').traverse_commits():
 #   - prettyprinter_example.py has changed (ADD)
 
 print("=========================================\n\n\n\n\n")
-
+import pprint
+pp = pprint.PrettyPrinter()
+from pydriller.metrics.process.commits_count import CommitsCount
+metric = CommitsCount(path_to_repo='..\..\PythonFriday',
+                      from_commit='42722d558b3175a0c60ba7e513b7786ae6dbb591',
+                      to_commit='36425461ed2e42883ee7935af79cb620218f88b2')
+files = metric.count()
+pp.pprint(files)
