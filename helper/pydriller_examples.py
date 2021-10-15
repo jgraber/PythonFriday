@@ -32,3 +32,32 @@ metric = CommitsCount(path_to_repo='..\..\PythonFriday',
                       to_commit='36425461ed2e42883ee7935af79cb620218f88b2')
 files = metric.count()
 pp.pprint(files)
+
+
+print("=========================================\n\n\n\n\n")
+
+from pydriller.metrics.process.contributors_count import ContributorsCount
+metric = ContributorsCount(path_to_repo='..\..\PythonFriday',
+                           from_commit='42722d558b3175a0c60ba7e513b7786ae6dbb591',
+                           to_commit='36425461ed2e42883ee7935af79cb620218f88b2')
+count = metric.count()
+minor = metric.count_minor()
+print('Number of contributors per file:')
+pp.pprint(count)
+print('Number of "minor" contributors per file:')
+pp.pprint(minor)
+
+print("=========================================\n\n\n\n\n")
+from pydriller.metrics.process.lines_count import LinesCount
+metric = LinesCount(path_to_repo='..\..\PythonFriday',
+                    from_commit='42722d558b3175a0c60ba7e513b7786ae6dbb591',
+                    to_commit='36425461ed2e42883ee7935af79cb620218f88b2')
+
+added_count = metric.count_added()
+removed_count = metric.count_removed()
+
+
+print('Total lines added per file:')
+pp.pprint(added_count)
+print('Total lines removed per file:')
+pp.pprint(removed_count)
