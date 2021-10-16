@@ -23,7 +23,7 @@ for commit in Repository('..\..\PythonFriday').traverse_commits():
 # e179d7750cd703b60a6ea0cdb03a174bd823e104 - 2021-10-06 21:49:39+02:00 - Johnny Graber - add example for PrettyPrinter
 #   - prettyprinter_example.py has changed (ADD)
 
-print("=========================================\n\n\n\n\n")
+print("\n\n\n\n=========================================\nCommitsCount:")
 import pprint
 pp = pprint.PrettyPrinter()
 from pydriller.metrics.process.commits_count import CommitsCount
@@ -34,7 +34,7 @@ files = metric.count()
 pp.pprint(files)
 
 
-print("=========================================\n\n\n\n\n")
+print("\n\n\n\n=========================================\nContributorsCount:")
 
 from pydriller.metrics.process.contributors_count import ContributorsCount
 metric = ContributorsCount(path_to_repo='..\..\PythonFriday',
@@ -47,7 +47,7 @@ pp.pprint(count)
 print('Number of "minor" contributors per file:')
 pp.pprint(minor)
 
-print("=========================================\n\n\n\n\n")
+print("\n\n\n\n=========================================\nLinesCount:")
 from pydriller.metrics.process.lines_count import LinesCount
 metric = LinesCount(path_to_repo='..\..\PythonFriday',
                     from_commit='42722d558b3175a0c60ba7e513b7786ae6dbb591',
