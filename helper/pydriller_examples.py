@@ -36,6 +36,24 @@ def count_commits():
     files = metric.count()
     pp.pprint(files)
 
+    # {'SQLAlchemy\\Core\\sqlalchemy_core_crud.py': 2,
+    #  'SQLAlchemy\\Core\\sqlalchemy_core_filters.py': 3,
+    #  'SQLAlchemy\\Core\\sqlalchemy_core_relationships.py': 1,
+    #  'SQLAlchemy\\ORM\\app_with_db.py': 2,
+    #  'SQLAlchemy\\ORM\\data\\__all_models.py': 2,
+    #  'SQLAlchemy\\ORM\\data\\author.py': 1,
+    #  'SQLAlchemy\\ORM\\data\\book.py': 2,
+    #  'SQLAlchemy\\ORM\\data\\book_author.py': 1,
+    #  'SQLAlchemy\\ORM\\data\\book_details.py': 1,
+    #  'SQLAlchemy\\ORM\\data\\db_session.py': 1,
+    #  'SQLAlchemy\\ORM\\data\\employee.py': 2,
+    #  'SQLAlchemy\\ORM\\data\\modelbase.py': 1,
+    #  'SQLAlchemy\\ORM\\data\\publisher.py': 1,
+    #  'SQLAlchemy\\ORM\\db\\Northwind_small.sqlite': 1,
+    #  'SQLAlchemy\\ORM\\sqlalchemy_orm_crud.py': 1,
+    #  'SQLAlchemy\\ORM\\sqlalchemy_orm_filters.py': 1,
+    #  'SQLAlchemy\\ORM\\sqlalchemy_orm_relationships.py': 1}
+
 def count_contributors():
     print("\n\n\n\n=========================================\nContributorsCount:")
 
