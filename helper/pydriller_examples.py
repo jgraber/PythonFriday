@@ -86,7 +86,7 @@ def count_lines():
 
 
 if __name__ == '__main__':
-    # traverse_commits()
+    traverse_commits()
     count_commits()
-    # count_contributors()
-    # count_lines()
+    count_contributors()
+    count_lines()
