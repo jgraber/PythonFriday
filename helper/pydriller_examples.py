@@ -68,6 +68,40 @@ def count_contributors():
     print('Number of "minor" contributors per file:')
     pp.pprint(minor)
 
+    # Number of contributors per file:
+    # {'SQLAlchemy\\Core\\sqlalchemy_core_crud.py': 1,
+    # 'SQLAlchemy\\Core\\sqlalchemy_core_filters.py': 1,
+    # 'SQLAlchemy\\Core\\sqlalchemy_core_relationships.py': 1,
+    # 'SQLAlchemy\\ORM\\app_with_db.py': 1,
+    # 'SQLAlchemy\\ORM\\data\\__all_models.py': 1,
+    # 'SQLAlchemy\\ORM\\data\\author.py': 1,
+    # 'SQLAlchemy\\ORM\\data\\book.py': 1,
+    # 'SQLAlchemy\\ORM\\data\\book_author.py': 1,
+    # 'SQLAlchemy\\ORM\\data\\book_details.py': 1,
+    # 'SQLAlchemy\\ORM\\data\\db_session.py': 1,
+    # 'SQLAlchemy\\ORM\\data\\employee.py': 1,
+    # 'SQLAlchemy\\ORM\\data\\modelbase.py': 1,
+    # 'SQLAlchemy\\ORM\\data\\publisher.py': 1,
+    # 'SQLAlchemy\\ORM\\sqlalchemy_orm_crud.py': 1,
+    # 'SQLAlchemy\\ORM\\sqlalchemy_orm_filters.py': 1,
+    # 'SQLAlchemy\\ORM\\sqlalchemy_orm_relationships.py': 1}
+    # Number of "minor" contributors per file:
+    # {'SQLAlchemy\\Core\\sqlalchemy_core_crud.py': 0,
+    # 'SQLAlchemy\\Core\\sqlalchemy_core_filters.py': 0,
+    # 'SQLAlchemy\\Core\\sqlalchemy_core_relationships.py': 0,
+    # 'SQLAlchemy\\ORM\\app_with_db.py': 0,
+    # 'SQLAlchemy\\ORM\\data\\__all_models.py': 0,
+    # 'SQLAlchemy\\ORM\\data\\author.py': 0,
+    # 'SQLAlchemy\\ORM\\data\\book.py': 0,
+    # 'SQLAlchemy\\ORM\\data\\book_author.py': 0,
+    # 'SQLAlchemy\\ORM\\data\\book_details.py': 0,
+    # 'SQLAlchemy\\ORM\\data\\db_session.py': 0,
+    # 'SQLAlchemy\\ORM\\data\\employee.py': 0,
+    # 'SQLAlchemy\\ORM\\data\\modelbase.py': 0,
+    # 'SQLAlchemy\\ORM\\data\\publisher.py': 0,
+    # 'SQLAlchemy\\ORM\\sqlalchemy_orm_crud.py': 0,
+    # 'SQLAlchemy\\ORM\\sqlalchemy_orm_filters.py': 0,
+    # 'SQLAlchemy\\ORM\\sqlalchemy_orm_relationships.py': 0}
 
 def count_lines():
     print("\n\n\n\n=========================================\nLinesCount:")
