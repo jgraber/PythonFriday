@@ -119,6 +119,44 @@ def count_lines():
     pp.pprint(removed_count)
 
 
+    # Total lines added per file:
+    # {'SQLAlchemy\\Core\\sqlalchemy_core_crud.py': 6,
+    # 'SQLAlchemy\\Core\\sqlalchemy_core_filters.py': 223,
+    # 'SQLAlchemy\\Core\\sqlalchemy_core_relationships.py': 200,
+    # 'SQLAlchemy\\ORM\\app_with_db.py': 14,
+    # 'SQLAlchemy\\ORM\\data\\__all_models.py': 7,
+    # 'SQLAlchemy\\ORM\\data\\author.py': 13,
+    # 'SQLAlchemy\\ORM\\data\\book.py': 18,
+    # 'SQLAlchemy\\ORM\\data\\book_author.py': 11,
+    # 'SQLAlchemy\\ORM\\data\\book_details.py': 14,
+    # 'SQLAlchemy\\ORM\\data\\db_session.py': 2,
+    # 'SQLAlchemy\\ORM\\data\\employee.py': 8,
+    # 'SQLAlchemy\\ORM\\data\\modelbase.py': 1,
+    # 'SQLAlchemy\\ORM\\data\\publisher.py': 12,
+    # 'SQLAlchemy\\ORM\\db\\Northwind_small.sqlite': 0,
+    # 'SQLAlchemy\\ORM\\sqlalchemy_orm_crud.py': 81,
+    # 'SQLAlchemy\\ORM\\sqlalchemy_orm_filters.py': 255,
+    # 'SQLAlchemy\\ORM\\sqlalchemy_orm_relationships.py': 65}
+    # Total lines removed per file:
+    # {'SQLAlchemy\\Core\\sqlalchemy_core_crud.py': 136,
+    # 'SQLAlchemy\\Core\\sqlalchemy_core_filters.py': 7,
+    # 'SQLAlchemy\\Core\\sqlalchemy_core_relationships.py': 0,
+    # 'SQLAlchemy\\ORM\\app_with_db.py': 59,
+    # 'SQLAlchemy\\ORM\\data\\__all_models.py': 2,
+    # 'SQLAlchemy\\ORM\\data\\author.py': 0,
+    # 'SQLAlchemy\\ORM\\data\\book.py': 1,
+    # 'SQLAlchemy\\ORM\\data\\book_author.py': 0,
+    # 'SQLAlchemy\\ORM\\data\\book_details.py': 0,
+    # 'SQLAlchemy\\ORM\\data\\db_session.py': 2,
+    # 'SQLAlchemy\\ORM\\data\\employee.py': 9,
+    # 'SQLAlchemy\\ORM\\data\\modelbase.py': 1,
+    # 'SQLAlchemy\\ORM\\data\\publisher.py': 0,
+    # 'SQLAlchemy\\ORM\\db\\Northwind_small.sqlite': 0,
+    # 'SQLAlchemy\\ORM\\sqlalchemy_orm_crud.py': 0,
+    # 'SQLAlchemy\\ORM\\sqlalchemy_orm_filters.py': 0,
+    # 'SQLAlchemy\\ORM\\sqlalchemy_orm_relationships.py': 0}
+
+
 if __name__ == '__main__':
     traverse_commits()
     count_commits()
