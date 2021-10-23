@@ -3,6 +3,10 @@ import pprint
 pp = pprint.PrettyPrinter()
     
 def traverse_commits():
+    """
+    traverse_commits() allows us to walk through the commit history.
+    """
+
     # for commit in Repository('https://github.com/jgraber/PythonFriday').traverse_commits():
     for commit in Repository('..\..\PythonFriday').traverse_commits():
         print(f"{commit.hash} - {commit.committer_date} - {commit.author.name} - {commit.msg}")
@@ -29,6 +33,10 @@ def traverse_commits():
 def count_commits():
     print("\n\n\n\n=========================================\nCommitsCount:")
 
+    """
+    CommitsCount() shows how often a file was changed in
+    a set of commits.
+    """
     from pydriller.metrics.process.commits_count import CommitsCount
     metric = CommitsCount(path_to_repo='..\..\PythonFriday',
                         from_commit='42722d558b3175a0c60ba7e513b7786ae6dbb591',
@@ -57,6 +65,10 @@ def count_commits():
 def count_contributors():
     print("\n\n\n\n=========================================\nContributorsCount:")
 
+    """
+    ContributorsCount() shows the number of main and minor 
+    contributors per file.
+    """
     from pydriller.metrics.process.contributors_count import ContributorsCount
     metric = ContributorsCount(path_to_repo='..\..\PythonFriday',
                             from_commit='42722d558b3175a0c60ba7e513b7786ae6dbb591',
@@ -105,6 +117,10 @@ def count_contributors():
 
 def count_lines():
     print("\n\n\n\n=========================================\nLinesCount:")
+    """
+    LinesCount() allows you to count the changed lines (add, remove)
+    of a file in a set of commits.
+    """
     from pydriller.metrics.process.lines_count import LinesCount
     metric = LinesCount(path_to_repo='..\..\PythonFriday',
                         from_commit='42722d558b3175a0c60ba7e513b7786ae6dbb591',
