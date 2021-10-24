@@ -6,7 +6,8 @@ def traverse_commits():
     """
     traverse_commits() allows us to walk through the commit history.
     """
-
+    print_separator("traverse_commits")
+    
     # for commit in Repository('https://github.com/jgraber/PythonFriday').traverse_commits():
     for commit in Repository('..\..\PythonFriday').traverse_commits():
         print(f"{commit.hash} - {commit.committer_date} - {commit.author.name} - {commit.msg}")
@@ -31,12 +32,12 @@ def traverse_commits():
     #   - prettyprinter_example.py has changed (ADD)
 
 def count_commits():
-    print("\n\n\n\n=========================================\nCommitsCount:")
-
     """
     CommitsCount() shows how often a file was changed in
     a set of commits.
     """
+    print_separator("CommitsCount")
+    
     from pydriller.metrics.process.commits_count import CommitsCount
     metric = CommitsCount(path_to_repo='..\..\PythonFriday',
                         from_commit='42722d558b3175a0c60ba7e513b7786ae6dbb591',
@@ -63,12 +64,12 @@ def count_commits():
     #  'SQLAlchemy\\ORM\\sqlalchemy_orm_relationships.py': 1}
 
 def count_contributors():
-    print("\n\n\n\n=========================================\nContributorsCount:")
-
     """
     ContributorsCount() shows the number of main and minor 
     contributors per file.
     """
+    print_separator("ContributorsCount")
+    
     from pydriller.metrics.process.contributors_count import ContributorsCount
     metric = ContributorsCount(path_to_repo='..\..\PythonFriday',
                             from_commit='42722d558b3175a0c60ba7e513b7786ae6dbb591',
@@ -116,11 +117,12 @@ def count_contributors():
     # 'SQLAlchemy\\ORM\\sqlalchemy_orm_relationships.py': 0}
 
 def count_lines():
-    print("\n\n\n\n=========================================\nLinesCount:")
     """
     LinesCount() allows you to count the changed lines (add, remove)
     of a file in a set of commits.
     """
+    print_separator("LinesCount")
+
     from pydriller.metrics.process.lines_count import LinesCount
     metric = LinesCount(path_to_repo='..\..\PythonFriday',
                         from_commit='42722d558b3175a0c60ba7e513b7786ae6dbb591',
@@ -133,7 +135,6 @@ def count_lines():
     pp.pprint(added_count)
     print('Total lines removed per file:')
     pp.pprint(removed_count)
-
 
     # Total lines added per file:
     # {'SQLAlchemy\\Core\\sqlalchemy_core_crud.py': 6,
@@ -171,6 +172,10 @@ def count_lines():
     # 'SQLAlchemy\\ORM\\sqlalchemy_orm_crud.py': 0,
     # 'SQLAlchemy\\ORM\\sqlalchemy_orm_filters.py': 0,
     # 'SQLAlchemy\\ORM\\sqlalchemy_orm_relationships.py': 0}
+
+
+def print_separator(name):
+    print(f"\n\n\n\n=========================================\{name}:")
 
 
 if __name__ == '__main__':
