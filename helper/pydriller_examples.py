@@ -175,6 +175,9 @@ def count_lines():
 
 
 def print_separator(name):
+    """
+    Print a separator line between the examples
+    """
     print(f"\n\n\n\n=========================================\{name}:")
 
 
