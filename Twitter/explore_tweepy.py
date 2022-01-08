@@ -54,32 +54,49 @@ api = tweepy.API(auth, wait_on_rate_limit=True)
 #     print(follower.screen_name)
 #default_profile_image
 
-followers = []
-friends = []
+### Followers and friends
+# followers = []
+# friends = []
 
-print("----------------------")
-print(f"Followers (peoply who follow {screen_name})")
-for page in tweepy.Cursor(api.get_followers, screen_name=screen_name,
-                          count=100).pages(10):
-    for user in page:
-        name = f"{user.id} - {user.name} (@{user.screen_name})"
-        followers.append(name)
-print(f"Followers: {len(followers)}")
+# print("----------------------")
+# print(f"Followers (peoply who follow {screen_name})")
+# for page in tweepy.Cursor(api.get_followers, screen_name=screen_name,
+#                           count=100).pages(10):
+#     for user in page:
+#         name = f"{user.id} - {user.name} (@{user.screen_name})"
+#         followers.append(name)
+# print(f"Followers: {len(followers)}")
 
-print("----------------------")
-print(f"Friends (peoply {screen_name} follows)")
+# print("----------------------")
+# print(f"Friends (peoply {screen_name} follows)")
+# for page in tweepy.Cursor(api.get_friends, screen_name=screen_name,
+#                           count=100).pages(10):
+#     for user in page:
+#         name = f"{user.id} - {user.name} (@{user.screen_name})"
+#         friends.append(name)
+# print(f"Friends: {len(friends)}")
+
+# friends_who_not_follow_back = np.setdiff1d(friends,followers)
+
+# with open(f"not_follow_back_{screen_name}.txt", "w") as f:
+#     for people in friends_who_not_follow_back:
+#         print(people)
+#         f.write(f"{people}\n")
+
+# print(f"Friends not Followers: {len(friends_who_not_follow_back)}")
+
+
+### Lists
+list_name = "People_I_Follow_20220106"
+list = api.create_list(name=list_name,mode='private',description='People I followed that day')
+print(list.slug)
 for page in tweepy.Cursor(api.get_friends, screen_name=screen_name,
-                          count=100).pages(10):
+                          count=99).pages(10):
+    batch = []
     for user in page:
-        name = f"{user.id} - {user.name} (@{user.screen_name})"
-        friends.append(name)
-print(f"Friends: {len(friends)}")
-
-friends_who_not_follow_back = np.setdiff1d(friends,followers)
-
-with open(f"not_follow_back_{screen_name}.txt", "w") as f:
-    for people in friends_who_not_follow_back:
-        print(people)
-        f.write(f"{people}\n")
-
-print(f"Friends not Followers: {len(friends_who_not_follow_back)}")
+        batch.append(user.screen_name)
+    separator = ','
+    batch_users = separator.join(batch)
+    api.add_list_members(list_id=list.id, slug=list.slug,screen_name=batch,owner_screen_name=screen_name)
+    print(batch_users)
+    print("\n")
