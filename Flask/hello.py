@@ -21,5 +21,9 @@ def tasks():
     my_tasks = get_latest_tasks()
     return render_template('tasks.html', name='Johnny', tasks=my_tasks)
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
 if(__name__ == "__main__"):
     app.run()
