@@ -1,5 +1,6 @@
 import flask
 from flask import render_template
+from flask import request
 
 app = flask.Flask(__name__)
 
@@ -24,6 +25,21 @@ def tasks():
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+@app.route('/hello/<name>')
+def hello(name):
+    return render_template('hello.html', who=name)
+
+
+@app.route('/even/<int:num>')
+def even_or_odd(num):
+    return render_template('number.html', number=num)
+
+
+@app.route('/send', methods=['POST'])
+def send():
+    data = request.form
+    return data
 
 if(__name__ == "__main__"):
     app.run()

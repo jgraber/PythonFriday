@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block title %}Numbers{% endblock %}
+{% block main %}
+    <h1>{{ number }} is {% if number % 2 == 0 %} even {% else %} odd {% endif %}</h1>
+
+{% endblock %}
