@@ -8,5 +8,5 @@ print(database_url)
 # loads .env file into application environment
 load_dotenv()
 
-database_url = os.getenv('DATABASE_URL', 'sqlite://')
+database_url = os.getenv('DATABASE_URL')
 print(database_url)
