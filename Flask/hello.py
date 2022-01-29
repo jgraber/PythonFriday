@@ -1,6 +1,7 @@
 import flask
 from flask import render_template
 from flask import request
+from viewmodels.contact_viewmodel import ContactViewModel
 
 app = flask.Flask(__name__)
 
@@ -45,24 +46,16 @@ def send():
 def contact_form():
     return render_template('contact.html')
 
+
 @app.route('/contact', methods=['POST'])
 def contact_post():
-    name = request.form['name']
-    email = request.form['email']
-    message = request.form['message']
-    error = None
+    vm = ContactViewModel()
+    vm.validate()
 
-    if not name or not name.strip():
-        error = 'name is missing'
-    if not email or not email.strip() or '@' not in email:
-        error = 'email is missing'
-    if not message or not message.strip():
-        error = 'message is missing' 
+    if vm.error:
+        return  render_template('contact.html', **vm.to_dict())
 
-    if error:
-        return  render_template('contact.html', error = error, name = name, email = email, message = message)
-
-    print(f"{name} [{email}]: {message}")
+    print(vm)
 
     resp = flask.redirect('/thanks')
     return resp
