@@ -52,6 +52,11 @@ def contact_post():
     message = request.form['message']
     print(f"{name} [{email}]: {message}")
 
+    resp = flask.redirect('/thanks')
+    return resp
+
+@app.route('/thanks')
+def thanks():    
     return render_template('thankyou.html')
 
 if(__name__ == "__main__"):
