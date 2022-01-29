@@ -13,12 +13,12 @@
     <input name="name" type="text" placeholder="Your name" 
         class="form-control" 
         value="{{ name }}"
-        >
+        required>
     <input name="email" type="email" placeholder="Your email address" 
         class="form-control" value="{{ email }}"
-        >
+        required>
     <textarea  name="message" type="text" placeholder="Your message" 
-        
+        required
         class="form-control">{{ message }}</textarea>
 
     <button type="submit" class="btn btn-danger">Submit message</button>
