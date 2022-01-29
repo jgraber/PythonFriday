@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Contact Task Tracker{% endblock %}
+{% block main %}
+<div class="form-container">
+  <form action="" method="POST" class="contact-form">
+    <h1>Contact us</h1>
+    <p>Please leave us a message</p>
+
+    {% if error %}
+        <div class="error-msg">{{ error }}</div>
+    {% endif %}
+
+    <input name="name" type="text" placeholder="Your name" 
+        class="form-control" 
+        value="{{ name }}"
+        >
+    <input name="email" type="email" placeholder="Your email address" 
+        class="form-control" value="{{ email }}"
+        >
+    <textarea  name="message" type="text" placeholder="Your message" 
+        
+        class="form-control">{{ message }}</textarea>
+
+    <button type="submit" class="btn btn-danger">Submit message</button>
+    <div style="clear: both;"></div>
+  </form>
+</div>
+{% endblock %}

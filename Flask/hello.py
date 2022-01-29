@@ -41,5 +41,18 @@ def send():
     data = request.form
     return data
 
+@app.route('/contact')
+def contact_form():
+    return render_template('contact.html')
+
+@app.route('/contact', methods=['POST'])
+def contact_post():
+    name = request.form['name']
+    email = request.form['email']
+    message = request.form['message']
+    print(f"{name} [{email}]: {message}")
+
+    return render_template('thankyou.html')
+
 if(__name__ == "__main__"):
     app.run()
