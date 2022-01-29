@@ -50,6 +50,18 @@ def contact_post():
     name = request.form['name']
     email = request.form['email']
     message = request.form['message']
+    error = None
+
+    if not name or not name.strip():
+        error = 'name is missing'
+    if not email or not email.strip() or '@' not in email:
+        error = 'email is missing'
+    if not message or not message.strip():
+        error = 'message is missing' 
+
+    if error:
+        return  render_template('contact.html', error = error, name = name, email = email, message = message)
+
     print(f"{name} [{email}]: {message}")
 
     resp = flask.redirect('/thanks')
