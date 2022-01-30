@@ -1,7 +1,10 @@
+import os
+import sys
 import flask
 from flask import render_template
 from flask import request
-from viewmodels.contact_viewmodel import ContactViewModel
+folder = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.insert(0, folder)
 
 app = flask.Flask(__name__)
 
@@ -42,27 +45,17 @@ def send():
     data = request.form
     return data
 
-@app.route('/contact')
-def contact_form():
-    return render_template('contact.html')
 
+def main():
+    register_blueprints()
+    app.run()
 
-@app.route('/contact', methods=['POST'])
-def contact_post():
-    vm = ContactViewModel()
-    vm.validate()
-
-    if vm.error:
-        return  render_template('contact.html', **vm.to_dict())
-
-    print(vm)
-
-    resp = flask.redirect('/thanks')
-    return resp
-
-@app.route('/thanks')
-def thanks():    
-    return render_template('thankyou.html')
+def register_blueprints():
+    from Flask.views import contact_views
+    app.register_blueprint(contact_views.blueprint)   
 
 if(__name__ == "__main__"):
-    app.run()
+    print("start application")
+    main()
+else:
+    register_blueprints()
