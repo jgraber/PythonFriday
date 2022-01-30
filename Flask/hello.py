@@ -5,6 +5,10 @@ from flask import render_template
 from flask import request
 folder = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 sys.path.insert(0, folder)
+import secure
+
+xss=secure.XXSSProtection().set("1; mode=block")
+secure_headers = secure.Secure(xxp=xss)
 
 app = flask.Flask(__name__)
 
@@ -44,6 +48,12 @@ def even_or_odd(num):
 def send():
     data = request.form
     return data
+
+
+@app.after_request
+def set_secure_headers(response):
+    secure_headers.framework.flask(response)
+    return response
 
 
 def main():
