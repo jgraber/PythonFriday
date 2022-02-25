@@ -1,4 +1,5 @@
 import tweepy
+import random
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -14,7 +15,7 @@ auth = tweepy.OAuthHandler(api_key, api_secret)
 auth.set_access_token(user_token,user_token_secret)
 api = tweepy.API(auth)
 
-# Create a tweet
-api.update_status("Another Tweet with #Tweepy!")
+# Create a tweet - random() to not write same tweet twice
+api.update_status(f"Another Tweet with #Tweepy! {random.random()}")
 
 print("Tweeted with your stored credentials")
