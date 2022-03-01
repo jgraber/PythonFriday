@@ -28,18 +28,21 @@ for page in tweepy.Cursor(api.get_friends, screen_name=screen_name,
         # print(name)
         friends.append(name)
     print(len(page))
+    
 print(f"Friends: {len(friends)}")
 
 print("-" * 50)
 
-print(f"Followers (accounts who follow {screen_name})")
+# list followers
 followers = []
+print(f"Followers (accounts who follow {screen_name})")
 for page in tweepy.Cursor(api.get_followers, screen_name=screen_name,
                           count=200).pages(10):
     for user in page:
         name = f"{user.id} - {user.name} (@{user.screen_name})"
         followers.append(name)
     print(len(page))
+    
 print(f"Followers: {len(followers)}")
 
 print("-" * 50)
