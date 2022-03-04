@@ -46,13 +46,18 @@ client = tweepy.Client(
 # print("-" * 50)
 
 # create a new list
-# list_name = "People_I_Follow_20220303"
+list_name = "People_I_Follow_20220304c"
+description='People I followed that day'
 # list = api.create_list(name=list_name,
 #                        mode='private',
 #                        description='People I followed that day')
 # print(f"New list id: {list.id}: {list.name}")
 
-# print("-" * 50)
+result = client.create_list(name=list_name, description=description, private=True, user_auth=True)
+# print(result)
+list_id = result.data['id']
+
+print("-" * 50)
 
 # add people to list
 
@@ -61,8 +66,8 @@ client = tweepy.Client(
 # print(ret.data["id"])
 print("-" * 50)
 
-ret = client.add_list_member(id='1499171951637581833',user_id='58932896',user_auth=True)
-print(ret)
+# ret = client.add_list_member(id='1499488896454909956',user_id='58932896',user_auth=True)
+# print(ret)
 
 print("-" * 50)
 screen_name = "PythonFriday"
@@ -82,14 +87,16 @@ screen_name = "PythonFriday"
 #                           count=100).pages(10):
 #     for user in page:
 #         print(f"{user.id} {user.screen_name}")
-# friends = 0
-# for response in tweepy.Paginator(client.get_users_following, id=58932896,
-#                                     max_results=1000, limit=5):
-#     # print(response.meta)
-#     # print(response)
-#     for user in response.data:
-#         friends += 1
-#     print(friends)
+friends = 0
+for response in tweepy.Paginator(client.get_users_following, id=58932896,
+                                    max_results=1000, limit=5):
+    # print(response.meta)
+    # print(response)
+    for user in response.data:
+        print(user.id)
+        client.add_list_member(id=list_id,user_id=user.id,user_auth=True)
+        friends += 1
+    print(f"added {friends} members to list")
     # len(response.data)
     # for user in response.data:
     #     print(user.id)
