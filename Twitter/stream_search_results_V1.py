@@ -12,8 +12,14 @@ access_token_secret = os.getenv('access-token-secret')
 class TweetPrinter(tweepy.Stream):
 
     def on_status(self, status):
-        print('-'*50)
-        print(f"{status.id} {status.user.name} (@{status.user.screen_name}) at {status.created_at} {status.text}")
+        print('-' * 50)
+        print("{id} {name} (@{screen}) at {time}:"
+            .format(
+                id=status.id,
+                name=status.user.name,
+                screen=status.user.screen_name,
+                time=status.created_at))
+        print(status.text)
 
 # Initialize instance of the subclass
 printer = TweetPrinter(

@@ -7,8 +7,7 @@ load_dotenv()
 bearer_token = os.getenv('bearer-token')
 
 class TweetPrinterV2(tweepy.StreamingClient):
-    users = {}
-
+    
     def on_tweet(self, tweet):
         print(f"{tweet.id} {tweet.created_at} ({tweet.author_id})): {tweet.text}")
         print("-"*50)
