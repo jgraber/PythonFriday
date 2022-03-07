@@ -8,8 +8,8 @@ consumer_secret = os.getenv('api-key-secret')
 access_token = os.getenv('access-token')
 access_token_secret = os.getenv('access-token-secret')
 
-# Subclass Stream to print IDs of Tweets received
-class IDPrinter(tweepy.Stream):
+# Subclass tweepy.Stream to print the tweets
+class TweetPrinter(tweepy.Stream):
 
     def on_status(self, status):
         print('-'*50)
@@ -17,10 +17,10 @@ class IDPrinter(tweepy.Stream):
         # print(dir(status))
 
 # Initialize instance of the subclass
-printer = IDPrinter(
+printer = TweetPrinter(
   consumer_key, consumer_secret,
   access_token, access_token_secret
 )
 
 # Filter realtime Tweets by keyword
-printer.filter(track=["Python"])
+printer.filter(track=["#Python"])

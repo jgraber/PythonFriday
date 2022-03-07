@@ -1,5 +1,6 @@
 import tweepy
 import os
+import time
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -12,9 +13,9 @@ user_token = os.getenv('access-token')
 user_token_secret = os.getenv('access-token-secret')
 bearer_token = os.getenv('bearer-token')
 
-import logging
+# import logging
 
-logging.basicConfig(level=logging.DEBUG)
+# logging.basicConfig(level=logging.DEBUG)
 
 # use user authentication tokens
 # auth = tweepy.OAuthHandler(api_key, api_secret)
@@ -46,7 +47,7 @@ client = tweepy.Client(
 # print("-" * 50)
 
 # create a new list
-list_name = "People_I_Follow_20220304c"
+list_name = "People_I_Follow_20220305"
 description='People I followed that day'
 # list = api.create_list(name=list_name,
 #                        mode='private',
@@ -95,6 +96,7 @@ for response in tweepy.Paginator(client.get_users_following, id=58932896,
     for user in response.data:
         print(user.id)
         client.add_list_member(id=list_id,user_id=user.id,user_auth=True)
+        time.sleep(3)
         friends += 1
     print(f"added {friends} members to list")
     # len(response.data)
