@@ -49,7 +49,7 @@ for entry in lists:
 print("-" * 50)
 
 # show timeline of a list
-list_id = 1498823312192987136
+list_id = 1500933128113770505
 timeline = api.list_timeline(list_id=list_id,include_rts=False,count=3)
 
 for tweet in timeline:
