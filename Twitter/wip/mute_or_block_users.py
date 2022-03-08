@@ -1,6 +1,5 @@
 import tweepy
 import os
-import time
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -30,8 +29,11 @@ print(f"id of user '@{user_to_mute}': {user.id}")
 
 print("-" * 50)
 
+# mute a user
 result = client.mute(target_user_id=user.id)
 print(f"user muted? {result.data['muting']}")
+
+print("-" * 50)
 
 # get a list of all muted users
 muted = []
@@ -45,6 +47,8 @@ print("Muted users:")
 for entry in muted:
     print(entry)
 
+print("-" * 50)
+
 # unmute a user
 result = client.unmute(target_user_id=user.id)
 print(f"user muted? {result.data['muting']}")
@@ -54,6 +58,9 @@ print("-" * 50)
 # block a user
 result = client.block(target_user_id=user.id)
 print(f"user blocked? {result.data['blocking']}")
+
+print("-" * 50)
+
 # get a list of all blocked users
 blocked = []
 for response in tweepy.Paginator(client.get_blocked, 
@@ -66,9 +73,10 @@ print("Blocked users:")
 for entry in blocked:
     print(entry)
 
+print("-" * 50)
+
 # unblock a user
 result = client.unblock(target_user_id=user.id)
 print(f"user blocked? {result.data['blocking']}")
-# with open(f"muted_{screen_name}.txt", "w") as f:
-#     for people in muted:
-#         f.write(f"{people}\n")
+
+print("-" * 50)
