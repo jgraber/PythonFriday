@@ -13,9 +13,9 @@ user_token = os.getenv('access-token')
 user_token_secret = os.getenv('access-token-secret')
 bearer_token = os.getenv('bearer-token')
 
-# import logging
+import logging
 
-# logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.DEBUG)
 
 # use user authentication tokens
 # auth = tweepy.OAuthHandler(api_key, api_secret)

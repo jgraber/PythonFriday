@@ -14,7 +14,6 @@ class TweetPrinter(tweepy.Stream):
     def on_status(self, status):
         print('-'*50)
         print(f"{status.id} {status.user.name} (@{status.user.screen_name}) at {status.created_at} {status.text}")
-        # print(dir(status))
 
 # Initialize instance of the subclass
 printer = TweetPrinter(

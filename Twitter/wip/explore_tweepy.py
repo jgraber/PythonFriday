@@ -6,24 +6,31 @@ import pprint
 pp = pprint.PrettyPrinter()
 import json
 import numpy as np
+import time
 
 consumer_key = os.getenv('client-id')
 consumer_secret = os.getenv('client-secret')
 api_key = os.getenv('api-key')
 api_secret = os.getenv('api-key-secret')
+user_token = os.getenv('access-token')
+user_token_secret = os.getenv('access-token-secret')
 screen_name = "j_graber"
 
-auth = tweepy.OAuthHandler(api_key, api_secret)
+# auth = tweepy.OAuthHandler(api_key, api_secret)
 
 # This prints a URL that can be used to authorize your app
 # After granting access to the app, a PIN to complete the authorization process
 # will be displayed
-print(auth.get_authorization_url())
-# Enter that PIN to continue
-verifier = input("PIN (oauth_verifier): ")
+# print(auth.get_authorization_url())
+# # Enter that PIN to continue
+# verifier = input("PIN (oauth_verifier): ")
 
-auth.get_access_token(verifier)
+# auth.get_access_token(verifier)
 
+# api = tweepy.API(auth, wait_on_rate_limit=True)
+# use user authentication tokens
+auth = tweepy.OAuthHandler(api_key, api_secret)
+auth.set_access_token(user_token,user_token_secret)
 api = tweepy.API(auth, wait_on_rate_limit=True)
 
 # user = api.get_user(screen_name='j_graber')
@@ -85,18 +92,22 @@ api = tweepy.API(auth, wait_on_rate_limit=True)
 
 # print(f"Friends not Followers: {len(friends_who_not_follow_back)}")
 
+# import logging
 
+# logging.basicConfig(level=logging.DEBUG)
 ### Lists
-list_name = "People_I_Follow_20220106"
+list_name = "People_I_Follow_20220305"
 list = api.create_list(name=list_name,mode='private',description='People I followed that day')
 print(list.slug)
 for page in tweepy.Cursor(api.get_friends, screen_name=screen_name,
                           count=99).pages(10):
     batch = []
     for user in page:
-        batch.append(user.screen_name)
-    separator = ','
-    batch_users = separator.join(batch)
-    api.add_list_members(list_id=list.id, slug=list.slug,screen_name=batch,owner_screen_name=screen_name)
-    print(batch_users)
-    print("\n")
+        print(user.screen_name)
+        batch.append(user.id)
+    # separator = ','
+    # batch_users = separator.join(batch)
+    api.add_list_members(list_id=list.id, slug=list.slug,user_id=batch,owner_screen_name=screen_name)
+    print("."*50)
+    time.sleep(60)
+    # print("\n")

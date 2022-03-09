@@ -21,7 +21,7 @@ api = tweepy.API(auth, wait_on_rate_limit=True)
 
 blocked = []
 
-for page in tweepy.Cursor(api.get_blocks).pages(1000):
+for page in tweepy.Cursor(api.get_blocks).pages(100):
     for user in page:
         blocked_user = f"{user.id}, {user.name}, @{user.screen_name}"
         print(blocked_user)
