@@ -35,6 +35,8 @@ print("-" * 50)
 result = client.follow_user(target_user_id=user.id)
 print(f"user followed? {result.data['following']}")
 
+print("-" * 50)
+
 # get a list of all users PythonFriday is following
 friends = []
 for response in tweepy.Paginator(client.get_users_following,
@@ -48,9 +50,11 @@ print("Friends:")
 for entry in friends:
     print(entry)
 
+print("-" * 50)
+
 # unfollow a user
 result = client.unfollow_user(target_user_id=user.id)
-print(f"user unfollowed? {result.data['following']}")
+print(f"user followed? {result.data['following']}")
 
 print("-" * 50)
 
@@ -65,9 +69,12 @@ print("-" * 50)
 result = client.retweet(tweet_id=tweet_id)
 print(f"retweeted the tweet? {result.data['retweeted']}")
 
+print("-" * 50)
+
 # write a tweet
 result = client.create_tweet(
                 text=f"A tweet from the V2 client of #Tweepy {random.random()}",
                 reply_settings='following')
-print(result)
 print(f"Tweet #{result.data['id']} created")
+
+print("-" * 50)
