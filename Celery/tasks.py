@@ -10,5 +10,9 @@ def add(x, y):
     logging.critical(f"{x} + {y}")
     return x + y
 
+@app.task
+def reverse(text):
+    return text[::-1]
+
 if __name__ == '__main__':
     app.worker_main()
