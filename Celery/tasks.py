@@ -1,13 +1,14 @@
 # Example from https://docs.celeryq.dev/en/stable/getting-started/first-steps-with-celery.html#first-steps
 from celery import Celery
-import logging
+from celery.utils.log import get_task_logger
+logger = get_task_logger(__name__)
 
 app = Celery('tasks', backend='db+sqlite:///./celery.db', broker='amqp://guest@localhost//')
 # app = Celery('tasks', broker='amqp://guest@localhost//')
 
-@app.task(bind=True)
+@app.task
 def add(x, y):
-    logging.critical(f"{x} + {y}")
+    logger.critical(f"{x} + {y}")
     return x + y
 
 @app.task
