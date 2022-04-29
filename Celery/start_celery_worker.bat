@@ -1,0 +1,1 @@
+celery -A celery_task worker --loglevel=INFO  -P threads
