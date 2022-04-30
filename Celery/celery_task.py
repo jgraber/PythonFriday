@@ -1,6 +1,7 @@
 import time
 from celery import Celery
 app = Celery('tasks', broker='amqp://guest@localhost//')
+app.control.rate_limit('celery_task.prepare', '1/m')
 
 @app.task
 def prepare(order_id):
