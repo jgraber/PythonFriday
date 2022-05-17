@@ -5,3 +5,6 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
   * [Python Friday #121: RabbitMQ and Python](https://improveandrepeat.com/2022/05/python-friday-121-rabbitmq-and-python/)
   * [Python Friday #122: Asynchronous Jobs With Celery](https://improveandrepeat.com/2022/05/python-friday-122-asynchronous-jobs-with-celery/)
   * [Python Friday #123: Running Celery on Windows](https://improveandrepeat.com/2022/05/python-friday-123-running-celery-on-windows/)
+* [EnvironmentVars](./EnvironmentVars)
+  * [Python Friday #106: Accessing Environment Variables in Python](https://improveandrepeat.com/2022/01/python-friday-106-accessing-environment-variables-in-python/)
+  * [Python Friday #107: Working With .env Files in Python](https://improveandrepeat.com/2022/01/python-friday-107-working-with-env-files-in-python/)
