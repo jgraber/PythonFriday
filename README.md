@@ -8,3 +8,6 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
 * [EnvironmentVars](./EnvironmentVars)
   * [Python Friday #106: Accessing Environment Variables in Python](https://improveandrepeat.com/2022/01/python-friday-106-accessing-environment-variables-in-python/)
   * [Python Friday #107: Working With .env Files in Python](https://improveandrepeat.com/2022/01/python-friday-107-working-with-env-files-in-python/)
+* [Pandas](./Pandas)
+  * [Python Friday #103: Working With CSV Files in Pandas](https://improveandrepeat.com/2021/12/python-friday-103-working-with-csv-files-in-pandas/)
+  * [Python Friday #104: Creating a Pivot Table in Pandas](https://improveandrepeat.com/2022/01/python-friday-104-creating-a-pivot-table-in-pandas/)
