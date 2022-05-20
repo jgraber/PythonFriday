@@ -8,6 +8,8 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
 * [EnvironmentVars](./EnvironmentVars)
   * [Python Friday #106: Accessing Environment Variables in Python](https://improveandrepeat.com/2022/01/python-friday-106-accessing-environment-variables-in-python/)
   * [Python Friday #107: Working With .env Files in Python](https://improveandrepeat.com/2022/01/python-friday-107-working-with-env-files-in-python/)
+* [JSON](./JSON)
+  * [Python Friday #95: Working With JSON](https://improveandrepeat.com/2021/10/python-friday-95-working-with-json/)
 * [NumPy](./NumPy)
   * [Python Friday #109: Set Operations on Lists With NumPy](https://improveandrepeat.com/2022/02/python-friday-109-set-operations-on-lists-with-numpy/)
 * [Pandas](./Pandas)
