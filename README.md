@@ -8,6 +8,8 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
 * [EnvironmentVars](./EnvironmentVars)
   * [Python Friday #106: Accessing Environment Variables in Python](https://improveandrepeat.com/2022/01/python-friday-106-accessing-environment-variables-in-python/)
   * [Python Friday #107: Working With .env Files in Python](https://improveandrepeat.com/2022/01/python-friday-107-working-with-env-files-in-python/)
+* [Git](./Git)
+  * [Python Friday #96: Access Your Git Repository With PyDriller](https://improveandrepeat.com/2021/11/python-friday-96-access-your-git-repository-with-pydriller/)
 * [Images](./Images)
   * [Python Friday #27: Reading Exif Metadata From Images](https://improveandrepeat.com/2020/07/python-friday-27-reading-exif-metadata-from-images/)
 * [JSON](./JSON)
