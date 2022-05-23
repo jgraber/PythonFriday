@@ -19,3 +19,6 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
 * [Pandas](./Pandas)
   * [Python Friday #103: Working With CSV Files in Pandas](https://improveandrepeat.com/2021/12/python-friday-103-working-with-csv-files-in-pandas/)
   * [Python Friday #104: Creating a Pivot Table in Pandas](https://improveandrepeat.com/2022/01/python-friday-104-creating-a-pivot-table-in-pandas/)
+* [RSS](./RSS)
+  * [Python Friday #102: Parse Atom and RSS Feeds With Feedparser](https://improveandrepeat.com/2021/12/python-friday-102-parse-atom-and-rss-feeds-with-feedparser/)  
+  
