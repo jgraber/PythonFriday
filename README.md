@@ -33,4 +33,8 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
   * [Python Friday #104: Creating a Pivot Table in Pandas](https://improveandrepeat.com/2022/01/python-friday-104-creating-a-pivot-table-in-pandas/)
 * [RSS](./RSS)
   * [Python Friday #102: Parse Atom and RSS Feeds With Feedparser](https://improveandrepeat.com/2021/12/python-friday-102-parse-atom-and-rss-feeds-with-feedparser/)  
-  
+* [SQLAlchemy](./SQLAlchemy)
+  * [Python Friday #92: Where to Start With SQLAlchemy](https://improveandrepeat.com/2021/10/python-friday-92-where-to-start-with-sqlalchemy/)
+  * [Python Friday #73: First Steps with SQLAlchemy](https://improveandrepeat.com/2021/05/python-friday-73-first-steps-with-sqlalchemy/)
+  * [Python Friday #74: Important Concepts in SQLAlchemy](https://improveandrepeat.com/2021/06/python-friday-74-important-concepts-in-sqlalchemy/)
+  * []()
