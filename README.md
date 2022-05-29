@@ -51,4 +51,6 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
   * [Python Friday #86: Database Migrations With Alembic and SQLAlchemy](https://improveandrepeat.com/2021/08/python-friday-86-database-migrations-with-alembic-and-sqlalchemy/)
   * [Python Friday #87: Handling Pre-Existing Tables With Alembic and SQLAlchemy](https://improveandrepeat.com/2021/09/python-friday-87-handling-pre-existing-tables-with-alembic-and-sqlalchemy/)
   * [Python Friday #88: Activate Batch Mode in Alembic to Work With Constraints in SQLite](https://improveandrepeat.com/2021/09/python-friday-88-activate-batch-mode-in-alembic-to-work-with-constraints-in-sqlite/)
-  * []()
+  * [Python Friday #89: Constraints, Indexes and Default Values in SQLAlchemy ORM](https://improveandrepeat.com/2021/09/python-friday-89-constraints-indexes-and-default-values-in-sqlalchemy-orm/)
+  * [Python Friday #90: SQL Server Connection Strings for SQLAlchemy](https://improveandrepeat.com/2021/09/python-friday-90-sql-server-connection-strings-for-sqlalchemy/)
+  * [Python Friday #91: Automap for SQLAlchemy ORM](https://improveandrepeat.com/2021/10/python-friday-91-automap-for-sqlalchemy-orm/)
