@@ -3,7 +3,8 @@ from celery import Celery
 from celery.utils.log import get_task_logger
 logger = get_task_logger(__name__)
 
-app = Celery('tasks', backend='rpc://', broker='amqp://guest@localhost//')
+# app = Celery('tasks', backend='rpc://', broker='amqp://guest@localhost//')
+app = Celery('tasks', backend='db+sqlite:///./celery.db', broker='amqp://guest@localhost//')
 
 @app.task(ignore_result=False)
 def prepare(order_id):
