@@ -1,0 +1,1 @@
+celery -A periodic_task beat --loglevel=INFO
