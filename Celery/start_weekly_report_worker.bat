@@ -1,0 +1,1 @@
+ celery -A periodic_task worker --loglevel=INFO  -P threads
