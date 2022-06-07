@@ -22,6 +22,12 @@ print("-" * 50)
 
 today = datetime.today()
 print(f"Today: {today}")
+print(f"Day: {today.strftime('%A')}")
+print(f"Day of week: {today.weekday()}") # Monday: 0, Sunday: 6 https://docs.python.org/3/library/datetime.html#datetime.datetime.weekday
+print(f"Day of year: {today.timetuple().tm_yday}")
+print(f"Week in year: {today.isocalendar()[1]}")
+print(f"Week in year: {today.strftime('%V')}")
+print(today.isocalendar())
 
 print("-" * 50)
 
