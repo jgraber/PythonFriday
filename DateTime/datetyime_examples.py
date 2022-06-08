@@ -1,4 +1,6 @@
-from datetime import datetime, timedelta
+from calendar import month
+from datetime import datetime, timedelta, date
+from dateutil.relativedelta import relativedelta
 
 date_string = 'Jun 1 2005 1:33PM'
 datetime_object = datetime.strptime(date_string, '%b %d %Y %I:%M%p')
@@ -37,3 +39,11 @@ print(tomorrow)
 print("-" * 50)
 
 print(f"Date part only: {tomorrow.date()}")
+
+print("-" * 50)
+
+end_january = date.fromisoformat('2022-01-31')
+result = end_january + relativedelta(months=1)
+print(result)
+print(result + relativedelta(months=1))
+print(result + relativedelta(month=1))
