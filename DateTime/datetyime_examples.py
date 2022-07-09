@@ -44,6 +44,23 @@ print("-" * 50)
 
 end_january = date.fromisoformat('2022-01-31')
 result = end_january + relativedelta(months=1)
+print(f"31. January + 1 months: {result}")
+feb_plus_months = result + relativedelta(months=1)
+print(f"28. February + months=1: {feb_plus_months}")
+feb_plus_month = result + relativedelta(month=1)
+print(f"28. February + month=1: {feb_plus_month}")
+
+print("-" * 50)
+
+christmas = datetime.fromisoformat(f"{today.year}-12-25")
+diff = christmas - today
+print (f"days until christmas: {diff.days}")
+
+print("-" * 50)
+
+christmas = datetime.fromisoformat(f"{today.year-1}-12-25")
+diff = today - christmas
+print (f"days since last christmas: {diff.days}")
 print(result)
 print(result + relativedelta(months=1))
 print(result + relativedelta(month=1))
