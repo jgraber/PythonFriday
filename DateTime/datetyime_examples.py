@@ -47,3 +47,27 @@ result = end_january + relativedelta(months=1)
 print(result)
 print(result + relativedelta(months=1))
 print(result + relativedelta(month=1))
+
+print("-" * 50)
+
+# Date
+# >>> from datetime import date
+# >>> today = date.today()
+# >>> today
+# datetime.date(2022, 6, 14)
+# >>> christmas = date(2022,12,25)
+# >>> christmas
+# datetime.date(2022, 12, 25)
+# >>> days_to_christmas = christmas - today
+# >>> days_to_christmas
+# datetime.timedelta(days=194)
+# >>> days_to_christmas.resolution
+# datetime.timedelta(microseconds=1)
+# >>> days_to_christmas.total_seconds()
+# 16761600.0
+# https://docs.python.org/3/library/datetime.html
+# >>> new_year = date.fromisoformat("2023-01-01")
+# >>> new_year
+# datetime.date(2023, 1, 1)
+# >>> new_year - today
+# datetime.timedelta(days=201)
