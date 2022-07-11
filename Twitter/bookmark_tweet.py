@@ -9,7 +9,7 @@ access_token_pkce = os.getenv('access-token-pkce')
 client = tweepy.Client(access_token_pkce)
 
 python_release = "1536895050176667649"
-photo_tweet = "1416838512117231627"
+photo_tweet = "1534959411185209348"
 
 # add tweet to bookmarks
 response = client.bookmark(tweet_id=python_release)
