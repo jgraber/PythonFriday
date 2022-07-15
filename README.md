@@ -59,6 +59,8 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
   * [Python Friday #89: Constraints, Indexes and Default Values in SQLAlchemy ORM](https://improveandrepeat.com/2021/09/python-friday-89-constraints-indexes-and-default-values-in-sqlalchemy-orm/)
   * [Python Friday #90: SQL Server Connection Strings for SQLAlchemy](https://improveandrepeat.com/2021/09/python-friday-90-sql-server-connection-strings-for-sqlalchemy/)
   * [Python Friday #91: Automap for SQLAlchemy ORM](https://improveandrepeat.com/2021/10/python-friday-91-automap-for-sqlalchemy-orm/)
+* [Twitter](./Twitter)
+  * [Python Friday #131: Working With Bookmarks in Tweepy](https://improveandrepeat.com/2022/07/python-friday-131-working-with-bookmarks-in-tweepy/)
 * [helper](./helper)
   * [Python Friday #71: A Progress Bar for Your Python Script](https://improveandrepeat.com/2021/05/python-friday-71-a-progress-bar-for-your-python-script/)
   * [Python Friday #93: Pretty Print for Python](https://improveandrepeat.com/2021/10/python-friday-93-pretty-print-for-python/)
