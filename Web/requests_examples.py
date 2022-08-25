@@ -49,6 +49,23 @@ True
 }
 
 
+>>> r = requests.get('http://jgraber.ch')  
+>>> r.headers
+{
+    'Date': 'Wed, 24 Aug 2022 20:53:40 GMT', 
+    'Content-Type': 'application/json', 
+    'Content-Length': '309', 
+    'Connection': 'keep-alive', 
+    'Server': 'gunicorn/19.9.0', 
+    'Access-Control-Allow-Origin': '*', 
+    'Access-Control-Allow-Credentials': 'true'
+}
+
+>>> r.headers['Server']
+'gunicorn/19.9.0'
+>>> r.headers['Content-Type'] 
+'application/json'
+
 # POST
 >>> r = requests.post('https://httpbin.org/post', data={'key': 'value'})
 >>> r.json()
@@ -80,24 +97,6 @@ False
 200
 >>> r.history
 [<Response [301]>]
-
-# Headers
->>> r = requests.get('http://jgraber.ch')  
->>> r.headers
-{
-    'Date': 'Wed, 24 Aug 2022 20:53:40 GMT', 
-    'Content-Type': 'application/json', 
-    'Content-Length': '309', 
-    'Connection': 'keep-alive', 
-    'Server': 'gunicorn/19.9.0', 
-    'Access-Control-Allow-Origin': '*', 
-    'Access-Control-Allow-Credentials': 'true'
-}
-
->>> r.headers['Server']
-'gunicorn/19.9.0'
->>> r.headers['Content-Type'] 
-'application/json'
 
 # Other HTTP methods
 
