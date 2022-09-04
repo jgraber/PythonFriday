@@ -58,3 +58,81 @@ https://improveandrepeat.com/tag/testing/
 https://improveandrepeat.com/2022/08/python-friday-136-date-and-time-in-python-part-3-dateutil/
 ...
 
+
+>>> contacts = """
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Contact</h1>
+	<table>
+		<tr>
+			<th>name</th>
+			<th>phone</th>
+			<th>country</th>
+			<th>email</th>
+		</tr>
+		<tr>
+			<td>Harlan Gibbs</td>
+			<td>1-351-733-8608</td>
+			<td>Chile</td>
+			<td>nec.quam.curabitur@outlook.net</td>
+		</tr>
+		<tr>
+			<td>Marny Ashley</td>
+			<td>1-760-796-7925</td>
+			<td>South Korea</td>
+			<td>pellentesque@google.edu</td>
+		</tr>
+		<tr>
+			<td>Chava Dixon</td>
+			<td>1-828-824-7717</td>
+			<td>Switzerland</td>
+			<td>malesuada.fames.ac@yahoo.ca</td>
+		</tr>
+	</table>
+ </body>
+ </html>
+ """
+
+>>> soup = BeautifulSoup(contacts, 'html.parser')
+>>> table = soup.body.table
+>>> for row in table.find_all('tr'):
+      columns = row.find_all('td')
+      if columns:
+          print(columns[3].text)
+
+nec.quam.curabitur@outlook.net
+pellentesque@google.edu
+malesuada.fames.ac@yahoo.ca
+
+>>> for row in table.find_all('tr'):
+       print(50*'-') 
+       headers = row.find_all('th')
+       for header in headers:
+           print(f'**{header.text}**')
+       columns = row.find_all('td')
+       for column in columns:
+           print(column.text)
+
+————————————————–
+**name**
+**phone**
+**country**
+**email**
+————————————————–
+Harlan Gibbs
+1-351-733-8608
+Chile
+nec.quam.curabitur@outlook.net
+————————————————–
+Marny Ashley
+1-760-796-7925
+South Korea
+pellentesque@google.edu
+————————————————–
+Chava Dixon
+1-828-824-7717
+Switzerland
+malesuada.fames.ac@yahoo.ca
