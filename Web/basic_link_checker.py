@@ -6,6 +6,7 @@ from typing import NamedTuple
 class Page(NamedTuple):
     url: str
     text: str
+    link_to: str
 
 
 def read_sitemap(domain):
