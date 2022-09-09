@@ -6,7 +6,6 @@ from typing import NamedTuple
 class Page(NamedTuple):
     url: str
     text: str
-    link_to: str
 
 
 def read_sitemap(domain):
@@ -20,7 +19,7 @@ def read_sitemap(domain):
 
 
 def find_links(pages):
-    all_links = []
+    all_links = {}
 
     for page in pages:
         content = requests.get(page)
@@ -36,12 +35,16 @@ def find_links(pages):
 
             link_text = link.get_text().strip()
             link_target = link.get('href')
+            source = Page(page, link_text)
 
             if not link_target.lower().startswith("http"):
                 link_target = page + link_target
 
-            all_links.append(Page(page, link_text, link_target))
-    
+            if link_target in all_links:
+                all_links[link_target].append(source)
+            else:
+                all_links[link_target] = [source]
+                
     return all_links
 
 
