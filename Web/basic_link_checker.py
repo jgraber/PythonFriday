@@ -27,7 +27,7 @@ def find_links(pages):
         links = soup.find_all("a")
 
         for link in links:
-            if link.get('href') == "#":
+            if link.get('href').startswith("#"):
                 continue
 
             if  link.get('rel') is not None and 'nofollow' in link.get('rel'):
