@@ -47,4 +47,24 @@ def find_links(pages):
                 
     return all_links
 
+def check_links(all_links):
+    status = {}
 
+    for key in all_links:
+        try:
+            print(f"working on {key}")
+            page = requests.head(key, timeout=5)
+            code = page.status_code
+        except ConnectionRefusedError:
+            code = 'ConnectionRefusedError'
+        except Exception:
+            code = 'Exception'
+
+        if code in status:
+            # print(f"{code}:{key}")
+            status[code].append(key)
+        else:
+            # print(f"{code}:{key}")
+            status[code] = [key]
+
+    return status
