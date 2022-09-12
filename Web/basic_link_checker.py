@@ -68,3 +68,13 @@ def check_links(all_links):
             status[code] = [key]
 
     return status
+
+def create_report(all_links, result):
+    with open("report_link_status.txt", "w", encoding="utf-8") as f:
+        for code in result:
+            f.write(f"- {code}\n")
+            for page in result[code]:
+                f.write(f"\t - {page}\n")
+                for source in all_links[page]:
+                    f.write(f"\t\t - {source.url} [{source.text}]\n")
+

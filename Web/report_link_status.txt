@@ -1,0 +1,254 @@
+- 200
+	 - https://requests.readthedocs.io/en/stable/user/install/#install
+		 - https://requests.readthedocs.io/en/stable/ [Installation]
+	 - https://pepy.tech/project/requests
+		 - https://requests.readthedocs.io/en/stable/ []
+	 - https://pypi.org/project/requests/
+		 - https://requests.readthedocs.io/en/stable/ []
+		 - https://requests.readthedocs.io/en/stable/ []
+		 - https://requests.readthedocs.io/en/stable/ []
+		 - https://requests.readthedocs.io/en/stable/ [Requests @ PyPI]
+	 - https://github.com/urllib3/urllib3
+		 - https://requests.readthedocs.io/en/stable/ [urllib3]
+	 - https://requests.readthedocs.io/en/stable/user/install/
+		 - https://requests.readthedocs.io/en/stable/ [Installation of Requests]
+	 - https://requests.readthedocs.io/en/stable/user/install/#python-m-pip-install-requests
+		 - https://requests.readthedocs.io/en/stable/ [$ python -m pip install requests]
+	 - https://requests.readthedocs.io/en/stable/user/install/#get-the-source-code
+		 - https://requests.readthedocs.io/en/stable/ [Get the Source Code]
+	 - https://requests.readthedocs.io/en/stable/user/quickstart/
+		 - https://requests.readthedocs.io/en/stable/ [Quickstart]
+	 - https://requests.readthedocs.io/en/stable/user/quickstart/#make-a-request
+		 - https://requests.readthedocs.io/en/stable/ [Make a Request]
+	 - https://requests.readthedocs.io/en/stable/user/quickstart/#passing-parameters-in-urls
+		 - https://requests.readthedocs.io/en/stable/ [Passing Parameters In URLs]
+	 - https://requests.readthedocs.io/en/stable/user/quickstart/#response-content
+		 - https://requests.readthedocs.io/en/stable/ [Response Content]
+	 - https://requests.readthedocs.io/en/stable/user/quickstart/#binary-response-content
+		 - https://requests.readthedocs.io/en/stable/ [Binary Response Content]
+	 - https://requests.readthedocs.io/en/stable/user/quickstart/#json-response-content
+		 - https://requests.readthedocs.io/en/stable/ [JSON Response Content]
+	 - https://requests.readthedocs.io/en/stable/user/quickstart/#raw-response-content
+		 - https://requests.readthedocs.io/en/stable/ [Raw Response Content]
+	 - https://requests.readthedocs.io/en/stable/user/quickstart/#custom-headers
+		 - https://requests.readthedocs.io/en/stable/ [Custom Headers]
+	 - https://requests.readthedocs.io/en/stable/user/quickstart/#more-complicated-post-requests
+		 - https://requests.readthedocs.io/en/stable/ [More complicated POST requests]
+	 - https://requests.readthedocs.io/en/stable/user/quickstart/#post-a-multipart-encoded-file
+		 - https://requests.readthedocs.io/en/stable/ [POST a Multipart-Encoded File]
+	 - https://requests.readthedocs.io/en/stable/user/quickstart/#response-status-codes
+		 - https://requests.readthedocs.io/en/stable/ [Response Status Codes]
+	 - https://requests.readthedocs.io/en/stable/user/quickstart/#response-headers
+		 - https://requests.readthedocs.io/en/stable/ [Response Headers]
+	 - https://requests.readthedocs.io/en/stable/user/quickstart/#cookies
+		 - https://requests.readthedocs.io/en/stable/ [Cookies]
+	 - https://requests.readthedocs.io/en/stable/user/quickstart/#redirection-and-history
+		 - https://requests.readthedocs.io/en/stable/ [Redirection and History]
+	 - https://requests.readthedocs.io/en/stable/user/quickstart/#timeouts
+		 - https://requests.readthedocs.io/en/stable/ [Timeouts]
+	 - https://requests.readthedocs.io/en/stable/user/quickstart/#errors-and-exceptions
+		 - https://requests.readthedocs.io/en/stable/ [Errors and Exceptions]
+	 - https://requests.readthedocs.io/en/stable/user/advanced/
+		 - https://requests.readthedocs.io/en/stable/ [Advanced Usage]
+	 - https://requests.readthedocs.io/en/stable/user/advanced/#session-objects
+		 - https://requests.readthedocs.io/en/stable/ [Session Objects]
+	 - https://requests.readthedocs.io/en/stable/user/advanced/#request-and-response-objects
+		 - https://requests.readthedocs.io/en/stable/ [Request and Response Objects]
+	 - https://requests.readthedocs.io/en/stable/user/advanced/#prepared-requests
+		 - https://requests.readthedocs.io/en/stable/ [Prepared Requests]
+	 - https://requests.readthedocs.io/en/stable/user/advanced/#ssl-cert-verification
+		 - https://requests.readthedocs.io/en/stable/ [SSL Cert Verification]
+	 - https://requests.readthedocs.io/en/stable/user/advanced/#client-side-certificates
+		 - https://requests.readthedocs.io/en/stable/ [Client Side Certificates]
+	 - https://requests.readthedocs.io/en/stable/user/advanced/#ca-certificates
+		 - https://requests.readthedocs.io/en/stable/ [CA Certificates]
+	 - https://requests.readthedocs.io/en/stable/user/advanced/#body-content-workflow
+		 - https://requests.readthedocs.io/en/stable/ [Body Content Workflow]
+	 - https://requests.readthedocs.io/en/stable/user/advanced/#keep-alive
+		 - https://requests.readthedocs.io/en/stable/ [Keep-Alive]
+	 - https://requests.readthedocs.io/en/stable/user/advanced/#streaming-uploads
+		 - https://requests.readthedocs.io/en/stable/ [Streaming Uploads]
+	 - https://requests.readthedocs.io/en/stable/user/advanced/#chunk-encoded-requests
+		 - https://requests.readthedocs.io/en/stable/ [Chunk-Encoded Requests]
+	 - https://requests.readthedocs.io/en/stable/user/advanced/#post-multiple-multipart-encoded-files
+		 - https://requests.readthedocs.io/en/stable/ [POST Multiple Multipart-Encoded Files]
+	 - https://requests.readthedocs.io/en/stable/user/advanced/#event-hooks
+		 - https://requests.readthedocs.io/en/stable/ [Event Hooks]
+	 - https://requests.readthedocs.io/en/stable/user/advanced/#custom-authentication
+		 - https://requests.readthedocs.io/en/stable/ [Custom Authentication]
+	 - https://requests.readthedocs.io/en/stable/user/advanced/#streaming-requests
+		 - https://requests.readthedocs.io/en/stable/ [Streaming Requests]
+	 - https://requests.readthedocs.io/en/stable/user/advanced/#proxies
+		 - https://requests.readthedocs.io/en/stable/ [Proxies]
+	 - https://requests.readthedocs.io/en/stable/user/advanced/#compliance
+		 - https://requests.readthedocs.io/en/stable/ [Compliance]
+	 - https://requests.readthedocs.io/en/stable/user/advanced/#http-verbs
+		 - https://requests.readthedocs.io/en/stable/ [HTTP Verbs]
+	 - https://requests.readthedocs.io/en/stable/user/advanced/#custom-verbs
+		 - https://requests.readthedocs.io/en/stable/ [Custom Verbs]
+	 - https://requests.readthedocs.io/en/stable/user/advanced/#link-headers
+		 - https://requests.readthedocs.io/en/stable/ [Link Headers]
+	 - https://requests.readthedocs.io/en/stable/user/advanced/#transport-adapters
+		 - https://requests.readthedocs.io/en/stable/ [Transport Adapters]
+	 - https://requests.readthedocs.io/en/stable/user/advanced/#blocking-or-non-blocking
+		 - https://requests.readthedocs.io/en/stable/ [Blocking Or Non-Blocking?]
+	 - https://requests.readthedocs.io/en/stable/user/advanced/#header-ordering
+		 - https://requests.readthedocs.io/en/stable/ [Header Ordering]
+	 - https://requests.readthedocs.io/en/stable/user/advanced/#timeouts
+		 - https://requests.readthedocs.io/en/stable/ [Timeouts]
+	 - https://requests.readthedocs.io/en/stable/user/authentication/
+		 - https://requests.readthedocs.io/en/stable/ [Authentication]
+	 - https://requests.readthedocs.io/en/stable/user/authentication/#basic-authentication
+		 - https://requests.readthedocs.io/en/stable/ [Basic Authentication]
+	 - https://requests.readthedocs.io/en/stable/user/authentication/#digest-authentication
+		 - https://requests.readthedocs.io/en/stable/ [Digest Authentication]
+	 - https://requests.readthedocs.io/en/stable/user/authentication/#oauth-1-authentication
+		 - https://requests.readthedocs.io/en/stable/ [OAuth 1 Authentication]
+	 - https://requests.readthedocs.io/en/stable/user/authentication/#oauth-2-and-openid-connect-authentication
+		 - https://requests.readthedocs.io/en/stable/ [OAuth 2 and OpenID Connect Authentication]
+	 - https://requests.readthedocs.io/en/stable/user/authentication/#other-authentication
+		 - https://requests.readthedocs.io/en/stable/ [Other Authentication]
+	 - https://requests.readthedocs.io/en/stable/user/authentication/#new-forms-of-authentication
+		 - https://requests.readthedocs.io/en/stable/ [New Forms of Authentication]
+	 - https://requests.readthedocs.io/en/stable/community/recommended/
+		 - https://requests.readthedocs.io/en/stable/ [Recommended Packages and Extensions]
+	 - https://requests.readthedocs.io/en/stable/community/recommended/#certifi-ca-bundle
+		 - https://requests.readthedocs.io/en/stable/ [Certifi CA Bundle]
+	 - https://requests.readthedocs.io/en/stable/community/recommended/#cachecontrol
+		 - https://requests.readthedocs.io/en/stable/ [CacheControl]
+	 - https://requests.readthedocs.io/en/stable/community/recommended/#requests-toolbelt
+		 - https://requests.readthedocs.io/en/stable/ [Requests-Toolbelt]
+	 - https://requests.readthedocs.io/en/stable/community/recommended/#requests-threads
+		 - https://requests.readthedocs.io/en/stable/ [Requests-Threads]
+	 - https://requests.readthedocs.io/en/stable/community/recommended/#requests-oauthlib
+		 - https://requests.readthedocs.io/en/stable/ [Requests-OAuthlib]
+	 - https://requests.readthedocs.io/en/stable/community/recommended/#betamax
+		 - https://requests.readthedocs.io/en/stable/ [Betamax]
+	 - https://requests.readthedocs.io/en/stable/community/faq/
+		 - https://requests.readthedocs.io/en/stable/ [Frequently Asked Questions]
+	 - https://requests.readthedocs.io/en/stable/community/faq/#encoded-data
+		 - https://requests.readthedocs.io/en/stable/ [Encoded Data?]
+	 - https://requests.readthedocs.io/en/stable/community/faq/#custom-user-agents
+		 - https://requests.readthedocs.io/en/stable/ [Custom User-Agents?]
+	 - https://requests.readthedocs.io/en/stable/community/faq/#why-not-httplib2
+		 - https://requests.readthedocs.io/en/stable/ [Why not Httplib2?]
+	 - https://requests.readthedocs.io/en/stable/community/faq/#python-3-support
+		 - https://requests.readthedocs.io/en/stable/ [Python 3 Support?]
+	 - https://requests.readthedocs.io/en/stable/community/faq/#python-2-support
+		 - https://requests.readthedocs.io/en/stable/ [Python 2 Support?]
+	 - https://requests.readthedocs.io/en/stable/community/faq/#what-are-hostname-doesn-t-match-errors
+		 - https://requests.readthedocs.io/en/stable/ [What are âhostname doesnât matchâ errors?]
+	 - https://requests.readthedocs.io/en/stable/community/out-there/
+		 - https://requests.readthedocs.io/en/stable/ [Integrations]
+	 - https://requests.readthedocs.io/en/stable/community/out-there/#python-for-ios
+		 - https://requests.readthedocs.io/en/stable/ [Python for iOS]
+	 - https://requests.readthedocs.io/en/stable/community/out-there/#articles-talks
+		 - https://requests.readthedocs.io/en/stable/ [Articles & Talks]
+	 - https://requests.readthedocs.io/en/stable/community/support/
+		 - https://requests.readthedocs.io/en/stable/ [Support]
+	 - https://requests.readthedocs.io/en/stable/community/support/#stack-overflow
+		 - https://requests.readthedocs.io/en/stable/ [Stack Overflow]
+	 - https://requests.readthedocs.io/en/stable/community/support/#file-an-issue
+		 - https://requests.readthedocs.io/en/stable/ [File an Issue]
+	 - https://requests.readthedocs.io/en/stable/community/support/#send-a-tweet
+		 - https://requests.readthedocs.io/en/stable/ [Send a Tweet]
+	 - https://requests.readthedocs.io/en/stable/community/vulnerabilities/
+		 - https://requests.readthedocs.io/en/stable/ [Vulnerability Disclosure]
+	 - https://requests.readthedocs.io/en/stable/community/vulnerabilities/#process
+		 - https://requests.readthedocs.io/en/stable/ [Process]
+	 - https://requests.readthedocs.io/en/stable/community/vulnerabilities/#previous-cves
+		 - https://requests.readthedocs.io/en/stable/ [Previous CVEs]
+	 - https://requests.readthedocs.io/en/stable/community/release-process/
+		 - https://requests.readthedocs.io/en/stable/ [Release Process and Rules]
+	 - https://requests.readthedocs.io/en/stable/community/release-process/#major-releases
+		 - https://requests.readthedocs.io/en/stable/ [Major Releases]
+	 - https://requests.readthedocs.io/en/stable/community/release-process/#minor-releases
+		 - https://requests.readthedocs.io/en/stable/ [Minor Releases]
+	 - https://requests.readthedocs.io/en/stable/community/release-process/#hotfix-releases
+		 - https://requests.readthedocs.io/en/stable/ [Hotfix Releases]
+	 - https://requests.readthedocs.io/en/stable/community/release-process/#reasoning
+		 - https://requests.readthedocs.io/en/stable/ [Reasoning]
+	 - https://requests.readthedocs.io/en/stable/community/updates/
+		 - https://requests.readthedocs.io/en/stable/ [Community Updates]
+	 - https://requests.readthedocs.io/en/stable/community/updates/#release-history
+		 - https://requests.readthedocs.io/en/stable/ [Release History]
+	 - https://requests.readthedocs.io/en/stable/api/
+		 - https://requests.readthedocs.io/en/stable/ [Developer Interface]
+	 - https://requests.readthedocs.io/en/stable/api/#main-interface
+		 - https://requests.readthedocs.io/en/stable/ [Main Interface]
+	 - https://requests.readthedocs.io/en/stable/api/#exceptions
+		 - https://requests.readthedocs.io/en/stable/ [Exceptions]
+	 - https://requests.readthedocs.io/en/stable/api/#request-sessions
+		 - https://requests.readthedocs.io/en/stable/ [Request Sessions]
+	 - https://requests.readthedocs.io/en/stable/api/#lower-level-classes
+		 - https://requests.readthedocs.io/en/stable/ [Lower-Level Classes]
+	 - https://requests.readthedocs.io/en/stable/api/#lower-lower-level-classes
+		 - https://requests.readthedocs.io/en/stable/ [Lower-Lower-Level Classes]
+	 - https://requests.readthedocs.io/en/stable/api/#authentication
+		 - https://requests.readthedocs.io/en/stable/ [Authentication]
+	 - https://requests.readthedocs.io/en/stable/api/#encodings
+		 - https://requests.readthedocs.io/en/stable/ [Encodings]
+	 - https://requests.readthedocs.io/en/stable/api/#cookies
+		 - https://requests.readthedocs.io/en/stable/ [Cookies]
+	 - https://requests.readthedocs.io/en/stable/api/#status-code-lookup
+		 - https://requests.readthedocs.io/en/stable/ [Status Code Lookup]
+	 - https://requests.readthedocs.io/en/stable/api/#migrating-to-1-x
+		 - https://requests.readthedocs.io/en/stable/ [Migrating to 1.x]
+	 - https://requests.readthedocs.io/en/stable/api/#migrating-to-2-x
+		 - https://requests.readthedocs.io/en/stable/ [Migrating to 2.x]
+	 - https://requests.readthedocs.io/en/stable/dev/contributing/
+		 - https://requests.readthedocs.io/en/stable/ [Contributorâs Guide]
+	 - https://requests.readthedocs.io/en/stable/dev/contributing/#be-cordial
+		 - https://requests.readthedocs.io/en/stable/ [Be Cordial]
+	 - https://requests.readthedocs.io/en/stable/dev/contributing/#get-early-feedback
+		 - https://requests.readthedocs.io/en/stable/ [Get Early Feedback]
+	 - https://requests.readthedocs.io/en/stable/dev/contributing/#contribution-suitability
+		 - https://requests.readthedocs.io/en/stable/ [Contribution Suitability]
+	 - https://requests.readthedocs.io/en/stable/dev/contributing/#code-contributions
+		 - https://requests.readthedocs.io/en/stable/ [Code Contributions]
+	 - https://requests.readthedocs.io/en/stable/dev/contributing/#steps-for-submitting-code
+		 - https://requests.readthedocs.io/en/stable/ [Steps for Submitting Code]
+	 - https://requests.readthedocs.io/en/stable/dev/contributing/#code-review
+		 - https://requests.readthedocs.io/en/stable/ [Code Review]
+	 - https://requests.readthedocs.io/en/stable/dev/contributing/#code-style
+		 - https://requests.readthedocs.io/en/stable/ [Code Style]
+	 - https://requests.readthedocs.io/en/stable/dev/contributing/#new-contributors
+		 - https://requests.readthedocs.io/en/stable/ [New Contributors]
+	 - https://requests.readthedocs.io/en/stable/dev/contributing/#documentation-contributions
+		 - https://requests.readthedocs.io/en/stable/ [Documentation Contributions]
+	 - https://requests.readthedocs.io/en/stable/dev/contributing/#bug-reports
+		 - https://requests.readthedocs.io/en/stable/ [Bug Reports]
+	 - https://requests.readthedocs.io/en/stable/dev/contributing/#feature-requests
+		 - https://requests.readthedocs.io/en/stable/ [Feature Requests]
+	 - https://requests.readthedocs.io/en/stable/dev/authors/
+		 - https://requests.readthedocs.io/en/stable/ [Authors]
+	 - https://requests.readthedocs.io/en/stable/dev/authors/#keepers-of-the-crystals
+		 - https://requests.readthedocs.io/en/stable/ [Keepers of the Crystals]
+	 - https://requests.readthedocs.io/en/stable/dev/authors/#previous-keepers-of-crystals
+		 - https://requests.readthedocs.io/en/stable/ [Previous Keepers of Crystals]
+	 - https://requests.readthedocs.io/en/stable/dev/authors/#patches-and-suggestions
+		 - https://requests.readthedocs.io/en/stable/ [Patches and Suggestions]
+	 - https://requests.readthedocs.io/en/latest/user/quickstart/
+		 - https://requests.readthedocs.io/en/stable/ [Quickstart]
+	 - https://requests.readthedocs.io/en/latest/user/advanced/
+		 - https://requests.readthedocs.io/en/stable/ [Advanced Usage]
+	 - https://requests.readthedocs.io/en/latest/api/
+		 - https://requests.readthedocs.io/en/stable/ [API Reference]
+	 - https://requests.readthedocs.io/en/latest/community/updates/#release-history
+		 - https://requests.readthedocs.io/en/stable/ [Release History]
+	 - https://requests.readthedocs.io/en/latest/dev/contributing/
+		 - https://requests.readthedocs.io/en/stable/ [Contributors Guide]
+	 - https://requests.readthedocs.io/en/latest/community/recommended/
+		 - https://requests.readthedocs.io/en/stable/ [Recommended Packages and Extensions]
+	 - https://github.com/psf/requests
+		 - https://requests.readthedocs.io/en/stable/ [Requests @ GitHub]
+	 - https://github.com/psf/requests/issues
+		 - https://requests.readthedocs.io/en/stable/ [Issue Tracker]
+- 302
+	 - https://gist.github.com/973705
+		 - https://requests.readthedocs.io/en/stable/ [similar code, sans Requests]
+- 301
+	 - https://kenreitz.org/projects
+		 - https://requests.readthedocs.io/en/stable/ [Kenneth Reitz]
+	 - https://github.com/requests/requests
+		 - https://requests.readthedocs.io/en/stable/ []
