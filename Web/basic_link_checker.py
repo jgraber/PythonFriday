@@ -78,3 +78,11 @@ def create_report(all_links, result):
                 for source in all_links[page]:
                     f.write(f"\t\t - {source.url} [{source.text}]\n")
 
+
+if __name__ == '__main__':
+    pages = read_sitemap('https://requests.readthedocs.io/')
+    all_links = find_links(pages)
+    result = check_links(all_links)
+    create_report(all_links, result)
+    
+
