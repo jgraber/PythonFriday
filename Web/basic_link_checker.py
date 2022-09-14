@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 from usp.tree import sitemap_tree_for_homepage
 from typing import NamedTuple
 
+
 class Page(NamedTuple):
     url: str
     text: str
@@ -10,11 +11,7 @@ class Page(NamedTuple):
 
 def read_sitemap(domain):
     tree = sitemap_tree_for_homepage(domain)
-    pages = []
-
-    for page in tree.all_pages():
-        pages.append(page.url)
-    
+    pages = [page.url for page in tree.all_pages()]
     return pages
 
 
@@ -47,6 +44,7 @@ def find_links(pages):
                 
     return all_links
 
+
 def check_links(all_links):
     status = {}
 
@@ -61,13 +59,12 @@ def check_links(all_links):
             code = 'Exception'
 
         if code in status:
-            # print(f"{code}:{key}")
             status[code].append(key)
         else:
-            # print(f"{code}:{key}")
             status[code] = [key]
 
     return status
+
 
 def create_report(all_links, result):
     with open("report_link_status.txt", "w", encoding="utf-8") as f:
@@ -85,4 +82,3 @@ if __name__ == '__main__':
     result = check_links(all_links)
     create_report(all_links, result)
     
-
