@@ -20,18 +20,18 @@ def find_links(pages):
 
     for page in pages:
         content = requests.get(page)
-        soup = BeautifulSoup(content.text, 'html.parser')
+        soup = BeautifulSoup(content.text, "html.parser")
         links = soup.find_all("a")
 
         for link in links:
-            if link.get('href').startswith("#"):
+            if link.get("href").startswith("#"):
                 continue
 
-            if  link.get('rel') is not None and 'nofollow' in link.get('rel'):
+            if  link.get("rel") is not None and "nofollow" in link.get("rel"):
                 continue
 
             link_text = link.get_text().strip()
-            link_target = link.get('href')
+            link_target = link.get("href")
             source = Page(page, link_text)
 
             if not link_target.lower().startswith("http"):
@@ -54,9 +54,9 @@ def check_links(all_links):
             page = requests.head(key, timeout=5)
             code = page.status_code
         except ConnectionRefusedError:
-            code = 'ConnectionRefusedError'
+            code = "ConnectionRefusedError"
         except Exception:
-            code = 'Exception'
+            code = "Exception"
 
         if code in status:
             status[code].append(key)
@@ -76,8 +76,8 @@ def create_report(all_links, result):
                     f.write(f"\t\t - {source.url} [{source.text}]\n")
 
 
-if __name__ == '__main__':
-    pages = read_sitemap('https://requests.readthedocs.io/')
+if __name__ == "__main__":
+    pages = read_sitemap("https://requests.readthedocs.io/")
     all_links = find_links(pages)
     result = check_links(all_links)
     create_report(all_links, result)
