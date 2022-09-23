@@ -4,6 +4,9 @@ from webdriver_manager.firefox import GeckoDriverManager
 import time
 import os
 from dotenv import load_dotenv
+import logging
+
+logging.getLogger('WDM').setLevel(logging.NOTSET)
 
 # read value for GH_TOKEN key from .evn file
 load_dotenv()
