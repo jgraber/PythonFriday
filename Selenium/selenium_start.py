@@ -1,4 +1,4 @@
-from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.firefox.service import Service
 from selenium import webdriver
 import time
 
