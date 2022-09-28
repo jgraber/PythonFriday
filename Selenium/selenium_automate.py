@@ -18,3 +18,12 @@ driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()))
 driver.implicitly_wait(1)
 
 driver.get("https://duckduckgo.com/?t=ha&va=j")
+
+print(50 * '=')
+
+# are we on the right page?
+title = driver.title
+print(title)
+
+print(50 * '=')
+
