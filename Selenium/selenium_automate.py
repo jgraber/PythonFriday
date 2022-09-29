@@ -1,6 +1,7 @@
 from selenium.webdriver.firefox.service import Service
 from selenium import webdriver
 from webdriver_manager.firefox import GeckoDriverManager
+from selenium.webdriver.common.by import By
 import time
 import os
 from dotenv import load_dotenv
@@ -24,6 +25,13 @@ print(50 * '=')
 # are we on the right page?
 title = driver.title
 print(title)
+
+print(50 * '=')
+
+# get all H1 elements
+headers = driver.find_elements(by=By.TAG_NAME, value="H1")
+for header in headers:
+    print(f"H1: [{header.text}]")
 
 print(50 * '=')
 
