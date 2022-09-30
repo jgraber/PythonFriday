@@ -35,3 +35,10 @@ for header in headers:
 
 print(50 * '=')
 
+# search for a single element
+logo = driver.find_element(by=By.ID, value="logo_homepage_link")
+print(logo.text)
+print(logo.get_attribute('href'))
+
+print(50 * '=')
+
