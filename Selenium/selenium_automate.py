@@ -42,3 +42,11 @@ print(logo.get_attribute('href'))
 
 print(50 * '=')
 
+# Check if Selenium throws an exception if search matches multiple elements
+try:
+    headers = driver.find_element(by=By.TAG_NAME, value="H1")
+    print(f"H1: [{headers.text}]")
+except Exception as error:
+    print(f"{type(error)}: {error}")
+
+print(50 * '=')
