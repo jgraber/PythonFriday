@@ -50,3 +50,4 @@ except Exception as error:
     print(f"{type(error)}: {error}")
 
 print(50 * '=')
+driver.quit()
