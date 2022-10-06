@@ -70,4 +70,10 @@ results = results_div.find_elements(by=By.TAG_NAME, value="h2")
 for result in results:
     print(f"* {result.text}")
 
+print(50 * '=')
+
+more = driver.find_element(by=By.CLASS_NAME, value="result--more")
+driver.execute_script("arguments[0].scrollIntoView();", more)
+more.click()
+
 driver.quit()
