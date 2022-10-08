@@ -79,6 +79,7 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
   * [Python Friday #138: Parsing HTML With Beautiful Soup](https://improveandrepeat.com/2022/09/python-friday-138-parsing-html-with-beautiful-soup/)
   * [Python Friday #139: Parse Sitemaps With Python](https://improveandrepeat.com/2022/09/python-friday-139-parse-sitemaps-with-python/)
   * [Python Friday #140: Create a Basic Link Checker](https://improveandrepeat.com/2022/09/python-friday-140-create-a-basic-link-checker/)
+  * [Python Friday #141: Read TLS/SSL Certificates in Python](https://improveandrepeat.com/2022/09/python-friday-141-read-tls-ssl-certificates-in-python/)
 * [helper](./helper)
   * [Python Friday #71: A Progress Bar for Your Python Script](https://improveandrepeat.com/2021/05/python-friday-71-a-progress-bar-for-your-python-script/)
   * [Python Friday #93: Pretty Print for Python](https://improveandrepeat.com/2021/10/python-friday-93-pretty-print-for-python/)
