@@ -51,7 +51,9 @@ except Exception as error:
 
 print(50 * '=')
 
-search_box = driver.find_element(by=By.ID, value="search_form_input_homepage")
+search_box = driver.find_element(
+    by=By.ID, 
+    value="search_form_input_homepage")
 search_box.send_keys("Selenium web")
 
 search_button = driver.find_element(
