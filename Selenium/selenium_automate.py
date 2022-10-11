@@ -74,8 +74,17 @@ for result in results:
 
 print(50 * '=')
 
+# scroll to element
 more = driver.find_element(by=By.CLASS_NAME, value="result--more")
 driver.execute_script("arguments[0].scrollIntoView();", more)
 more.click()
+
+# scroll to end
+driver.execute_script('window.scrollTo(0, document.body.scrollHeight);')
+
+print(50 * '=')
+
+
+time.sleep(15)
 
 driver.quit()
