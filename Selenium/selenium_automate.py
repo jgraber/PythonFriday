@@ -16,7 +16,7 @@ load_dotenv()
 # ValueError: API Rate limit exceeded. You have to add GH_TOKEN!!!
 # service = Service(executable_path="./geckodriver.exe")
 driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()))
-driver.implicitly_wait(1)
+driver.implicitly_wait(1) # 1 second
 
 driver.get("https://duckduckgo.com/?t=ha&va=j")
 
