@@ -66,8 +66,12 @@ print(title)
 
 print(50 * '=')
 
-results_div = driver.find_element(by=By.CLASS_NAME, value="results")
-results = results_div.find_elements(by=By.TAG_NAME, value="h2")
+results_div = driver.find_element(
+    by=By.CLASS_NAME, 
+    value="results")
+results = results_div.find_elements(
+    by=By.TAG_NAME, 
+    value="h2")
 
 for result in results:
     print(f"* {result.text}")
