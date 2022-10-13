@@ -79,7 +79,9 @@ for result in results:
 print(50 * '=')
 
 # scroll to element
-more = driver.find_element(by=By.CLASS_NAME, value="result--more")
+more = driver.find_element(
+    by=By.CLASS_NAME, 
+    value="result--more")
 driver.execute_script("arguments[0].scrollIntoView();", more)
 more.click()
 
