@@ -46,6 +46,18 @@ def login(driver):
     time.sleep(2)
 
 
+def download_statistics(driver, start):
+    end = date.today()
+    stats_day = min(start, end)
+        
+    while stats_day < end:
+        download_statistics_for_day(driver, stats_day)
+        stats_day += timedelta(days=1)
+
+
 if __name__ == '__main__':
     load_dotenv()
     driver = prepare_browser()
+    login(driver)
+    download_statistics(driver, date(2022, 10, 1))
+    driver.quit()
