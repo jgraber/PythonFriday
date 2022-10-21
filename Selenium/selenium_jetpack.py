@@ -55,6 +55,20 @@ def download_statistics(driver, start):
         stats_day += timedelta(days=1)
 
 
+def download_statistics_for_day(driver, day):
+    posts = f"https://wordpress.com/stats/day/posts/improveandrepeat.com?startDate={day}"
+    driver.get(posts)
+
+    time.sleep(2)
+    
+    driver.execute_script('window.scrollTo(0, document.body.scrollHeight);')
+    
+    download = driver.find_element(
+        by=By.CLASS_NAME, 
+        value="stats-download-csv")
+    download.click()
+
+
 if __name__ == '__main__':
     load_dotenv()
     driver = prepare_browser()
