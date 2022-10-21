@@ -11,7 +11,8 @@ import logging
 
 def prepare_browser():
     logging.getLogger('WDM').setLevel(logging.NOTSET)
-    driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()))
+    driver = webdriver.Firefox(
+        service=Service(GeckoDriverManager().install()))
     driver.implicitly_wait(2) # 2 second
     return driver
 
