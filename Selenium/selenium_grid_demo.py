@@ -8,12 +8,16 @@ from selenium.webdriver.common.by import By
 #     options=firefox_options
 # )
 
-edge_options = webdriver.EdgeOptions()
+# edge_options = webdriver.EdgeOptions()
+# driver = webdriver.Remote(
+#     command_executor='http://localhost:4444',
+#     options=edge_options
+# )
+
+chrome_options = webdriver.ChromeOptions()
 driver = webdriver.Remote(
     command_executor='http://localhost:4444',
-    options=edge_options
-)
-
+    options=chrome_options
 )
 driver.get("https://duckduckgo.com/?t=ha&va=j")
 
