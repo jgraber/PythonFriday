@@ -2,11 +2,11 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-# firefox_options = webdriver.FirefoxOptions()
-# driver = webdriver.Remote(
-#     command_executor='http://localhost:4444',
-#     options=firefox_options
-# )
+firefox_options = webdriver.FirefoxOptions()
+driver = webdriver.Remote(
+    command_executor='http://localhost:4444',
+    options=firefox_options
+)
 
 # edge_options = webdriver.EdgeOptions()
 # driver = webdriver.Remote(
@@ -14,12 +14,11 @@ from selenium.webdriver.common.by import By
 #     options=edge_options
 # )
 
-chrome_options = webdriver.ChromeOptions()
-driver = webdriver.Remote(
-    command_executor='http://localhost:4444',
-    options=chrome_options
-)
-driver.get("https://duckduckgo.com/?t=ha&va=j")
+# chrome_options = webdriver.ChromeOptions()
+# driver = webdriver.Remote(
+#     command_executor='http://localhost:4444',
+#     options=chrome_options
+# )
 
 # time.sleep(15)
 
