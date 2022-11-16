@@ -22,6 +22,8 @@ driver = webdriver.Remote(
 
 # time.sleep(15)
 
+driver.get("https://duckduckgo.com/?t=ha&va=j")
+
 search_box = driver.find_element(
     by=By.ID, 
     value="search_form_input_homepage")
