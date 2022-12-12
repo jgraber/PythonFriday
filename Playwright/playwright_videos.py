@@ -23,6 +23,10 @@ def run(playwright: Playwright) -> None:
     print(f"video located in: {path}")
 
 
+    page.screenshot(path="screenshot.png")
+    page.screenshot(path="screenshot_full.png", full_page=True)
+
+
     # ---------------------
     context.close()
     browser.close()
