@@ -104,4 +104,5 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
   * [Python Friday #105: Multiply Strings in Python](https://improveandrepeat.com/2022/01/python-friday-105-multiply-strings-in-python/)
   * [Python Friday #108: Getting Input From the Command Line](https://improveandrepeat.com/2022/02/python-friday-108-getting-input-from-the-command-line/)
   * [Python Friday #120: Modify the Create Date of a File](https://improveandrepeat.com/2022/04/python-friday-120-modify-the-create-date-of-a-file/)
+  * [Python Friday #157: Access Your Wi-Fi Passwords on Windows](https://improveandrepeat.com/2023/01/python-friday-157-access-your-wi-fi-passwords-on-windows/)
 * []()
