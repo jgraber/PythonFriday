@@ -1,0 +1,100 @@
++*In[1]:*+
+[source, ipython3]
+----
+def add(a, b):
+    return a + b
+----
+
+
++*In[2]:*+
+[source, ipython3]
+----
+add(1, 2)
+----
+
+
++*Out[2]:*+
+----3----
+
+
+
+
++*In[3]:*+
+[source, ipython3]
+----
+import os, sys
+code_dir = os.path.abspath(os.path.join(os.getcwd(), 'code'))
+sys.path.insert(0, code_dir)
+----
+
+
++*In[4]:*+
+[source, ipython3]
+----
+from fizzbuzz import fizz_buzz
+----
+
+
++*In[5]:*+
+[source, ipython3]
+----
+fizz_buzz(18)
+----
+
+
++*Out[5]:*+
+----'Fizz'----
+
+
+
+
++*In[6]:*+
+[source, ipython3]
+----
+#import os
+data_file = os.path.abspath(os.path.join(os.getcwd(), 'data', 'project_size.csv'))
+----
+
+
++*In[7]:*+
+[source, ipython3]
+----
+import pandas as pd
+ 
+df = pd.read_csv(data_file, delimiter=';')
+----
+
+
++*In[8]:*+
+[source, ipython3]
+----
+df
+----
+
+
++*Out[8]:*+
+----
+[cols=",,,",options="header",]
+|===
+| |month |project |loc
+|0 |2021.01 |A |100
+|1 |2021.01 |B |1000
+|2 |2021.01 |C |1100
+|3 |2021.02 |A |200
+|4 |2021.02 |B |2100
+|5 |2021.02 |C |1100
+|6 |2021.03 |A |500
+|7 |2021.03 |B |2100
+|8 |2021.03 |C |3100
+|9 |2021.04 |A |1000
+|10 |2021.04 |B |5000
+|11 |2021.04 |C |4100
+|===
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
