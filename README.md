@@ -88,6 +88,8 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
   * [Python Friday #118: Block and Mute Accounts With Tweepy](https://improveandrepeat.com/2022/04/python-friday-118-block-and-mute-accounts-with-tweepy/)
   * [Python Friday #119: Follow, Like and Retweet With Tweepy](https://improveandrepeat.com/2022/04/python-friday-119-follow-like-and-retweet-with-tweepy/)
   * [Python Friday #131: Working With Bookmarks in Tweepy](https://improveandrepeat.com/2022/07/python-friday-131-working-with-bookmarks-in-tweepy/)
+* [Video](./Video)
+  * [Python Friday #158: Extract the Audio of an MP4 Video](https://improveandrepeat.com/2023/01/python-friday-158-extract-the-audio-of-an-mp4-video/)
 * [Web](./Web)
   * [Python Friday #137: HTTP With Requests](https://improveandrepeat.com/2022/08/python-friday-137-http-with-requests/)
   * [Python Friday #138: Parsing HTML With Beautiful Soup](https://improveandrepeat.com/2022/09/python-friday-138-parsing-html-with-beautiful-soup/)
