@@ -31,6 +31,8 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
   * [Python Friday #27: Reading Exif Metadata From Images](https://improveandrepeat.com/2020/07/python-friday-27-reading-exif-metadata-from-images/)
 * [JSON](./JSON)
   * [Python Friday #95: Working With JSON](https://improveandrepeat.com/2021/10/python-friday-95-working-with-json/)
+* [Jupyter](./Jupyter)
+  * [Python Friday #160: Jupyter Notebooks for Your Data Analysis](https://improveandrepeat.com/2023/02/python-friday-160-jupyter-notebooks-for-your-data-analysis/)
 * [NumPy](./NumPy)
   * [Python Friday #109: Set Operations on Lists With NumPy](https://improveandrepeat.com/2022/02/python-friday-109-set-operations-on-lists-with-numpy/)
 * [Pandas](./Pandas)
