@@ -1,5 +1,6 @@
 import networkx as nx
 # pip install networkx
+# Theory: https://en.wikipedia.org/wiki/Graph_theory
 
 G = nx.DiGraph()
 G.add_edge("B","A")
