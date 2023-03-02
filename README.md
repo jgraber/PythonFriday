@@ -34,6 +34,8 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
 * [Jupyter](./Jupyter)
   * [Python Friday #160: Jupyter Notebooks for Your Data Analysis](https://improveandrepeat.com/2023/02/python-friday-160-jupyter-notebooks-for-your-data-analysis/)
   * [Python Friday #161: Organise Data and Code in Jupyter Notebooks](https://improveandrepeat.com/2023/02/python-friday-161-organise-data-and-code-in-jupyter-notebooks/)
+  * [Python Friday #162: Tips & Tricks to Work effectively With JupyterLab](https://improveandrepeat.com/2023/02/python-friday-162-tips-tricks-to-work-effectively-with-jupyterlab/)
+  * [Python Friday #163: Share Your Jupyter Notebooks](https://improveandrepeat.com/2023/02/python-friday-163-share-your-jupyter-notebooks/)
 * [NumPy](./NumPy)
   * [Python Friday #109: Set Operations on Lists With NumPy](https://improveandrepeat.com/2022/02/python-friday-109-set-operations-on-lists-with-numpy/)
 * [Pandas](./Pandas)
