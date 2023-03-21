@@ -38,6 +38,7 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
   * [Python Friday #163: Share Your Jupyter Notebooks](https://improveandrepeat.com/2023/02/python-friday-163-share-your-jupyter-notebooks/)
   * [Python Friday #164: Visualise Data With Matplotlib](https://improveandrepeat.com/2023/03/python-friday-164-visualise-data-with-matplotlib/)
   * [Python Friday #165: Figures and Axes in Matplotlib](https://improveandrepeat.com/2023/03/python-friday-165-figures-and-axes-in-matplotlib/)
+  * [Python Friday #166: Export your Matplotlib Plots](https://improveandrepeat.com/2023/03/python-friday-166-export-your-matplotlib-plots/)
 * [NumPy](./NumPy)
   * [Python Friday #109: Set Operations on Lists With NumPy](https://improveandrepeat.com/2022/02/python-friday-109-set-operations-on-lists-with-numpy/)
 * [Pandas](./Pandas)
