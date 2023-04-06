@@ -46,6 +46,12 @@ def login(driver):
     # wait a moment to finish login
     time.sleep(2)
 
+    # select correct site
+    select_site = driver.find_element(
+        by=By.LINK_TEXT,
+        value="Improve & Repeat")
+    select_site.click()
+
 
 def download_statistics(driver, start):
     end = date.today()
