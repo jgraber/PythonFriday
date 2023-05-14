@@ -35,7 +35,7 @@ def login(page: Page):
     time.sleep(2)
 
     # select correct part
-    page.get_by_role("link", name="Improve & Repeat").click()
+    # page.get_by_role("link", name="Improve & Repeat").click()
 
 
 def download_statistics(page: Page, start: date):
