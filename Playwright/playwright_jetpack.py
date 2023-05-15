@@ -53,11 +53,15 @@ def download_statistics_for_day(page: Page, day: date):
     page.goto(posts)
     
     time.sleep(2)
-     
-    download = page.get_by_role("button", name="Download data as CSV")
-    download.scroll_into_view_if_needed() 
-    download.click()
 
+    with page.expect_download() as download_info: 
+        download = page.get_by_role("button", name="Download data as CSV")
+        download.scroll_into_view_if_needed() 
+        download.click()
+
+    download_value = download_info.value
+    print(download_value.path())
+    download_value.save_as(f"C:/temp/JetpackStats/{day}.csv")
 
 with sync_playwright() as playwright:
     load_dotenv()
