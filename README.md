@@ -44,6 +44,7 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
   * [Python Friday #169: Style Your Plots in Matplotlib](https://improveandrepeat.com/2023/04/python-friday-169-style-your-plots-in-matplotlib/)
   * [Python Friday #170: XKCD Styled Plots for Matplotlib](https://improveandrepeat.com/2023/04/python-friday-170-xkcd-styled-plots-for-matplotlib/)
   * [Python Friday #171: Annotate Your Matplotlib Plots](https://improveandrepeat.com/2023/04/python-friday-171-annotate-your-matplotlib-plots/)
+  * [Python Friday #175: Visualise Data in Pandas With Plot()](https://improveandrepeat.com/2023/05/python-friday-175-visualise-data-in-pandas-with-plot/)
 * [NumPy](./NumPy)
   * [Python Friday #109: Set Operations on Lists With NumPy](https://improveandrepeat.com/2022/02/python-friday-109-set-operations-on-lists-with-numpy/)
 * [Pandas](./Pandas)
