@@ -47,6 +47,7 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
   * [Python Friday #172: Combine Multiple Plots in Matplotlib](https://improveandrepeat.com/2023/04/python-friday-172-combine-multiple-plots-in-matplotlib/)
   * [Python Friday #175: Visualise Data in Pandas With Plot()](https://improveandrepeat.com/2023/05/python-friday-175-visualise-data-in-pandas-with-plot/)
   * [Python Friday #176: Visualise Data in Pandas With Hist() & Boxplot()](https://improveandrepeat.com/2023/05/python-friday-176-visualise-data-in-pandas-with-hist-boxplot/)
+  * [Python Friday #177: Customise Your Plots in Pandas](https://improveandrepeat.com/2023/06/python-friday-177-customise-your-plots-in-pandas/)
 * [NumPy](./NumPy)
   * [Python Friday #109: Set Operations on Lists With NumPy](https://improveandrepeat.com/2022/02/python-friday-109-set-operations-on-lists-with-numpy/)
 * [Pandas](./Pandas)
