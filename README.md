@@ -49,6 +49,7 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
   * [Python Friday #176: Visualise Data in Pandas With Hist() & Boxplot()](https://improveandrepeat.com/2023/05/python-friday-176-visualise-data-in-pandas-with-hist-boxplot/)
   * [Python Friday #177: Customise Your Plots in Pandas](https://improveandrepeat.com/2023/06/python-friday-177-customise-your-plots-in-pandas/)
   * [Python Friday #180: Explore Your Data With Seaborn](https://improveandrepeat.com/2023/06/python-friday-180-explore-your-data-with-seaborn/)
+  * [Python Friday #181: Making Sense of Your Data With Seaborn](https://improveandrepeat.com/2023/06/python-friday-181-making-sense-of-your-data-with-seaborn/)
 * [NumPy](./NumPy)
   * [Python Friday #109: Set Operations on Lists With NumPy](https://improveandrepeat.com/2022/02/python-friday-109-set-operations-on-lists-with-numpy/)
 * [Pandas](./Pandas)
