@@ -61,6 +61,7 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
   * [Python Friday #178: Clean-up Your Data With Pandas](https://improveandrepeat.com/2023/06/python-friday-178-cleanup-your-data-with-pandas/)
   * [Python Friday #179: Explore Your Data With Pandas](https://improveandrepeat.com/2023/06/python-friday-179-explore-your-data-with-pandas/)
   * [Python Friday #185: Creating DataFrames in Pandas](https://improveandrepeat.com/2023/07/python-friday-185-creating-dataframes-in-pandas/)
+  * [Python Friday #186: Filter Data in Pandas](https://improveandrepeat.com/2023/08/filter-data-in-your-pandas-dataframe/)
 * [Playwright](./Playwright)
   * [Python Friday #152: Playwright for Python](https://improveandrepeat.com/2022/12/python-friday-152-playwright-for-python/)
   * [Python Friday #153: Automate Browsers With Playwright](https://improveandrepeat.com/2022/12/python-friday-153-automate-browsers-with-playwright/)
