@@ -53,6 +53,8 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
   * [Python Friday #182: Style Your Plots in Seaborn](https://improveandrepeat.com/2023/07/python-friday-182-style-your-plots-in-seaborn/)
   * [Python Friday #183: Advanced Tips & Tricks for JupyterLab](https://improveandrepeat.com/2023/07/python-friday-183-advanced-tips-tricks-for-jupyterlab/)
   * [Python Friday #184: Performance-Related Magic Commands in Jupyter](https://improveandrepeat.com/2023/07/python-friday-184-performance-related-magic-commands-in-jupyter/)
+  * [Python Friday #187: Extracting the NDC Talks Data From YouTube](https://improveandrepeat.com/2023/08/python-friday-187-extracting-the-ndc-talks-data-from-youtube/)
+  * [Python Friday #188: Working With the NDC Talks Data](https://improveandrepeat.com/2023/08/python-friday-188-working-with-the-ndc-talks-data/)
 * [NumPy](./NumPy)
   * [Python Friday #109: Set Operations on Lists With NumPy](https://improveandrepeat.com/2022/02/python-friday-109-set-operations-on-lists-with-numpy/)
 * [Pandas](./Pandas)
