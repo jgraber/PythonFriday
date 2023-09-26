@@ -55,6 +55,7 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
   * [Python Friday #184: Performance-Related Magic Commands in Jupyter](https://improveandrepeat.com/2023/07/python-friday-184-performance-related-magic-commands-in-jupyter/)
   * [Python Friday #187: Extracting the NDC Talks Data From YouTube](https://improveandrepeat.com/2023/08/python-friday-187-extracting-the-ndc-talks-data-from-youtube/)
   * [Python Friday #188: Working With the NDC Talks Data](https://improveandrepeat.com/2023/08/python-friday-188-working-with-the-ndc-talks-data/)
+  * [Python Friday #189: Visualize Text With a Word Cloud](https://improveandrepeat.com/2023/08/python-friday-189-visualize-text-with-a-word-cloud/)
 * [NumPy](./NumPy)
   * [Python Friday #109: Set Operations on Lists With NumPy](https://improveandrepeat.com/2022/02/python-friday-109-set-operations-on-lists-with-numpy/)
 * [Pandas](./Pandas)
