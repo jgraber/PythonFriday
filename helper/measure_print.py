@@ -21,4 +21,4 @@ def without_prints():
 if __name__ == '__main__':      
     print(timeit.repeat(with_prints, number=1, repeat=5))
     print(timeit.repeat(without_prints, number=1, repeat=5))
-    print(without_prints())
+    print(f"number of loops: {without_prints()}")
