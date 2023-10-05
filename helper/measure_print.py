@@ -1,5 +1,9 @@
 import timeit
 
+"""
+A simplified example on how much print() can cost if you call it in huge numbers.
+"""
+
 def with_prints():
     a = 0
     for i in range(0,1000):
