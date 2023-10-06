@@ -61,6 +61,7 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
   * [Python Friday #192: Plotly-Specific Diagrams](https://improveandrepeat.com/2023/09/python-friday-192-plotly-specific-diagrams/)
   * [Python Friday #193: Choosing Colours for Plotly](https://improveandrepeat.com/2023/09/python-friday-193-choosing-colours-for-plotly/)
   * [Python Friday #194: Templates for Plotly](https://improveandrepeat.com/2023/09/python-friday-194-templates-for-plotly/)
+  * [Python Friday #195: Customise Your Plots in Plotly](https://improveandrepeat.com/2023/10/python-friday-195-customise-your-plots-in-plotly/)
 * [NumPy](./NumPy)
   * [Python Friday #109: Set Operations on Lists With NumPy](https://improveandrepeat.com/2022/02/python-friday-109-set-operations-on-lists-with-numpy/)
 * [Pandas](./Pandas)
