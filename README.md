@@ -35,6 +35,7 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
     * [Python Friday #193: Choosing Colours for Plotly](https://improveandrepeat.com/2023/09/python-friday-193-choosing-colours-for-plotly/)
     * [Python Friday #194: Templates for Plotly](https://improveandrepeat.com/2023/09/python-friday-194-templates-for-plotly/)
     * [Python Friday #195: Customise Your Plots in Plotly](https://improveandrepeat.com/2023/10/python-friday-195-customise-your-plots-in-plotly/)
+    * [Python Friday #196: Engine Troubles When Saving Plots With Plotly](https://improveandrepeat.com/2023/10/python-friday-196-engine-troubles-when-saving-plots-with-plotly/)
   * [WordCloud](./DataVisualisation/WordCloud)
     * [Python Friday #189: Visualize Text With a Word Cloud](https://improveandrepeat.com/2023/08/python-friday-189-visualize-text-with-a-word-cloud/)
 * [EnvironmentVars](./EnvironmentVars)
