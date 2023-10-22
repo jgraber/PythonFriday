@@ -11,6 +11,8 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
   * [Python Friday #127: Track the State of a Celery Task](https://improveandrepeat.com/2022/06/python-friday-127-track-the-state-of-a-celery-task/)
   * [Python Friday #128: Periodic Tasks in Celery](https://improveandrepeat.com/2022/06/python-friday-128-periodic-tasks-in-celery/)
 * [DataVisualisation](./DataVisualisation)
+  * [Dash](./DataVisualisation/Dash)
+    * [Python Friday #197: Creating Interactive Dashboards With Dash](https://improveandrepeat.com/2023/10/python-friday-197-creating-interactive-dashboards-with-dash/)
   * [Matplotlib](./DataVisualisation/Matplotlib)
     * [Python Friday #164: Visualise Data With Matplotlib](https://improveandrepeat.com/2023/03/python-friday-164-visualise-data-with-matplotlib/)
     * [Python Friday #165: Figures and Axes in Matplotlib](https://improveandrepeat.com/2023/03/python-friday-165-figures-and-axes-in-matplotlib/)
