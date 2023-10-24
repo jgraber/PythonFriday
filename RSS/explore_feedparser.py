@@ -6,7 +6,6 @@ f = feedparser.parse('https://improveandrepeat.com/category/pythonfriday/feed/')
 
 print("Title: " + f.feed.title)
 print("Site: " + f.feed.link)
-#print("Generator: " + f.feed.generator)
 print("Last updated: " +f.feed.updated)
 
 for post in reversed(f.entries):
