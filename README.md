@@ -88,6 +88,8 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
   * [Python Friday #154: Figure Out Where Playwright Went Wrong](https://improveandrepeat.com/2022/12/python-friday-154-figure-out-where-playwright-went-wrong/)
   * [Python Friday #155: Download Jetpack Statistics With Playwright](https://improveandrepeat.com/2022/12/python-friday-155-download-jetpack-statistics-with-playwright/)
   * [Python Friday #156: Connect Playwright to BrowserStack and Selenium Grid](https://improveandrepeat.com/2023/01/python-friday-156-connect-playwright-to-browserstack-and-selenium-grid/)
+* [Python](./Python)
+  * [Python Friday #202: Rounding in Python](https://improveandrepeat.com/2023/11/python-friday-202-rounding-in-python/)
 * [RSS](./RSS)
   * [Python Friday #102: Parse Atom and RSS Feeds With Feedparser](https://improveandrepeat.com/2021/12/python-friday-102-parse-atom-and-rss-feeds-with-feedparser/)  
 * [SQLAlchemy](./SQLAlchemy)
