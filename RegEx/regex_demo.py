@@ -20,7 +20,12 @@ for i in res:
 # <re.Match object; span=(0, 3), match='123'>
 # <re.Match object; span=(6, 9), match='123'>
 
-
+res = re.findall("\d","123abc123")
+res
+# ['1', '2', '3', '1', '2', '3']
+res = re.findall("\d+","123abc123")
+res
+# ['123', '123']
 
 """
 >>> import re
@@ -85,4 +90,13 @@ IndexError: list index out of range
 >>> res
 >>> res = re.fullmatch("123abc123",text)
 >>> res
-<re.Match object; span=(0, 9), match='123abc123'>"""
+<re.Match object; span=(0, 9), match='123abc123'>
+
+>>> res = re.findall("\d","123abc123")
+>>> res
+['1', '2', '3', '1', '2', '3']
+>>> res = re.findall("\d+","123abc123")
+>>> res
+['123', '123']
+
+"""
