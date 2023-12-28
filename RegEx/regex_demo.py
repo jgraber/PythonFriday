@@ -27,6 +27,15 @@ res = re.findall("\d+","123abc123")
 res
 # ['123', '123']
 
+
+
+res = re.sub("\d+", "#", "123abc123")
+res
+
+res, no = re.subn("\d+", "#", "123abc123")
+res
+no
+
 """
 >>> import re
 >>> text = "123abc123"
@@ -98,5 +107,14 @@ IndexError: list index out of range
 >>> res = re.findall("\d+","123abc123")
 >>> res
 ['123', '123']
+
+>>> res = re.sub("\d+", "#", "123abc123")
+>>> res
+'#abc#'
+>>> res, no = re.subn("\d+", "#", "123abc123")
+>>> res
+'#abc#'
+>>> no
+2
 
 """
