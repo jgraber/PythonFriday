@@ -27,6 +27,24 @@ res = re.findall("\d+","123abc123")
 res
 # ['123', '123']
 
+res = re.search(r"(\b[A-Z]+\b).+(\b\d+.\d+)","The price of APPLE is 192.34")
+res.groups()
+# ('APPLE', '192.34')
+res.group(1)
+# 'APPLE'
+res.group(2)
+# '192.34'
+
+res = re.search(r"(?P<stock>\b[A-Z]+\b).+(?P<price>\b\d+.\d+)","The price of APPLE is 192.34")
+res.groups()
+# ('APPLE', '192.34')
+res.group("stock")
+# 'APPLE'
+res.group("price")
+# '192.34'
+
+"a<2006,m>2090"
+
 
 
 res = re.sub("\d+", "#", "123abc123")
@@ -107,6 +125,24 @@ IndexError: list index out of range
 >>> res = re.findall("\d+","123abc123")
 >>> res
 ['123', '123']
+
+
+>>> res = re.search(r"(\b[A-Z]+\b).+(\b\d+.\d+)","The price of APPLE is 192.34")
+>>> res.groups()
+('APPLE', '192.34')
+>>> res.group(1)
+'APPLE'
+>>> res.group(2)
+'192.34'
+
+>>> res = re.search(r"(?P<stock>\b[A-Z]+\b).+(?P<price>\b\d+.\d+)","The price of APPLE is 192.34")
+>>> res.groups()
+('APPLE', '192.34')
+>>> res.group("stock")
+'APPLE'
+>>> res.group("price")
+'192.34'
+
 
 >>> res = re.sub("\d+", "#", "123abc123")
 >>> res
