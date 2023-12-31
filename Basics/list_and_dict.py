@@ -92,6 +92,18 @@ data = ['H', 'e', 'l', 'l', 'o']
 data = ['H', 'e', 'l', 'l', 'o', 1, 2, 3]
 "".join(str(x) for x in data)
 
+
+
+data = ['H', 'e', 'l', 'l', 'o', 1, 2, 3]
+for value in data:
+    print(value)
+
+
+data = ['H', 'e', 'l', 'l', 'o', 1, 2, 3]
+for index, value in enumerate(data):
+    print(f"{index}. => {value}")
+
+
 print("*" * 50)
 
 data = {"a":4, "b":2, "d":3, "e":5, "f":1}
@@ -201,6 +213,32 @@ max(data, key=data.get)
 >>> data = ['H', 'e', 'l', 'l', 'o', 1, 2, 3]
 >>> "".join(str(x) for x in data)
 'Hello123'
+>>> data = ['H', 'e', 'l', 'l', 'o', 1, 2, 3]
+>>> for value in data:
+...     print(value)
+...
+H
+e
+l
+l
+o
+1
+2
+3
+>>> data = ['H', 'e', 'l', 'l', 'o', 1, 2, 3]
+>>> for index, value in enumerate(data):
+...     print(f"{index}. => {value}")
+...
+0. => H
+1. => e
+2. => l
+3. => l
+4. => o
+5. => 1
+6. => 2
+7. => 3
+
+
 >>> print("*" * 50)
 **************************************************
 
