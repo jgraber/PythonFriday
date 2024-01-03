@@ -43,16 +43,25 @@ res.group("stock")
 res.group("price")
 # '192.34'
 
-"a<2006,m>2090"
-
-
 
 res = re.sub("\d+", "#", "123abc123")
 res
+# '#abc#'
 
 res, no = re.subn("\d+", "#", "123abc123")
 res
+# '#abc#'
 no
+# 2
+
+
+p = re.compile('[a-z]+')
+p.search("abc123cde")
+# <re.Match object; span=(0, 3), match='abc'>
+p.findall("abc123cde")
+# ['abc', 'cde']
+
+
 
 """
 >>> import re
@@ -153,4 +162,11 @@ IndexError: list index out of range
 >>> no
 2
 
+
+>>> p = re.compile('[a-z]+')
+>>> p.search("abc123cde")
+<re.Match object; span=(0, 3), match='abc'>
+>>> p.findall("abc123cde")
+['abc', 'cde']
+>>>
 """
