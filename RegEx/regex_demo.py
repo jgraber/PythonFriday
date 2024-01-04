@@ -62,6 +62,13 @@ p.findall("abc123cde")
 # ['abc', 'cde']
 
 
+regular = "\\w+\\s+\\1"
+regular
+# '\\w+\\s+\\1'
+escaped = r"\w+\s+\1"
+escaped
+# '\\w+\\s+\\1'
+
 
 """
 >>> import re
@@ -169,4 +176,12 @@ IndexError: list index out of range
 >>> p.findall("abc123cde")
 ['abc', 'cde']
 >>>
+
+
+>>> regular = "\\w+\\s+\\1"
+>>> regular
+'\\w+\\s+\\1'
+>>> escaped = r"\w+\s+\1"
+>>> escaped
+'\\w+\\s+\\1'
 """
