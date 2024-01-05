@@ -55,6 +55,17 @@ no
 # 2
 
 
+res = re.sub("123", "#", "123abc123")
+res
+# '#abc#'
+
+res, no = re.subn("123", "#", "123abc123")
+res
+# '#abc#'
+no
+# 2
+
+
 p = re.compile('[a-z]+')
 p.search("abc123cde")
 # <re.Match object; span=(0, 3), match='abc'>
@@ -169,6 +180,14 @@ IndexError: list index out of range
 >>> no
 2
 
+>>> res = re.sub("123", "#", "123abc123")
+>>> res
+'#abc#'
+>>> res, no = re.subn("123", "#", "123abc123")
+>>> res
+'#abc#'
+>>> no
+2
 
 >>> p = re.compile('[a-z]+')
 >>> p.search("abc123cde")
