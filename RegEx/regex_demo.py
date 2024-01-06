@@ -27,7 +27,7 @@ res = re.findall("\d+","123abc123")
 res
 # ['123', '123']
 
-res = re.search(r"(\b[A-Z]+\b).+(\b\d+.\d+)","The price of APPLE is 192.34")
+res = re.search(r"(\b[A-Z]+\b).+(\b\d+.\d+)","The price of AAPL is 192.34")
 res.groups()
 # ('APPLE', '192.34')
 res.group(1)
@@ -35,7 +35,7 @@ res.group(1)
 res.group(2)
 # '192.34'
 
-res = re.search(r"(?P<stock>\b[A-Z]+\b).+(?P<price>\b\d+.\d+)","The price of APPLE is 192.34")
+res = re.search(r"(?P<stock>\b[A-Z]+\b).+(?P<price>\b\d+.\d+)","The price of AAPL is 192.34")
 res.groups()
 # ('APPLE', '192.34')
 res.group("stock")
