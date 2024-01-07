@@ -1,5 +1,7 @@
 import re
 res = re.search("123","123abc123")
+res
+# <re.Match object; span=(0, 3), match='123'>
 type(res)
 # <class 're.Match'>
 res = re.search("1234","123abc123")
@@ -8,6 +10,7 @@ type(res)
 
 res = re.findall("123","123abc123")
 res
+# ['123', '123']
 type(res)
 # <class 'list'>
 type(res[0])
@@ -19,6 +22,17 @@ for i in res:
 
 # <re.Match object; span=(0, 3), match='123'>
 # <re.Match object; span=(6, 9), match='123'>
+
+res = re.match("123", "123abc1234")
+res
+# <re.Match object; span=(0, 3), match='123'>
+res = re.match("1234", "123abc1234")
+res
+# nothing
+
+res = re.fullmatch("abc", "abc")
+res
+# <re.Match object; span=(0, 3), match='abc'>
 
 res = re.findall("\d","123abc123")
 res
@@ -65,6 +79,9 @@ res
 no
 # 2
 
+
+p = re.compile('123')
+p.search("abc123cde")
 
 p = re.compile('[a-z]+')
 p.search("abc123cde")
