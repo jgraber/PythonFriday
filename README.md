@@ -1,6 +1,8 @@
 # Python Friday examples
 A place to put the code samples of my [Python Friday](https://improveandrepeat.com/category/pythonfriday/) blog series:
 
+* [Basics](./Basics)
+  * [Python Friday #208: Working With Lists and Dictionaries](https://improveandrepeat.com/2024/01/python-friday-208-working-with-lists-and-dictionaries/)
 * [Celery](./Celery)
   * [Python Friday #121: RabbitMQ and Python](https://improveandrepeat.com/2022/05/python-friday-121-rabbitmq-and-python/)
   * [Python Friday #122: Asynchronous Jobs With Celery](https://improveandrepeat.com/2022/05/python-friday-122-asynchronous-jobs-with-celery/)
