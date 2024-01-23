@@ -16,7 +16,7 @@ asyncio.run(sequence())
 
 print("*" * 50)
 
-
+# https://docs.python.org/3/library/asyncio-task.html#running-tasks-concurrently
 async def parallel():
     await asyncio.gather(hi(), hi(), hi())
 
