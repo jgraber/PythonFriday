@@ -1,4 +1,5 @@
 import asyncio
+import time
 
 
 async def hi():
@@ -12,7 +13,10 @@ async def sequence():
     await hi()
     await hi()
 
+start = time.perf_counter()
 asyncio.run(sequence())
+elapsed = time.perf_counter() - start
+print(f"sequence() executed in {elapsed:0.2f} seconds.")
 
 print("*" * 50)
 
