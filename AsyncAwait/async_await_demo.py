@@ -24,4 +24,7 @@ print("*" * 50)
 async def parallel():
     await asyncio.gather(hi(), hi(), hi())
 
-asyncio.run(parallel())    
+start = time.perf_counter()
+asyncio.run(parallel())  
+elapsed = time.perf_counter() - start
+print(f"parallel() executed in {elapsed:0.2f} seconds.")  
