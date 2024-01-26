@@ -28,3 +28,18 @@ start = time.perf_counter()
 asyncio.run(parallel())  
 elapsed = time.perf_counter() - start
 print(f"parallel() executed in {elapsed:0.2f} seconds.")  
+
+
+print("*" * 50)
+
+async def too_long():
+    await asyncio.sleep(10)
+
+async def starter():
+    try:
+        async with asyncio.timeout(5):
+            await too_long()
+    except TimeoutError:
+        print("Got a time out for the long running method")
+
+asyncio.run(starter()) 
