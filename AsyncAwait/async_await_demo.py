@@ -35,6 +35,7 @@ print("*" * 50)
 async def too_long():
     await asyncio.sleep(10)
 
+# https://docs.python.org/3/library/asyncio-task.html#timeouts
 async def starter():
     try:
         async with asyncio.timeout(5):
