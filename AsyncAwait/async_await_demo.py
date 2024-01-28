@@ -43,4 +43,7 @@ async def starter():
     except TimeoutError:
         print("Got a time out for the long running method")
 
+start = time.perf_counter()
 asyncio.run(starter()) 
+elapsed = time.perf_counter() - start
+print(f"starter() executed in {elapsed:0.2f} seconds.") 
