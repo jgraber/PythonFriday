@@ -1,6 +1,12 @@
 import asyncio
 import time
 
+# async def use_sleep():
+#     await time.sleep(2)
+
+# asyncio.run(use_sleep())
+# # => TypeError: object NoneType can't be used in 'await' expression
+
 
 async def hi():
     print("Hello")
