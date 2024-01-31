@@ -1,6 +1,15 @@
 import asyncio
 import time
 
+
+async def use_sleep():
+    print("start sleep")
+    time.sleep(2)
+    print("end sleep")
+
+
+asyncio.run(use_sleep())
+
 # async def use_sleep():
 #     await time.sleep(2)
 
