@@ -38,3 +38,18 @@ print(gc.get_count())
 print(gc.get_threshold())
 print(len(students))
 
+
+gc.disable()
+start = time.perf_counter()
+students = []
+for i in range(1, 10000000):
+    x = Student(str(i))
+    students.append(x)
+elapsed = time.perf_counter() - start
+print(f"GC disabled executed in {elapsed:0.2f} seconds.")
+
+print(gc.get_stats())
+print(gc.get_count())
+print(gc.get_threshold())
+print(len(students))
+gc.enable()
