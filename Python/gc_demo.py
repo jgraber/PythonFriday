@@ -12,7 +12,7 @@ print(gc.is_tracked(j))
 
 start = time.perf_counter()
 students = []
-for i in range(1, 10000000):
+for i in range(0, 10_000_000):
     x = Student(str(i))
     students.append(x)
 elapsed = time.perf_counter() - start
@@ -27,7 +27,7 @@ print(len(students))
 gc.set_threshold(50000, 100, 100)
 start = time.perf_counter()
 students = []
-for i in range(1, 10000000):
+for i in range(0, 10_000_000):
     x = Student(str(i))
     students.append(x)
 elapsed = time.perf_counter() - start
@@ -42,7 +42,7 @@ print(len(students))
 gc.disable()
 start = time.perf_counter()
 students = []
-for i in range(1, 10000000):
+for i in range(0, 10_000_000):
     x = Student(str(i))
     students.append(x)
 elapsed = time.perf_counter() - start
