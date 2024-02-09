@@ -15,7 +15,7 @@ asyncio.run(use_sleep())
 
 # asyncio.run(use_sleep())
 # # => TypeError: object NoneType can't be used in 'await' expression
-
+print("*" * 50)
 
 async def hi():
     print("Hello")
@@ -23,6 +23,10 @@ async def hi():
     # time.sleep(1)
     print("World")
 
+
+asyncio.run(hi())
+
+print("*" * 50)
 
 async def sequence():
     await hi()
