@@ -1,7 +1,8 @@
 from typing import Union
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 
 app = FastAPI()
+
 
 @app.get("/")
 async def read_root():
@@ -11,6 +12,11 @@ async def read_root():
 @app.get("/items/{item_id}")
 async def read_item(item_id: int, q: Union[str, None] = None):
     return {"item_id": item_id, "q": q}
+
+
+@app.get("/echo")
+async def echo(request: Request):
+    return request.query_params
 
 # Installation: pip install fastapi && pip install "uvicorn[standard]"
 # Start: uvicorn main:app --reload
