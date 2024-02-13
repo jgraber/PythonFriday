@@ -18,6 +18,23 @@ async def read_item(item_id: int, q: Union[str, None] = None):
 async def echo(request: Request):
     return request.query_params
 
+
+# @app.get("/calculator")
+# async def calculate(a, b, c):
+#     return a + b + c
+
+
+# @app.get("/calculator")
+# async def calculate(a, b, c):
+#     a = int(a)
+#     b = int(b)
+#     c = int(c)
+#     return a + b + c
+
+@app.get("/calculator")
+async def calculate(a: int, b: int, c: int):
+    return a + b + c
+
 # Installation: pip install fastapi && pip install "uvicorn[standard]"
 # Start: uvicorn main:app --reload
 # Endpoints:
