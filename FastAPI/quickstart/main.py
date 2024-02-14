@@ -35,6 +35,16 @@ async def echo(request: Request):
 async def calculate(a: int, b: int, c: int):
     return a + b + c
 
+
+# @app.get("/weather/{city}")
+# async def weather(city):
+#     return {"city": city}
+
+@app.get("/weather/{city}")
+async def weather(city: int):
+    return {"city": city}
+
+
 # Installation: pip install fastapi && pip install "uvicorn[standard]"
 # Start: uvicorn main:app --reload
 # Endpoints:
