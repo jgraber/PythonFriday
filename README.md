@@ -99,6 +99,7 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
   * [Python Friday #204: Using Feedparser With Self-Signed Certificates](https://improveandrepeat.com/2023/12/python-friday-204-using-feedparser-with-self-signed-certificates/)  
 * [RegEx](./RegEx)
   * [Python Friday #211: First Steps With Regular Expressions](https://improveandrepeat.com/2024/01/python-friday-211-first-steps-with-regular-expressions/)
+  * [Python Friday #212: Regular Expressions With Metacharacters](https://improveandrepeat.com/2024/02/python-friday-212-regular-expressions-with-metacharacters/)
 * [SQLAlchemy](./SQLAlchemy)
   * [Python Friday #92: Where to Start With SQLAlchemy](https://improveandrepeat.com/2021/10/python-friday-92-where-to-start-with-sqlalchemy/)
   * [Python Friday #73: First Steps with SQLAlchemy](https://improveandrepeat.com/2021/05/python-friday-73-first-steps-with-sqlalchemy/)
