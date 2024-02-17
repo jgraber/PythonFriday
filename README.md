@@ -94,6 +94,7 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
   * [Python Friday #156: Connect Playwright to BrowserStack and Selenium Grid](https://improveandrepeat.com/2023/01/python-friday-156-connect-playwright-to-browserstack-and-selenium-grid/)
 * [Python](./Python)
   * [Python Friday #202: Rounding in Python](https://improveandrepeat.com/2023/11/python-friday-202-rounding-in-python/)
+  * [Python Friday #213: Tune the Garbage Collector](https://improveandrepeat.com/2024/02/python-friday-213-tune-the-garbage-collector/)
 * [RSS](./RSS)
   * [Python Friday #102: Parse Atom and RSS Feeds With Feedparser](https://improveandrepeat.com/2021/12/python-friday-102-parse-atom-and-rss-feeds-with-feedparser/)
   * [Python Friday #204: Using Feedparser With Self-Signed Certificates](https://improveandrepeat.com/2023/12/python-friday-204-using-feedparser-with-self-signed-certificates/)  
