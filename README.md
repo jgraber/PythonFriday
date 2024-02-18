@@ -49,6 +49,8 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
 * [EnvironmentVars](./EnvironmentVars)
   * [Python Friday #106: Accessing Environment Variables in Python](https://improveandrepeat.com/2022/01/python-friday-106-accessing-environment-variables-in-python/)
   * [Python Friday #107: Working With .env Files in Python](https://improveandrepeat.com/2022/01/python-friday-107-working-with-env-files-in-python/)
+* [FastAPI](./FastAPI)
+  * [Python Friday #214: First Steps With FastAPI](https://improveandrepeat.com/2024/02/python-friday-214-first-steps-with-fastapi/)
 * [Flask](./Flask)
   * [Python Friday #32: First Steps With Flask](https://improveandrepeat.com/2020/08/python-friday-32-first-steps-with-flask/)
   * [Python Friday #33: Activate Auto-Reload for Flask in VS Code](https://improveandrepeat.com/2020/08/python-friday-33-activate-auto-reload-for-flask-in-vs-code/)
