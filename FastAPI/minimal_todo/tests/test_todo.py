@@ -23,3 +23,20 @@ def test_create_task():
     assert result['due_date'] == data['due_date']
 
 
+def test_show_task():
+    data = {
+        "name": "A second task",
+        "priority": 4,
+        "due_date": str(date.today() + timedelta(days=1))
+    }
+
+    prepare_response = client.post("/api/todo/", json=data)
+    assert prepare_response.status_code == 200
+
+    id = prepare_response.json()['id']
+    response = client.get(f"/api/todo/{id}")
+    assert response.status_code == 200
+    details = response.json()
+    assert details['name'] == data['name']
+
+
