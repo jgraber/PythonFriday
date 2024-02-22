@@ -40,3 +40,9 @@ def test_show_task():
     assert details['name'] == data['name']
 
 
+def test_show_task_where_task_is_unknown():
+    response = client.get(f"/api/todo/-1")
+    assert response.status_code == 404
+    assert response.json()['detail'] == "Task not found"
+
+

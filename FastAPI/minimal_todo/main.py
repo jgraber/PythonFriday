@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from .models.todo import *
 
 app = FastAPI()
@@ -21,5 +22,12 @@ async def create_task(task: TaskInput):
 @app.get("/api/todo/{id}")
 async def show_task(id: int):
     result = [item for item in db if item.id == id]
-    return result[0]
+    # return result[0]
+
+    if len(result) > 0:
+        return result[0]
+    else:
+        raise HTTPException(status_code=404, detail="Task not found")
+    
+
 
