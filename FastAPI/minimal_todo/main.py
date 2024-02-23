@@ -1,4 +1,3 @@
-from fastapi import FastAPI
 from fastapi import FastAPI, HTTPException
 from .models.todo import *
 
@@ -30,4 +29,19 @@ async def show_task(id: int):
         raise HTTPException(status_code=404, detail="Task not found")
     
 
+
+@app.put("/api/todo/{id}")
+async def update_task(id: int, task: TaskInput):
+    result = [item for item in db if item.id == id]
+
+    if len(result) == 1:
+        current = result[0]
+        current.name = task.name
+        current.priority = task.priority
+        current.due_date = task.due_date
+
+        return current
+    else:
+        raise HTTPException(status_code=404, detail="Task not found")
+    
 

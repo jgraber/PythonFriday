@@ -46,3 +46,29 @@ def test_show_task_where_task_is_unknown():
     assert response.json()['detail'] == "Task not found"
 
 
+def test_update_task():
+    data = {
+        "name": "A 2nd task",
+        "priority": 4,
+        "due_date": str(date.today() + timedelta(days=1))
+    }
+
+    prepare_response = client.post("/api/todo/", json=data)
+    assert prepare_response.status_code == 200
+
+    id = prepare_response.json()['id']
+
+    update = {
+        "name": "An updated task",
+        "priority": 5,
+        "due_date": str(date.today() + timedelta(days=2))
+    }
+
+    response = client.put(f"/api/todo/{id}", json=update)
+    assert response.status_code == 200
+    assert response.json()['name'] == "An updated task"
+
+    check = client.get(f"/api/todo/{id}")
+    assert check.json()['name'] == "An updated task"
+
+
