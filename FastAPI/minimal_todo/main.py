@@ -45,3 +45,9 @@ async def update_task(id: int, task: TaskInput):
         raise HTTPException(status_code=404, detail="Task not found")
     
 
+@app.delete("/api/todo/{id}")
+async def delete_task(id: int):
+    result = [item for item in db if item.id == id]
+
+    if len(result) == 1:
+        db.remove(result[0])
