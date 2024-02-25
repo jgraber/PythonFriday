@@ -21,7 +21,7 @@ async def echo(request: Request):
 
 # @app.get("/calculator")
 # async def calculate(a, b, c):
-#     return a + b + c
+#     return {"value": a + b + c}
 
 
 # @app.get("/calculator")
@@ -29,11 +29,11 @@ async def echo(request: Request):
 #     a = int(a)
 #     b = int(b)
 #     c = int(c)
-#     return a + b + c
+#     return {"value": a + b + c}
 
 @app.get("/calculator")
 async def calculate(a: int, b: int, c: int):
-    return a + b + c
+    return {"value": a + b + c}
 
 
 # @app.get("/weather/{city}")
