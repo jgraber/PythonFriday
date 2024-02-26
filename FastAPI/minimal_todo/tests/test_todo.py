@@ -9,7 +9,8 @@ def test_create_task():
     data = {
         "name": "A first task",
         "priority": 5,
-        "due_date": str(date.today() + timedelta(days=1))
+        "due_date": str(date.today() + timedelta(days=1)),
+        "done": False
     }
 
     response = client.post("/api/todo/", json=data)
@@ -27,7 +28,8 @@ def test_show_task():
     data = {
         "name": "A second task",
         "priority": 4,
-        "due_date": str(date.today() + timedelta(days=1))
+        "due_date": str(date.today() + timedelta(days=1)),
+        "done": False
     }
 
     prepare_response = client.post("/api/todo/", json=data)
@@ -50,7 +52,8 @@ def test_update_task():
     data = {
         "name": "A 2nd task",
         "priority": 4,
-        "due_date": str(date.today() + timedelta(days=1))
+        "due_date": str(date.today() + timedelta(days=1)),
+        "done": False
     }
 
     prepare_response = client.post("/api/todo/", json=data)
@@ -61,7 +64,8 @@ def test_update_task():
     update = {
         "name": "An updated task",
         "priority": 5,
-        "due_date": str(date.today() + timedelta(days=2))
+        "due_date": str(date.today() + timedelta(days=2)),
+        "done": False
     }
 
     response = client.put(f"/api/todo/{id}", json=update)
@@ -76,7 +80,8 @@ def test_delete_task():
     data = {
         "name": "A 2nd task",
         "priority": 4,
-        "due_date": str(date.today() + timedelta(days=1))
+        "due_date": str(date.today() + timedelta(days=1)),
+        "done": False
     }
 
     prepare_response = client.post("/api/todo/", json=data)

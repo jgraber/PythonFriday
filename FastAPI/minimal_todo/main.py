@@ -12,7 +12,7 @@ async def create_task(task: TaskInput):
                         name=task.name, 
                         priority=task.priority, 
                         due_date=task.due_date,
-                        done=False, 
+                        done=task.done, 
                         created_at=date.today())
     db.append(result)
     return result

@@ -5,6 +5,7 @@ class TaskInput(BaseModel):
     name: str
     priority: int
     due_date: date
+    done: bool
 
 
 class TaskOutput(BaseModel):
