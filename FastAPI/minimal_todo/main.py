@@ -39,6 +39,7 @@ async def update_task(id: int, task: TaskInput):
         current.name = task.name
         current.priority = task.priority
         current.due_date = task.due_date
+        current.done = task.done
 
         return current
     else:
