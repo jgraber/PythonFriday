@@ -24,22 +24,27 @@ def test_create_task():
     assert result['due_date'] == data['due_date']
 
 
-def test_show_task():
+def prepare_task(name, priority=4, due_date=None, done=False):
     data = {
-        "name": "A second task",
-        "priority": 4,
+        "name": name,
+        "priority": priority,
         "due_date": str(date.today() + timedelta(days=1)),
-        "done": False
+        "done": done
     }
 
     prepare_response = client.post("/api/todo/", json=data)
     assert prepare_response.status_code == 200
+    return prepare_response.json()['id']
 
-    id = prepare_response.json()['id']
+def test_show_task():
+    name = "A second task"
+    id = prepare_task(name)
+
     response = client.get(f"/api/todo/{id}")
     assert response.status_code == 200
     details = response.json()
-    assert details['name'] == data['name']
+    print(details)
+    assert details['name'] == name
 
 
 def test_show_task_where_task_is_unknown():
@@ -49,17 +54,7 @@ def test_show_task_where_task_is_unknown():
 
 
 def test_update_task():
-    data = {
-        "name": "A 2nd task",
-        "priority": 4,
-        "due_date": str(date.today() + timedelta(days=1)),
-        "done": False
-    }
-
-    prepare_response = client.post("/api/todo/", json=data)
-    assert prepare_response.status_code == 200
-
-    id = prepare_response.json()['id']
+    id = prepare_task("original")
 
     update = {
         "name": "An updated task",
@@ -77,17 +72,7 @@ def test_update_task():
 
 
 def test_delete_task():
-    data = {
-        "name": "A 2nd task",
-        "priority": 4,
-        "due_date": str(date.today() + timedelta(days=1)),
-        "done": False
-    }
-
-    prepare_response = client.post("/api/todo/", json=data)
-    assert prepare_response.status_code == 200
-
-    id = prepare_response.json()['id']
+    id = prepare_task("to delete")
     response = client.delete(f"/api/todo/{id}")
     assert response.status_code == 200
 
