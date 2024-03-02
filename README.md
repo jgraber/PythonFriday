@@ -1,6 +1,8 @@
 # Python Friday examples
 A place to put the code samples of my [Python Friday](https://improveandrepeat.com/category/pythonfriday/) blog series:
 
+* [AsyncAwait](./AsyncAwait)
+  * [Python Friday #215: Async & Await](https://improveandrepeat.com/2024/02/python-friday-215-async-await/)
 * [Basics](./Basics)
   * [Python Friday #208: Working With Lists and Dictionaries](https://improveandrepeat.com/2024/01/python-friday-208-working-with-lists-and-dictionaries/)
   * [Python Friday #209: Defaultdict](https://improveandrepeat.com/2024/01/python-friday-209-defaultdict/)
