@@ -1,10 +1,11 @@
-from datetime import date
-from pydantic import BaseModel
+from datetime import date, timedelta
+from typing import Annotated
+from pydantic import BaseModel, Field
 
 class TaskInput(BaseModel):
-    name: str
-    priority: int
-    due_date: date
+    name: str = Field(str, min_length=5, max_length=100)
+    priority: int = Field(gt=0, lt=10)
+    due_date: date = Field(ge=date.today(), le=date.today() + timedelta(days=365))
     done: bool
 
 
