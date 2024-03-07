@@ -6,6 +6,11 @@ app = FastAPI()
 
 db = DataStore()
 
+@app.get("/")
+async def main():
+    return {'message':'The minimalistic ToDo API'}
+
+
 @app.post("/api/todo")
 async def create_task(task: TaskInput):
     result = db.add(task)
