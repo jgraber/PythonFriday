@@ -43,7 +43,6 @@ def test_show_task():
     response = client.get(f"/api/todo/{id}")
     assert response.status_code == 200
     details = response.json()
-    print(details)
     assert details['name'] == name
 
 
@@ -79,8 +78,22 @@ def test_delete_task():
     check = client.get(f"/api/todo/{id}")
     assert check.status_code == 404
 
+
 def test_main_page_shows_info_message():
     response = client.get("/")
 
     assert response.status_code == 200
     assert response.json()['message'] == "The minimalistic ToDo API"
+
+
+def test_show_all_tasks():
+    prepare_task("a first task")
+    prepare_task("a second task")
+    prepare_task("a third task")
+
+    response = client.get("/api/todo")
+
+    assert response.status_code == 200
+    tasks = response.json()
+    assert len(tasks) >= 3
+

@@ -11,6 +11,11 @@ async def main():
     return {'message':'The minimalistic ToDo API'}
 
 
+@app.get("/api/todo")
+async def show_all_tasks():
+    result = db.all()
+    return result
+
 @app.post("/api/todo")
 async def create_task(task: TaskInput):
     result = db.add(task)
