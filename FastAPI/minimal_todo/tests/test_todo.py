@@ -100,3 +100,27 @@ def test_show_all_tasks():
     tasks = response.json()
     assert len(tasks) >= 3
 
+
+def test_show_all_tasks_that_are_not_done():
+    prepare_task("a finished task", done=True)
+    prepare_task("an open task", done=False)
+
+    response = client.get("/api/todo?include_done=false")
+
+    assert response.status_code == 200
+    tasks = response.json()
+    done = [task for task in tasks if task['done'] == True]
+    assert len(done) == 0
+
+
+def test_show_all_tasks_that_are_due_within_five_days():
+    prepare_task("in 10 days", due_date=date.today() + timedelta(days=10))
+
+    response = client.get(f"/api/todo?due_before={date.today() + timedelta(days=5)}")
+
+    assert response.status_code == 200
+    tasks = response.json()
+    done = [task for task in tasks if date.fromisoformat(task['due_date']) > date.today() + timedelta(days=5)]
+    assert len(done) == 0
+
+

@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import Depends, FastAPI, HTTPException
 from .models.todo import *
 from .data.datastore import DataStore
 
@@ -6,14 +6,24 @@ app = FastAPI()
 
 db = DataStore()
 
+async def filter_parameters(q: str | None = None, include_done: bool = True, due_before: date = date.today() + timedelta(days=365)):
+    return {"q": q, "include_done": include_done, "due_before": due_before }
+
+
 @app.get("/")
 async def main():
     return {'message':'The minimalistic ToDo API'}
 
 
 @app.get("/api/todo")
-async def show_all_tasks():
+async def show_all_tasks(filter: Annotated[dict, Depends(filter_parameters)]):
     result = db.all()
+
+    if not filter["include_done"]:
+        result = [item for item in result if item.done == False ]
+
+    result = [item for item in result if item.due_date <= filter["due_before"] ]
+
     return result
 
 @app.post("/api/todo")
