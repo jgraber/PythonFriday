@@ -25,10 +25,13 @@ def test_create_task():
 
 
 def prepare_task(name, priority=4, due_date=None, done=False):
+    if due_date == None:
+        due_date = date.today() + timedelta(days=1)
+    
     data = {
         "name": name,
         "priority": priority,
-        "due_date": str(date.today() + timedelta(days=1)),
+        "due_date": str(due_date),
         "done": done
     }
 
