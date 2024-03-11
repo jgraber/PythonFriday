@@ -37,11 +37,12 @@ def test_check_input_has_a_priority_smaler_than_10():
 def test_check_input_does_not_have_a_due_date_in_the_past():
     with pytest.raises(ValueError) as e_info:
         input_model = TaskInput(name="write blog post", priority=2, due_date=date.today() + timedelta(days=-1), done=False)
-    assert f"Input should be greater than or equal to {date.today()}" in str(e_info.value)
+    # assert f"Input should be greater than or equal to {date.today()}" in str(e_info.value)
+    assert f"due_date must be between today and one year in the future" in str(e_info.value)
 
 
 def test_check_input_does_not_have_a_due_date_more_than_a_year_in_the_future():
     with pytest.raises(ValueError) as e_info:
             input_model = TaskInput(name="write blog post", priority=2, due_date=date.today() + timedelta(days=+367), done=False)
-    assert f"Input should be less than or equal to {date.today() + timedelta(days=+365)}" in str(e_info.value)
-
+    # assert f"Input should be less than or equal to {date.today() + timedelta(days=+365)}" in str(e_info.value)
+    assert f"due_date must be between today and one year in the future" in str(e_info.value)
