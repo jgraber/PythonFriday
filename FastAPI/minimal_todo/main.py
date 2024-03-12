@@ -1,4 +1,6 @@
-from fastapi import Depends, FastAPI, HTTPException
+from fastapi import Depends, FastAPI, HTTPException, Request, Response, status
+from fastapi.encoders import jsonable_encoder
+from fastapi.responses import JSONResponse
 from .models.todo import *
 from .data.datastore import DataStore
 
@@ -6,7 +8,9 @@ app = FastAPI()
 
 db = DataStore()
 
-async def filter_parameters(q: str | None = None, include_done: bool = True, due_before: date = date.today() + timedelta(days=365)):
+async def filter_parameters(q: str | None = None, 
+                            include_done: bool = True, 
+                            due_before: date = date.today() + timedelta(days=365)):
     return {"q": q, "include_done": include_done, "due_before": due_before }
 
 
@@ -29,7 +33,8 @@ async def show_all_tasks(filter: Annotated[dict, Depends(filter_parameters)]):
 @app.post("/api/todo")
 async def create_task(task: TaskInput):
     result = db.add(task)
-    return result
+    return JSONResponse(content=jsonable_encoder(result), 
+                        status_code=status.HTTP_201_CREATED)
 
 
 @app.get("/api/todo/{id}")
@@ -55,3 +60,4 @@ async def update_task(id: int, task: TaskInput):
 @app.delete("/api/todo/{id}")
 async def delete_task(id: int):
     db.delete(id)
+    return Response(status_code=status.HTTP_204_NO_CONTENT)

@@ -14,7 +14,7 @@ def test_create_task():
     }
 
     response = client.post("/api/todo/", json=data)
-    assert response.status_code == 200
+    assert response.status_code == 201
     result = response.json()
     assert result['id'] > 0
     assert result['done'] == False
@@ -36,8 +36,9 @@ def prepare_task(name, priority=4, due_date=None, done=False):
     }
 
     prepare_response = client.post("/api/todo/", json=data)
-    assert prepare_response.status_code == 200
+    assert prepare_response.status_code == 201
     return prepare_response.json()['id']
+
 
 def test_show_task():
     name = "A second task"
@@ -76,7 +77,7 @@ def test_update_task():
 def test_delete_task():
     id = prepare_task("to delete")
     response = client.delete(f"/api/todo/{id}")
-    assert response.status_code == 200
+    assert response.status_code == 204
 
     check = client.get(f"/api/todo/{id}")
     assert check.status_code == 404
