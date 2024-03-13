@@ -31,10 +31,12 @@ async def show_all_tasks(filter: Annotated[dict, Depends(filter_parameters)]):
     return result
 
 @app.post("/api/todo")
-async def create_task(task: TaskInput):
+async def create_task(task: TaskInput, request: Request) -> TaskOutput:
     result = db.add(task)
+    headers = {"Location": f"{request.base_url}api/todo/{result.id}"}
     return JSONResponse(content=jsonable_encoder(result), 
-                        status_code=status.HTTP_201_CREATED)
+                        status_code=status.HTTP_201_CREATED,
+                        headers=headers)
 
 
 @app.get("/api/todo/{id}")

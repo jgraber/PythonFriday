@@ -22,6 +22,7 @@ def test_create_task():
     assert result['name'] == data['name']
     assert result['priority'] == data['priority']
     assert result['due_date'] == data['due_date']
+    assert f"http://testserver/api/todo/{result['id']}" == response.headers['location']
 
 
 def prepare_task(name, priority=4, due_date=None, done=False):
