@@ -1,3 +1,4 @@
+from typing import List
 from fastapi import Depends, FastAPI, HTTPException, Request, Response, status
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
@@ -14,13 +15,13 @@ async def filter_parameters(q: str | None = None,
     return {"q": q, "include_done": include_done, "due_before": due_before }
 
 
-@app.get("/")
+@app.get("/", include_in_schema=False)
 async def main():
     return {'message':'The minimalistic ToDo API'}
 
 
 @app.get("/api/todo")
-async def show_all_tasks(filter: Annotated[dict, Depends(filter_parameters)]):
+async def show_all_tasks(filter: Annotated[dict, Depends(filter_parameters)]) -> List[TaskOutput]:
     result = db.all()
 
     if not filter["include_done"]:
@@ -30,7 +31,7 @@ async def show_all_tasks(filter: Annotated[dict, Depends(filter_parameters)]):
 
     return result
 
-@app.post("/api/todo")
+@app.post("/api/todo", status_code=status.HTTP_201_CREATED)
 async def create_task(task: TaskInput, request: Request) -> TaskOutput:
     result = db.add(task)
     headers = {"Location": f"{request.base_url}api/todo/{result.id}"}
@@ -40,7 +41,7 @@ async def create_task(task: TaskInput, request: Request) -> TaskOutput:
 
 
 @app.get("/api/todo/{id}")
-async def show_task(id: int):
+async def show_task(id: int) -> TaskOutput:
     result = db.get(id)
 
     if result:
@@ -51,7 +52,7 @@ async def show_task(id: int):
 
 
 @app.put("/api/todo/{id}")
-async def update_task(id: int, task: TaskInput):
+async def update_task(id: int, task: TaskInput) -> TaskOutput:
     try:
         result = db.update(id, task)
         return result
@@ -59,7 +60,7 @@ async def update_task(id: int, task: TaskInput):
         raise HTTPException(status_code=404, detail="Task not found")
     
 
-@app.delete("/api/todo/{id}")
-async def delete_task(id: int):
+@app.delete("/api/todo/{id}", status_code=status.HTTP_204_NO_CONTENT)
+async def delete_task(id: int) -> None:
     db.delete(id)
     return Response(status_code=status.HTTP_204_NO_CONTENT)
