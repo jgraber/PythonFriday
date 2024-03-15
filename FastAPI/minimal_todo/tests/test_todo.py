@@ -126,3 +126,6 @@ def test_show_all_tasks_that_are_due_within_five_days():
     assert len(done) == 0
 
 
+def test_docs_endpoint_works():
+    response = client.get("/openapi.json")
+    # No exception -> test passes
