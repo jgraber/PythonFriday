@@ -68,6 +68,7 @@ def test_can_get_all_entrries_back():
     
     assert len(entries) == 3
 
+
 def test_can_delete_entry():
     entry_a = TaskInput(name="a simple task", priority=1, due_date=date.today(), done=False)
     entry_b = TaskInput(name="b simple task", priority=2, due_date=date.today(), done=False)
@@ -80,6 +81,7 @@ def test_can_delete_entry():
     entries = store.all()
     assert len(entries) == 1
     assert entries[0].id == 1
+
 
 def test_can_update_entry():
     old = TaskInput(name="a simple task", priority=1, due_date=date.today(), done=False)
@@ -95,6 +97,7 @@ def test_can_update_entry():
     assert entry.due_date == date.today() + timedelta(days=2)
     assert entry.done == True
 
+
 def test_non_existing_entry_cannot_be_updated():
     store = DataStore()
     
@@ -102,3 +105,4 @@ def test_non_existing_entry_cannot_be_updated():
     with pytest.raises(ValueError) as e_info:
         store.update(123, new)
     assert str(e_info.value) == "no taks known with id '123'"
+
