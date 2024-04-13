@@ -2,10 +2,10 @@ from datetime import date, timedelta
 from typing import Annotated
 from pydantic import BaseModel, Field, field_validator
 
+
 class TaskInput(BaseModel):
-    name: str = Field(str, min_length=5, max_length=100)
+    name: str
     priority: int = Field(gt=0, lt=10)
-    # due_date: date = Field(ge=date.today(), le=date.today() + timedelta(days=365))
     due_date: date
     done: bool
 
@@ -14,6 +14,15 @@ class TaskInput(BaseModel):
         if not date.today() <= v <= date.today() + timedelta(days=365):
             raise ValueError("due_date must be between today and one year in the future")
         return v
+    
+    @field_validator('name')
+    def name_must_be_between_5_and_100(cls, v):
+        if len(v) < 5 :
+            raise ValueError("String should have at least 5 characters")
+        if len(v) > 100:
+            raise ValueError("String should have at most 100 characters")
+        return v
+
 
 class TaskOutput(BaseModel):
     id: int
@@ -22,3 +31,4 @@ class TaskOutput(BaseModel):
     due_date: date
     done: bool
     created_at: date
+
