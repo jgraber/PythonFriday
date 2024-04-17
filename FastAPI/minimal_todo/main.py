@@ -3,7 +3,7 @@ from .routers import todo
 
 
 app = FastAPI()
-app.include_router(todo.router)
+app.include_router(todo.router, prefix="/api/todo")
 
 
 @app.get("/", include_in_schema=False)

@@ -18,7 +18,7 @@ async def filter_parameters(q: str | None = None,
     return {"q": q, "include_done": include_done, "due_before": due_before }
 
 
-@router.get("/api/todo")
+@router.get("/")
 async def show_all_tasks(filter: Annotated[dict, Depends(filter_parameters)]) -> List[TaskOutput]:
     result = db.all()
 
@@ -30,7 +30,7 @@ async def show_all_tasks(filter: Annotated[dict, Depends(filter_parameters)]) ->
     return result
 
 
-@router.post("/api/todo", status_code=status.HTTP_201_CREATED)
+@router.post("/", status_code=status.HTTP_201_CREATED)
 async def create_task(task: TaskInput, request: Request) -> TaskOutput:
     result = db.add(task)
     headers = {"Location": f"{request.base_url}api/todo/{result.id}"}
@@ -39,7 +39,7 @@ async def create_task(task: TaskInput, request: Request) -> TaskOutput:
                         headers=headers)
 
 
-@router.get("/api/todo/{id}")
+@router.get("/{id}")
 async def show_task(id: int) -> TaskOutput:
     result = db.get(id)
 
@@ -49,7 +49,7 @@ async def show_task(id: int) -> TaskOutput:
         raise HTTPException(status_code=404, detail="Task not found")
     
 
-@router.put("/api/todo/{id}")
+@router.put("/{id}")
 async def update_task(id: int, task: TaskInput) -> TaskOutput:
     try:
         result = db.update(id, task)
@@ -58,7 +58,7 @@ async def update_task(id: int, task: TaskInput) -> TaskOutput:
         raise HTTPException(status_code=404, detail="Task not found")
     
 
-@router.delete("/api/todo/{id}", status_code=status.HTTP_204_NO_CONTENT)
+@router.delete("/{id}", status_code=status.HTTP_204_NO_CONTENT)
 async def delete_task(id: int) -> None:
     db.delete(id)
     return Response(status_code=status.HTTP_204_NO_CONTENT)
