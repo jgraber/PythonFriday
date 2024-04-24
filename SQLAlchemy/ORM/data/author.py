@@ -7,7 +7,7 @@ class Author(ModelBase):
     id = sa.Column('Id', sa.Integer, primary_key=True, autoincrement=True)
     first_name = sa.Column('FirstName', sa.String, nullable=False)
     last_name = sa.Column('LastName', sa.String, nullable=False)
-    books = sa.orm.relation("Book", secondary='BookAuthor', back_populates="authors")
+    books = sa.orm.relationship("Book", secondary='BookAuthor', back_populates="authors")
     
     def __repr__(self):
         return f'<Author {self.id} ({self.first_name} {self.last_name})>'

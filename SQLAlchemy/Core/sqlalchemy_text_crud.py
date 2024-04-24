@@ -13,7 +13,7 @@ def create():
         con.execute(insert, {"last":"Davolio","first":"Nancy","title":"Sales","dob":"1980-05-29"})
         new_id = con.execute(text("SELECT last_insert_rowid() AS Id;")).first()
         print(new_id)    
-        return new_id["Id"]
+        return new_id[0]
 
 
 def read(id):
@@ -28,7 +28,7 @@ def read(id):
     with engine.begin() as con:
         for row in con.execute(select, {"last":"Davolio", "first":"Robert", "id":id}):
             print(row)
-            print(row['LastName'])
+            print(row[1])
 
 
 def update(id):
@@ -45,7 +45,7 @@ def update(id):
         con.execute(update, {"last":"D'Avolio","first":"Patricia","id":id})
     
     with engine.begin() as con2:
-        for row in con2.execute("SELECT Id, LastName, FirstName FROM Employee WHERE id = :id", {"id":id}):
+        for row in con2.execute(text("SELECT Id, LastName, FirstName FROM Employee WHERE id = :id"), {"id":id}):
             print(row)
 
 
@@ -60,7 +60,7 @@ def delete(id):
         con.execute(delete, {"id":id})
         
     with engine.begin() as con2:
-        for row in con2.execute("SELECT Id, LastName, FirstName FROM Employee WHERE id = :id", {"id":id}):
+        for row in con2.execute(text("SELECT Id, LastName, FirstName FROM Employee WHERE id = :id"), {"id":id}):
             print(row)
         else:
             print("No rows found")

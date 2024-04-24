@@ -1,4 +1,4 @@
-from sqlalchemy import MetaData, Table, Column, String, Integer, Text, DateTime, Boolean, create_engine, select, insert, update, delete, or_, and_
+from sqlalchemy import MetaData, Table, Column, String, Integer, text, DateTime, Boolean, create_engine, select, insert, update, delete, or_, and_
 from sqlalchemy.sql.schema import ForeignKey, PrimaryKeyConstraint
 
 connection_string = "sqlite:///Bookstore.sqlite"
@@ -55,7 +55,7 @@ def create_publisher(name):
     engine = create_engine(connection_string, echo=False)
     with engine.begin() as con:
         result = con.execute(stmt)
-        new_id = result.inserted_primary_key['Id']
+        new_id = result.inserted_primary_key[0]
         pub = select(publishers).where(publishers.c.Id == new_id)
         return con.execute(pub).first() 
     
@@ -69,9 +69,9 @@ def create_book(title, isbn, pages, publisher):
     
     engine = create_engine(connection_string, echo=False)
     with engine.begin() as con:
-        con.execute('pragma foreign_keys=on')
+        con.execute(text('PRAGMA foreign_keys=on'))
         result = con.execute(stmt)
-        new_id = result.inserted_primary_key['Id']
+        new_id = result.inserted_primary_key[0]
         book = select(books).where(books.c.Id == new_id)
         return con.execute(book).first() 
 
@@ -83,9 +83,9 @@ def create_author(first, last):
     
     engine = create_engine(connection_string, echo=False)
     with engine.begin() as con:
-        con.execute('pragma foreign_keys=on')
+        con.execute(text('PRAGMA foreign_keys=on'))
         result = con.execute(stmt)
-        new_id = result.inserted_primary_key['Id']
+        new_id = result.inserted_primary_key[0]
         author = select(authors).where(authors.c.Id == new_id)
         return con.execute(author).first() 
 
@@ -97,7 +97,7 @@ def create_book_author(book, author):
     
     engine = create_engine(connection_string, echo=False)
     with engine.begin() as con:
-        con.execute('pragma foreign_keys=on')
+        con.execute(text('PRAGMA foreign_keys=on'))
         result = con.execute(stmt)
         bookauthor = select(book_authors).where((book_authors.c.BookId == book.Id) & (book_authors.c.AuthorId == author.Id) )
         return con.execute(bookauthor).first() 
@@ -110,9 +110,9 @@ def create_book_details(book):
     
     engine = create_engine(connection_string, echo=False)
     with engine.begin() as con:
-        con.execute('pragma foreign_keys=on')
+        con.execute(text('PRAGMA foreign_keys=on'))
         result = con.execute(stmt)
-        new_id = result.inserted_primary_key['Id']
+        new_id = result.inserted_primary_key[0]
         details = select(bookdetails).where(bookdetails.c.Id == new_id)
         return con.execute(details).first() 
 

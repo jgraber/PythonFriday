@@ -86,7 +86,7 @@ def show_book_and_publisher(publisher_id):
     session = db_session.factory()
     
     publisher = session.query(Publisher).\
-        options(joinedload("books")).\
+        options(joinedload(Publisher.books)).\
         filter(Publisher.id == publisher_id).first()
     for b in publisher.books:
         print(f"{b.title} published by {b.publisher}")
@@ -98,7 +98,7 @@ def show_authors_of_book(bookA_id, bookB_id):
     session = db_session.factory()
     
     books = session.query(Book).\
-        options(joinedload("authors")).\
+        options(joinedload(Book.authors)).\
         filter(Book.id.in_([bookA_id, bookB_id])).all()
     for b in books:
         print(b)
@@ -112,7 +112,7 @@ def show_book_details(bookA_id):
     session = db_session.factory()
        
     books = session.query(Book).\
-        options(joinedload("details")).\
+        options(joinedload(Book.details)).\
         filter(Book.id == bookA_id).all()
     for b in books:
         print(b)

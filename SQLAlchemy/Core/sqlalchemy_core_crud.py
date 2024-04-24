@@ -27,7 +27,7 @@ def do_insert():
     engine = create_engine(connection_string, echo=False)
     with engine.begin() as con:
         result = con.execute(stmt)
-        new_id = result.inserted_primary_key['Id']
+        new_id = result.inserted_primary_key[0]
         print(f"New Id: {new_id}")
         
     return new_id

@@ -7,10 +7,13 @@ Create Date: 2021-06-12 17:27:18.833477
 """
 from alembic import op
 import sqlalchemy as sa
-import imp
+import importlib
 import os
-alembic_helpers = imp.load_source('alembic_helpers', (
-    os.getcwd() + '/' + op.get_context().script.dir + '/alembic_helpers.py'))
+
+spec = importlib.util.spec_from_file_location('alembic_helpers', 
+                                              (os.getcwd() + '/' + op.get_context().script.dir + '/alembic_helpers.py'))
+alembic_helpers = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(alembic_helpers)
 
 # revision identifiers, used by Alembic.
 revision = '347126fc065d'

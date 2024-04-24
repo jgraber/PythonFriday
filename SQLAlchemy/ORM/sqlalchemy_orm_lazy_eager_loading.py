@@ -112,8 +112,8 @@ def lazy_loading_throws_error(publisher_id):
 def eager_loading_joinedload(publisher_id):
     session = db_session.factory()
     publisher = session.query(Publisher).\
-        options(joinedload("books").\
-        joinedload("authors")).\
+        options(joinedload(Publisher.books).\
+        joinedload(Book.authors)).\
         filter(Publisher.id == publisher_id).\
         first()
     session.close()
@@ -128,8 +128,8 @@ def eager_loading_joinedload(publisher_id):
 def eager_loading_selectinload(publisher_id):
     session = db_session.factory()
     publisher = session.query(Publisher).\
-        options(selectinload("books").\
-        selectinload("authors")).\
+        options(selectinload(Publisher.books).\
+        selectinload(Book.authors)).\
         filter(Publisher.id == publisher_id).\
         first()
     session.close()
