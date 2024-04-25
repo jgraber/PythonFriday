@@ -5,9 +5,6 @@ import urllib
 
 Base = automap_base()
 
-SERVER = '.'
-DATABASE = 'Northwind'
-
 connection_string = (
     'DRIVER=ODBC Driver 18 for SQL Server;'
     'SERVER=localhost;'
@@ -20,7 +17,6 @@ connection_uri = "mssql+pyodbc:///?odbc_connect=%s" % params
 engine = create_engine(connection_uri)
 
 # reflect the tables
-# Base.prepare(engine, reflect=True, schema='dbo')
 Base.prepare(autoload_with=engine, schema='dbo')
 
 # mapped classes use table name.
