@@ -32,3 +32,6 @@ class TaskOutput(BaseModel):
     done: bool
     created_at: date
 
+    class ConfigDict:
+        from_attributes = True
+

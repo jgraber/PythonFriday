@@ -1,16 +1,31 @@
 from datetime import date, timedelta
+import os
 from typing import Annotated, List
 
 from fastapi import APIRouter, Depends, HTTPException, Request, Response, status
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 
+from ..data import db_session
+
 from ..models.todo import TaskOutput, TaskInput
-from ..data.datastore import DataStore
+from ..data.datastore_db import DataStoreDb
 
 router = APIRouter()
 
-db = DataStore()
+def get_db_file():
+    db_file = os.path.join(
+            os.path.dirname(__file__),
+            '..',
+            'db',
+            'api.sqlite')
+    return db_file
+
+db_session.global_init(get_db_file())
+session = db_session.factory()
+
+
+db = DataStoreDb(session)
 
 async def filter_parameters(q: str | None = None, 
                             include_done: bool = True, 
