@@ -6,26 +6,31 @@ from fastapi import APIRouter, Depends, HTTPException, Request, Response, status
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 
-from ..data import db_session
-
 from ..models.todo import TaskOutput, TaskInput
 from ..data.datastore_db import DataStoreDb
+from ..data.database import create_session_factory
 
 router = APIRouter()
 
-def get_db_file():
+
+async def get_db():
+    """
+    Creates the datastore 
+    """
     db_file = os.path.join(
-            os.path.dirname(__file__),
-            '..',
-            'db',
-            'api.sqlite')
-    return db_file
+        os.path.dirname(__file__),
+        '..',
+        'db',
+        'todo_api.sqlite')
+    
+    factory = create_session_factory(db_file)
+    session = factory()
+    db = DataStoreDb(session)
+    try:
+        yield db
+    finally:
+        session.close()
 
-db_session.global_init(get_db_file())
-session = db_session.factory()
-
-
-db = DataStoreDb(session)
 
 async def filter_parameters(q: str | None = None, 
                             include_done: bool = True, 
@@ -34,7 +39,8 @@ async def filter_parameters(q: str | None = None,
 
 
 @router.get("/")
-async def show_all_tasks(filter: Annotated[dict, Depends(filter_parameters)]) -> List[TaskOutput]:
+async def show_all_tasks(filter: Annotated[dict, Depends(filter_parameters)], 
+                         db: DataStoreDb = Depends(get_db)) -> List[TaskOutput]:
     result = db.all()
 
     if not filter["include_done"]:
@@ -46,7 +52,9 @@ async def show_all_tasks(filter: Annotated[dict, Depends(filter_parameters)]) ->
 
 
 @router.post("/", status_code=status.HTTP_201_CREATED)
-async def create_task(task: TaskInput, request: Request) -> TaskOutput:
+async def create_task(task: TaskInput, 
+                      request: Request, 
+                      db: DataStoreDb = Depends(get_db)) -> TaskOutput:
     result = db.add(task)
     headers = {"Location": f"{request.base_url}api/todo/{result.id}"}
     return JSONResponse(content=jsonable_encoder(result), 
@@ -55,7 +63,8 @@ async def create_task(task: TaskInput, request: Request) -> TaskOutput:
 
 
 @router.get("/{id}")
-async def show_task(id: int) -> TaskOutput:
+async def show_task(id: int, 
+                    db: DataStoreDb = Depends(get_db)) -> TaskOutput:
     result = db.get(id)
 
     if result:
@@ -65,7 +74,9 @@ async def show_task(id: int) -> TaskOutput:
     
 
 @router.put("/{id}")
-async def update_task(id: int, task: TaskInput) -> TaskOutput:
+async def update_task(id: int, 
+                      task: TaskInput, 
+                      db: DataStoreDb = Depends(get_db)) -> TaskOutput:
     try:
         result = db.update(id, task)
         return result
@@ -74,6 +85,7 @@ async def update_task(id: int, task: TaskInput) -> TaskOutput:
     
 
 @router.delete("/{id}", status_code=status.HTTP_204_NO_CONTENT)
-async def delete_task(id: int) -> None:
+async def delete_task(id: int, 
+                      db: DataStoreDb = Depends(get_db)) -> None:
     db.delete(id)
     return Response(status_code=status.HTTP_204_NO_CONTENT)

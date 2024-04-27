@@ -1,6 +1,7 @@
 import os
+
+from ..data.database import create_session_factory
 from ..data.datastore_db import DataStoreDb
-from ..data import db_session
 from ..models.todo import TaskOutput, TaskInput
 from datetime import date, datetime, timedelta
 import pytest
@@ -13,8 +14,10 @@ def with_db():
         '..',
         'db',
         'test_db.sqlite')
-    db_session.global_init(db_file)
-    session = db_session.factory()
+    
+    factory = create_session_factory(db_file)
+    session = factory()
+    
     try:
         yield session
     finally:
