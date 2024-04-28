@@ -7,7 +7,7 @@ from datetime import date, datetime, timedelta
 import pytest
 
 
-@pytest.fixture()
+@pytest.fixture(scope="session")
 def with_db():
     db_file = os.path.join(
         os.path.dirname(__file__),
@@ -15,6 +15,9 @@ def with_db():
         'db',
         'test_db.sqlite')
     
+    # if os.path.isfile(db_file):
+    #     os.remove(db_file)
+
     factory = create_session_factory(db_file)
     session = factory()
     
