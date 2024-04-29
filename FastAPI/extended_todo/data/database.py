@@ -7,9 +7,6 @@ def create_session_factory(db_file: str) -> sessionmaker:
     engine = create_engine(
         'sqlite:///' + db_file, connect_args={"check_same_thread": False}
     )
-    create_tables(engine)
+
     factory = sessionmaker(autocommit=False, autoflush=False, bind=engine)
     return factory
-
-def create_tables(engine):
-    EntityBase.metadata.create_all(engine)
