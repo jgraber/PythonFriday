@@ -1,11 +1,21 @@
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
+from fastapi.templating import Jinja2Templates
 from .routers import todo
+from pathlib import Path
 
+BASE_DIR = Path(__file__).resolve().parent
 
 app = FastAPI()
 app.include_router(todo.router, prefix="/api/todo")
 
+templates = Jinja2Templates(directory=str(Path(BASE_DIR, 'templates')))
+
+@app.get("/about", response_class=HTMLResponse)
+async def about(request: Request):
+    return templates.TemplateResponse(
+        request=request, name="about.html"
+    )
 
 @app.get("/", include_in_schema=False)
 async def main():
