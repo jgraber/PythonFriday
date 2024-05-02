@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from .routers import todo
 from pathlib import Path
@@ -8,6 +9,8 @@ BASE_DIR = Path(__file__).resolve().parent
 
 app = FastAPI()
 app.include_router(todo.router, prefix="/api/todo")
+
+app.mount("/static", StaticFiles(directory=str(Path(BASE_DIR, 'static'))), name="static")
 
 templates = Jinja2Templates(directory=str(Path(BASE_DIR, 'templates')))
 
