@@ -127,3 +127,11 @@ def test_non_existing_entry_cannot_be_updated(with_db):
     with pytest.raises(ValueError) as e_info:
         store.update(-123, new)
     assert str(e_info.value) == "no taks known with id '-123'"
+
+def test_fetches_statistics(with_db):
+    store = DataStoreDb(with_db)
+    store.add(TaskInput(name="counter", priority=1, due_date=date.today(), done=False))
+    stats = store.get_statistics()
+
+    assert stats.total_tasks == stats.total_open + stats.total_done
+    assert stats.total_tasks >= 1
