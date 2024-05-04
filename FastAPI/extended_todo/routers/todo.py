@@ -6,30 +6,13 @@ from fastapi import APIRouter, Depends, HTTPException, Request, Response, status
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 
+from ..dependencies import get_db
+
 from ..models.todo import TaskOutput, TaskInput
 from ..data.datastore_db import DataStoreDb
 from ..data.database import create_session_factory
 
 router = APIRouter()
-
-
-async def get_db():
-    """
-    Creates the datastore 
-    """
-    db_file = os.path.join(
-        os.path.dirname(__file__),
-        '..',
-        'db',
-        'todo_api.sqlite')
-    
-    factory = create_session_factory(db_file)
-    session = factory()
-    db = DataStoreDb(session)
-    try:
-        yield db
-    finally:
-        session.close()
 
 
 async def filter_parameters(q: str | None = None, 
