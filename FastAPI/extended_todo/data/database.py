@@ -5,7 +5,7 @@ from .entitybase import EntityBase
 
 def create_session_factory(db_file: str) -> sessionmaker:
     engine = create_engine(
-        'sqlite:///' + db_file, connect_args={"check_same_thread": False}
+        'sqlite:///' + db_file, connect_args={"check_same_thread": False}, echo=False
     )
 
     factory = sessionmaker(autocommit=False, autoflush=False, bind=engine)
