@@ -1,0 +1,12 @@
+{% extends "./shared/layout.html" %}
+{% block title %}Dashboard To-Do Task API{% endblock %}
+{% block main %}
+    <h1>Dashboard</h1>
+    <p>We have {{total_tasks}} tasks in our system.
+
+        <ul>
+            <li>Open: {{total_open}}</li>
+            <li>Done: {{total_done}}</li>
+        </ul>
+    </p>
+{% endblock %}

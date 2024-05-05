@@ -1,8 +1,10 @@
 from datetime import date, timedelta
 import os
+import re
+from bs4 import BeautifulSoup
 from fastapi.testclient import TestClient
 
-from ..routers.todo import get_db
+from ..dependencies import get_db
 from ..data.datastore_db import DataStoreDb
 from ..data.database import create_session_factory
 from ..main import app
@@ -152,3 +154,23 @@ def test_show_all_tasks_that_are_due_within_five_days():
 def test_docs_endpoint_works():
     response = client.get("/openapi.json")
     # No exception -> test passes
+
+
+def test_about_page():
+    response = client.get("/about")
+    assert response.status_code == 200
+
+    soup = BeautifulSoup(response.text, 'html.parser')
+    assert soup.title.text == "About To-Do Task API"
+    assert soup.body.h1.text == "About"
+
+
+def test_dashboard():
+    response = client.get("/dashboard")
+    assert response.status_code == 200
+
+    soup = BeautifulSoup(response.text, 'html.parser')
+    assert soup.title.text == "Dashboard To-Do Task API"
+    assert soup.body.h1.text == "Dashboard"
+    numbers = re.findall(r"\d+", soup.body.p.text)
+    assert  int(numbers[0]) == int(numbers[1]) + int(numbers[2])
