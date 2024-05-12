@@ -40,34 +40,49 @@ async def with_db_async():
         'test_db.sqlite')
 
     factory = await create_async_session_factory(db_file)
-    # session = factory()
-
-    async with factory() as session:
-        async with session.begin():
-            try:
-                yield session
-            finally:
-                await session.close()
-
+    
+    yield factory
+    
 
 @pytest.mark.asyncio
-# @pytest.mark.anyio
 async def test_session(db):
-    # session = with_db_async
-    query = select(Task)
-    result = await db.scalars(query)
-    
-    for res in result:
-        print(f"{res.id}: {res.name}")
-    # assert result > 1
+    async with db() as session:
+        query = select(Task)
+        result = await session.scalars(query)
+        
+        for res in result:
+            print(f"{res.id}: {res.name}")
+        
 
 @pytest.mark.asyncio
 async def test_insert(db):
-    task = Task(name="a test task", priority=1, due_date=date.today(), done=False, created_at=datetime.now())
+    async with db() as session:
+        task = Task(name="a test task", priority=1, due_date=date.today(), done=False, created_at=datetime.now())
+        
+        session.add(task)
+        await session.commit()
+        
+        print(task.id)
+        assert task.id > 0
+
+
+@pytest.mark.asyncio
+async def test_multiple_actions(db):
+    async with db() as session:
+        task = Task(name="a test task", priority=1, due_date=date.today(), done=False, created_at=datetime.now())
     
-    db.add(task)
-    # await db.flush()
-    await db.commit()
+        session.add(task)
+        await session.commit()
     
-    print(task.id)
-    assert task.id > 0
+        print(task.id)
+        assert task.id > 0
+
+    async with db() as session:
+        task = Task(name="a test task", priority=1, due_date=date.today(), done=False, created_at=datetime.now())
+        
+        session.add(task)
+        await session.commit()
+        
+        print(task.id)
+        assert task.id > 0
+
