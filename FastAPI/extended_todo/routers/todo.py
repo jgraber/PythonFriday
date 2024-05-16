@@ -24,7 +24,7 @@ async def filter_parameters(q: str | None = None,
 @router.get("/")
 async def show_all_tasks(filter: Annotated[dict, Depends(filter_parameters)], 
                          db: DataStoreDb = Depends(get_db)) -> List[TaskOutput]:
-    result = db.all()
+    result = await db.all()
 
     if not filter["include_done"]:
         result = [item for item in result if item.done == False ]
@@ -38,7 +38,7 @@ async def show_all_tasks(filter: Annotated[dict, Depends(filter_parameters)],
 async def create_task(task: TaskInput, 
                       request: Request, 
                       db: DataStoreDb = Depends(get_db)) -> TaskOutput:
-    result = db.add(task)
+    result = await db.add(task)
     headers = {"Location": f"{request.base_url}api/todo/{result.id}"}
     return JSONResponse(content=jsonable_encoder(result), 
                         status_code=status.HTTP_201_CREATED,
@@ -48,7 +48,7 @@ async def create_task(task: TaskInput,
 @router.get("/{id}")
 async def show_task(id: int, 
                     db: DataStoreDb = Depends(get_db)) -> TaskOutput:
-    result = db.get(id)
+    result = await db.get(id)
 
     if result:
         return result
@@ -61,7 +61,7 @@ async def update_task(id: int,
                       task: TaskInput, 
                       db: DataStoreDb = Depends(get_db)) -> TaskOutput:
     try:
-        result = db.update(id, task)
+        result = await db.update(id, task)
         return result
     except ValueError:
         raise HTTPException(status_code=404, detail="Task not found")
@@ -70,5 +70,5 @@ async def update_task(id: int,
 @router.delete("/{id}", status_code=status.HTTP_204_NO_CONTENT)
 async def delete_task(id: int, 
                       db: DataStoreDb = Depends(get_db)) -> None:
-    db.delete(id)
+    await db.delete(id)
     return Response(status_code=status.HTTP_204_NO_CONTENT)

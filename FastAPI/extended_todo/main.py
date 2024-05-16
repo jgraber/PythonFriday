@@ -35,7 +35,7 @@ async def main():
 
 @app.get("/dashboard", include_in_schema=False)
 async def dashboard(request: Request, db: DataStoreDb = Depends(get_db)):
-    stats = db.get_statistics()
+    stats = await db.get_statistics()
     return templates.TemplateResponse(
         request=request, name="dashboard.html", context=jsonable_encoder(stats)
     )

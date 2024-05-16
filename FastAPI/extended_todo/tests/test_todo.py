@@ -6,26 +6,22 @@ from fastapi.testclient import TestClient
 
 from ..dependencies import get_db
 from ..data.datastore_db import DataStoreDb
-from ..data.database import create_session_factory
+from ..data.database import create_async_session_factory, create_session_factory
 from ..main import app
 
 import logging
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
-def override_get_db():
+async def override_get_db():
     db_file = os.path.join(
         os.path.dirname(__file__),
         '..',
         'db',
         'test_db.sqlite')
-    factory = create_session_factory(db_file)
-    session = factory()
-    db = DataStoreDb(session)
-    try:
-        yield db
-    finally:
-        session.close()
-
+    factory = await create_async_session_factory(db_file)
+    db = DataStoreDb(factory)
+    yield db
+    
 
 client = TestClient(app)
 app.dependency_overrides[get_db] = override_get_db

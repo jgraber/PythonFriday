@@ -1,6 +1,6 @@
 import os
 
-from .data.database import create_session_factory
+from .data.database import create_async_session_factory, create_session_factory
 from .data.datastore_db import DataStoreDb
 
 
@@ -14,10 +14,8 @@ async def get_db():
         'db',
         'todo_api.sqlite')
     
-    factory = create_session_factory(db_file)
-    session = factory()
-    db = DataStoreDb(session)
-    try:
-        yield db
-    finally:
-        session.close()
+    factory = await create_async_session_factory(db_file)
+    db = DataStoreDb(factory)
+
+    yield db
+    
