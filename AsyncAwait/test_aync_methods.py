@@ -7,6 +7,7 @@ import pytest_asyncio
 async def test_function():
     await asyncio.sleep(1)
 
+# @pytest.fixture()
 @pytest_asyncio.fixture()
 async def prepare():
     print("setup...")
