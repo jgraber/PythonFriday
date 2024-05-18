@@ -1,7 +1,7 @@
 # no cache
 
 def factorial(n):
-    print(n)
+    print(f"***{n}***")
     return n * factorial(n-1) if n else 1
 
 
@@ -14,7 +14,7 @@ factorial(8)
 from functools import cache
 @cache
 def factorial(n):
-    print(n)
+    print(f"***{n}***")
     return n * factorial(n-1) if n else 1
 
 
