@@ -3,6 +3,7 @@ import os
 import re
 from bs4 import BeautifulSoup
 from fastapi.testclient import TestClient
+import pytest
 
 from ..dependencies import get_db
 from ..data.datastore_db import DataStoreDb
@@ -26,7 +27,8 @@ async def override_get_db():
 client = TestClient(app)
 app.dependency_overrides[get_db] = override_get_db
 
-def test_create_task():
+@pytest.mark.asyncio
+async def test_create_task():
     data = {
         "name": "A first task",
         "priority": 5,
@@ -46,7 +48,8 @@ def test_create_task():
     assert f"http://testserver/api/todo/{result['id']}" == response.headers['location']
 
 
-def prepare_task(name, priority=4, due_date=None, done=False):
+@pytest.mark.asyncio
+async def prepare_task(name, priority=4, due_date=None, done=False):
     if due_date == None:
         due_date = date.today() + timedelta(days=1)
     
@@ -62,9 +65,10 @@ def prepare_task(name, priority=4, due_date=None, done=False):
     return prepare_response.json()['id']
 
 
-def test_show_task():
+@pytest.mark.asyncio
+async def test_show_task():
     name = "A second task"
-    id = prepare_task(name)
+    id = await prepare_task(name)
 
     response = client.get(f"/api/todo/{id}")
     assert response.status_code == 200
@@ -72,14 +76,16 @@ def test_show_task():
     assert details['name'] == name
 
 
-def test_show_task_where_task_is_unknown():
+@pytest.mark.asyncio
+async def test_show_task_where_task_is_unknown():
     response = client.get(f"/api/todo/-1")
     assert response.status_code == 404
     assert response.json()['detail'] == "Task not found"
 
 
-def test_update_task():
-    id = prepare_task("original")
+@pytest.mark.asyncio
+async def test_update_task():
+    id = await prepare_task("original")
 
     update = {
         "name": "An updated task",
@@ -96,8 +102,9 @@ def test_update_task():
     assert check.json()['name'] == "An updated task"
 
 
-def test_delete_task():
-    id = prepare_task("to delete")
+@pytest.mark.asyncio
+async def test_delete_task():
+    id = await prepare_task("to delete")
     response = client.delete(f"/api/todo/{id}")
     assert response.status_code == 204
 
@@ -105,17 +112,19 @@ def test_delete_task():
     assert check.status_code == 404
 
 
-def test_main_page_shows_info_message():
+@pytest.mark.asyncio
+async def test_main_page_shows_info_message():
     response = client.get("/")
 
     assert response.status_code == 200
     assert response.json()['message'] == "The minimalistic ToDo API"
 
 
-def test_show_all_tasks():
-    prepare_task("a first task")
-    prepare_task("a second task")
-    prepare_task("a third task")
+@pytest.mark.asyncio
+async def test_show_all_tasks():
+    await prepare_task("a first task")
+    await prepare_task("a second task")
+    await prepare_task("a third task")
 
     response = client.get("/api/todo")
 
@@ -124,9 +133,10 @@ def test_show_all_tasks():
     assert len(tasks) >= 3
 
 
-def test_show_all_tasks_that_are_not_done():
-    prepare_task("a finished task", done=True)
-    prepare_task("an open task", done=False)
+@pytest.mark.asyncio
+async def test_show_all_tasks_that_are_not_done():
+    await prepare_task("a finished task", done=True)
+    await prepare_task("an open task", done=False)
 
     response = client.get("/api/todo?include_done=false")
 
@@ -136,8 +146,9 @@ def test_show_all_tasks_that_are_not_done():
     assert len(done) == 0
 
 
-def test_show_all_tasks_that_are_due_within_five_days():
-    prepare_task("in 10 days", due_date=date.today() + timedelta(days=10))
+@pytest.mark.asyncio
+async def test_show_all_tasks_that_are_due_within_five_days():
+    await prepare_task("in 10 days", due_date=date.today() + timedelta(days=10))
 
     response = client.get(f"/api/todo?due_before={date.today() + timedelta(days=5)}")
 
@@ -147,12 +158,14 @@ def test_show_all_tasks_that_are_due_within_five_days():
     assert len(done) == 0
 
 
-def test_docs_endpoint_works():
+@pytest.mark.asyncio
+async def test_docs_endpoint_works():
     response = client.get("/openapi.json")
     # No exception -> test passes
 
 
-def test_about_page():
+@pytest.mark.asyncio
+async def test_about_page():
     response = client.get("/about")
     assert response.status_code == 200
 
@@ -161,7 +174,8 @@ def test_about_page():
     assert soup.body.h1.text == "About"
 
 
-def test_dashboard():
+@pytest.mark.asyncio
+async def test_dashboard():
     response = client.get("/dashboard")
     assert response.status_code == 200
 
