@@ -1,7 +1,6 @@
 from typing import AsyncIterator
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy.orm import Session
-from sqlalchemy import func, text, select
+from sqlalchemy import func, select
 from datetime import date, datetime
 
 from ..models.statistics import StatisticOverview

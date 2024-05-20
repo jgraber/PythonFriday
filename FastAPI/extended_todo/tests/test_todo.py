@@ -7,7 +7,7 @@ import pytest
 
 from ..dependencies import get_db
 from ..data.datastore_db import DataStoreDb
-from ..data.database import create_async_session_factory, create_session_factory
+from ..data.database import create_async_session_factory
 from ..main import app
 
 import logging

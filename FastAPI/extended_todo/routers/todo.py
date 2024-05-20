@@ -1,5 +1,4 @@
 from datetime import date, timedelta
-import os
 from typing import Annotated, List
 
 from fastapi import APIRouter, Depends, HTTPException, Request, Response, status
@@ -10,7 +9,6 @@ from ..dependencies import get_db
 
 from ..models.todo import TaskOutput, TaskInput
 from ..data.datastore_db import DataStoreDb
-from ..data.database import create_session_factory
 
 router = APIRouter()
 
