@@ -4,31 +4,21 @@ from typing import Annotated, List
 from fastapi import APIRouter, Depends, HTTPException, Request, Response, status
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
+from fastapi_filter import FilterDepends
 
 from ..dependencies import get_db
 
 from ..models.todo import TaskOutput, TaskInput
+from ..models.task_filter import TaskFilter
 from ..data.datastore_db import DataStoreDb
 
 router = APIRouter()
 
 
-async def filter_parameters(q: str | None = None, 
-                            include_done: bool = True, 
-                            due_before: date = date.today() + timedelta(days=365)):
-    return {"q": q, "include_done": include_done, "due_before": due_before }
-
-
 @router.get("/")
-async def show_all_tasks(filter: Annotated[dict, Depends(filter_parameters)], 
+async def show_all_tasks(filter: TaskFilter = FilterDepends(TaskFilter), 
                          db: DataStoreDb = Depends(get_db)) -> List[TaskOutput]:
-    result = await db.all()
-
-    if not filter["include_done"]:
-        result = [item for item in result if item.done == False ]
-
-    result = [item for item in result if item.due_date <= filter["due_before"] ]
-
+    result = await db.filter(filter)
     return result
 
 

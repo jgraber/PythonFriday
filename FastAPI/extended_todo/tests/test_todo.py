@@ -138,7 +138,7 @@ async def test_show_all_tasks_that_are_not_done():
     await prepare_task("a finished task", done=True)
     await prepare_task("an open task", done=False)
 
-    response = client.get("/api/todo?include_done=false")
+    response = client.get("/api/todo?done=false")
 
     assert response.status_code == 200
     tasks = response.json()
@@ -149,13 +149,47 @@ async def test_show_all_tasks_that_are_not_done():
 @pytest.mark.asyncio
 async def test_show_all_tasks_that_are_due_within_five_days():
     await prepare_task("in 10 days", due_date=date.today() + timedelta(days=10))
+    await prepare_task("in 4 days", due_date=date.today() + timedelta(days=4))
 
-    response = client.get(f"/api/todo?due_before={date.today() + timedelta(days=5)}")
+    response = client.get(f"/api/todo?done=false&due_date__lte={date.today() + timedelta(days=5)}")
 
     assert response.status_code == 200
     tasks = response.json()
-    done = [task for task in tasks if date.fromisoformat(task['due_date']) > date.today() + timedelta(days=5)]
-    assert len(done) == 0
+    assert len(tasks) >= 1
+    larger = [task for task in tasks if date.fromisoformat(task['due_date']) > date.today() + timedelta(days=5)]
+    assert len(larger) == 0
+
+
+@pytest.mark.asyncio
+async def test_show_all_tasks_that_match_search_criteria_sorted_by_name():
+    await prepare_task("485960 A", due_date=date.today())
+    await prepare_task("485960 B", due_date=date.today())
+    await prepare_task("485960 C", due_date=date.today())
+
+    response = client.get(f"/api/todo?search=485960")
+
+    assert response.status_code == 200
+    tasks = response.json()
+    assert len(tasks) == 3
+    assert tasks[0]["name"] == "485960 A"
+    assert tasks[1]["name"] == "485960 B"
+    assert tasks[2]["name"] == "485960 C"
+
+
+@pytest.mark.asyncio
+async def test_show_all_tasks_that_match_search_criteria_sorted_by_name_descending():
+    await prepare_task("5780383 A", due_date=date.today())
+    await prepare_task("5780383 B", due_date=date.today())
+    await prepare_task("5780383 C", due_date=date.today())
+
+    response = client.get(f"/api/todo?search=5780383&order_by=-name")
+
+    assert response.status_code == 200
+    tasks = response.json()
+    assert len(tasks) == 3
+    assert tasks[0]["name"] == "5780383 C"
+    assert tasks[1]["name"] == "5780383 B"
+    assert tasks[2]["name"] == "5780383 A"
 
 
 @pytest.mark.asyncio

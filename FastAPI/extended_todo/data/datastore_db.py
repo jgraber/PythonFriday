@@ -3,6 +3,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import func, select
 from datetime import date, datetime
 
+from ..models.task_filter import TaskFilter
 from ..models.statistics import StatisticOverview
 from ..models.todo import TaskInput, TaskOutput
 from .entities import Task
@@ -88,6 +89,19 @@ class DataStoreDb:
             
             return StatisticOverview(total_tasks=result[0], total_done=result[1], total_open=result[2])
     
+
+    async def filter(self, filter: TaskFilter):
+        async with self.db() as session:
+            query = select(Task)
+            query = filter.filter(query)
+            query = filter.sort(query)
+            result = await session.execute(query)
+            results = []
+
+            for entry in result:
+                results.append(self.__to_output(*entry))
+
+            return results
 
     def __to_output(self, entity: Task) -> TaskOutput:
         return TaskOutput(id=entity.id, 

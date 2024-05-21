@@ -2,6 +2,8 @@ import os
 
 import pytest_asyncio
 
+from ..models.task_filter import TaskFilter
+
 from ..data.database import create_async_session_factory, create_session_factory
 from ..data.datastore_db import DataStoreDb
 from ..models.todo import TaskInput
@@ -176,3 +178,85 @@ async def test_fetches_statistics(with_db):
 
     assert stats.total_tasks == stats.total_open + stats.total_done
     assert stats.total_tasks >= 1
+
+
+@pytest.mark.asyncio
+async def test_filter_empty_filter_gives_all_entries(with_db):
+    store = DataStoreDb(with_db)
+    await store.add(TaskInput(name="counter", 
+                              priority=1, 
+                              due_date=date.today(), 
+                              done=False))
+    await store.add(TaskInput(name="A second entry", 
+                              priority=2, 
+                              due_date=date.today(), 
+                              done=True))
+    filter = TaskFilter()
+    
+    entries = await store.filter(filter)
+    
+    assert len(entries) >= 2
+
+
+@pytest.mark.asyncio
+async def test_filter_with_filter_for_done_gives_only_done_entries(with_db):
+    store = DataStoreDb(with_db)
+    await store.add(TaskInput(name="counter", 
+                              priority=1, 
+                              due_date=date.today(), 
+                              done=False))
+    await store.add(TaskInput(name="A second entry", 
+                              priority=2, 
+                              due_date=date.today(), 
+                              done=True))
+    filter = TaskFilter()
+    filter.done = True
+    
+    entries = await store.filter(filter)
+    
+    assert len(entries) >= 1
+
+    for entry in entries:
+        assert entry.done == True
+
+
+@pytest.mark.asyncio
+async def test_filter_with_filter_for_name_gives_only_matching_entries(with_db):
+    store = DataStoreDb(with_db)
+    await store.add(TaskInput(name="counter", 
+                              priority=1, 
+                              due_date=date.today(), 
+                              done=False))
+    await store.add(TaskInput(name="Create a filter", 
+                              priority=2, 
+                              due_date=date.today(), 
+                              done=True))
+    filter = TaskFilter()
+    filter.name = "Create a filter"
+    
+    entries = await store.filter(filter)
+    
+    assert len(entries) == 1
+    assert entries[0].name == "Create a filter"
+
+
+@pytest.mark.asyncio
+async def test_filter_with_search_gives_only_matching_entries(with_db):
+    store = DataStoreDb(with_db)
+    await store.add(TaskInput(name="Search for item", 
+                              priority=1, 
+                              due_date=date.today(), 
+                              done=False))
+    await store.add(TaskInput(name="Create a Search", 
+                              priority=2, 
+                              due_date=date.today(), 
+                              done=True))
+    filter = TaskFilter()
+    filter.search = "Search"
+    
+    entries = await store.filter(filter)
+    
+    assert len(entries) >= 2
+    for entry in entries:
+        assert "Search" in entry.name
+    
