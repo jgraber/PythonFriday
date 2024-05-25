@@ -6,6 +6,9 @@ from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 from fastapi_filter import FilterDepends
 
+from ..authentication import current_active_user
+from ..data.entities import User
+
 from ..dependencies import get_db
 
 from ..models.todo import TaskOutput, TaskInput
@@ -25,7 +28,8 @@ async def show_all_tasks(filter: TaskFilter = FilterDepends(TaskFilter),
 @router.post("/", status_code=status.HTTP_201_CREATED)
 async def create_task(task: TaskInput, 
                       request: Request, 
-                      db: DataStoreDb = Depends(get_db)) -> TaskOutput:
+                      db: DataStoreDb = Depends(get_db),
+                      user: User = Depends(current_active_user)) -> TaskOutput:
     result = await db.add(task)
     headers = {"Location": f"{request.base_url}api/todo/{result.id}"}
     return JSONResponse(content=jsonable_encoder(result), 

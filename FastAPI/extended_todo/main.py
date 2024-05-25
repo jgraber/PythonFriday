@@ -4,6 +4,11 @@ from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
+from .data.entities import User
+
+from .models.user import UserCreate, UserRead, UserUpdate
+from .authentication import auth_backend, current_active_user, fastapi_users
+
 from .data.datastore_db import DataStoreDb
 from .dependencies import get_db
 from .routers import todo
@@ -13,6 +18,40 @@ BASE_DIR = Path(__file__).resolve().parent
 
 app = FastAPI()
 app.include_router(todo.router, prefix="/api/todo")
+app.include_router(todo.router, prefix="/api/v1/todo")
+app.include_router(todo.router, prefix="/api/latest/todo")
+
+app.include_router(
+    fastapi_users.get_auth_router(auth_backend), prefix="/auth/jwt", tags=["auth"]
+)
+app.include_router(
+    fastapi_users.get_register_router(UserRead, UserCreate),
+    prefix="/auth",
+    tags=["auth"],
+)
+app.include_router(
+    fastapi_users.get_reset_password_router(),
+    prefix="/auth",
+    tags=["auth"],
+)
+app.include_router(
+    fastapi_users.get_verify_router(UserRead),
+    prefix="/auth",
+    tags=["auth"],
+)
+app.include_router(
+    fastapi_users.get_users_router(UserRead, UserUpdate),
+    prefix="/users",
+    tags=["users"],
+)
+
+
+
+@app.get("/about/me")
+async def about_me(user: User = Depends(current_active_user)):
+    return {"message": f"Hello {user.email}!"}
+
+
 
 app.mount("/static", StaticFiles(directory=str(Path(BASE_DIR, 'static'))), name="static")
 
