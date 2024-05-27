@@ -1,13 +1,10 @@
 from fastapi import FastAPI
-
 from fastapi_versionizer.versionizer import Versionizer, api_version
-
 
 app = FastAPI(
     title='test',
     redoc_url=None
 )
-
 
 @app.get('/status')
 def get_status() -> str:

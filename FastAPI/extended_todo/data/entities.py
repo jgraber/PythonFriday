@@ -14,6 +14,9 @@ class Task(EntityBase):
     due_date = Column(Date)
     done = Column(Boolean, default=False)
     created_at = Column(DateTime)
+
+    def __str__(self):
+        return f"{self.id}: '{self.name}' [{self.due_date}] [{self.done}] - {self.created_at}"
     
 
 class User(SQLAlchemyBaseUserTableUUID, EntityBase):
