@@ -51,7 +51,8 @@ async def show_task(id: int,
 @router.put("/{id}")
 async def update_task(id: int, 
                       task: TaskInput, 
-                      db: DataStoreDb = Depends(get_db)) -> TaskOutput:
+                      db: DataStoreDb = Depends(get_db),
+                      user: User = Depends(current_active_user)) -> TaskOutput:
     try:
         result = await db.update(id, task)
         return result
@@ -61,6 +62,7 @@ async def update_task(id: int,
 
 @router.delete("/{id}", status_code=status.HTTP_204_NO_CONTENT)
 async def delete_task(id: int, 
-                      db: DataStoreDb = Depends(get_db)) -> None:
+                      db: DataStoreDb = Depends(get_db),
+                      user: User = Depends(current_active_user)) -> None:
     await db.delete(id)
     return Response(status_code=status.HTTP_204_NO_CONTENT)
