@@ -3,5 +3,19 @@ version: "3.2"
 services:
   app:
     build: .
+    volumes:
+      - type: bind
+        source: .
+        target: /apps/todo
+    restart: unless-stopped
+
+  nginx:
+    restart: unless-stopped
+    image: nginx
+    container_name: nginx
     ports:
-      - "8000:8000"
+      - "80:80"
+    volumes:
+      - ./server:/etc/nginx/conf.d:ro
+    depends_on:
+      - app
