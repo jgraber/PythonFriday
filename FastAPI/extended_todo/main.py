@@ -47,7 +47,7 @@ app.include_router(
 
 
 
-@app.get("/about/me")
+@app.get("/about/me", tags=["users"])
 async def about_me(user: User = Depends(current_active_user)):
     return {"message": f"Hello {user.email}!"}
 
@@ -57,7 +57,7 @@ app.mount("/static", StaticFiles(directory=str(Path(BASE_DIR, 'static'))), name=
 
 templates = Jinja2Templates(directory=str(Path(BASE_DIR, 'templates')))
 
-@app.get("/about", response_class=HTMLResponse)
+@app.get("/about", tags=["users"], response_class=HTMLResponse)
 async def about(request: Request):
     return templates.TemplateResponse(
         request=request, name="about.html"
