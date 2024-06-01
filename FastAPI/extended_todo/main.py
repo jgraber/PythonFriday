@@ -16,10 +16,38 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
 
-app = FastAPI()
-app.include_router(todo.router, prefix="/api/todo")
-app.include_router(todo.router, prefix="/api/v1/todo")
-app.include_router(todo.router, prefix="/api/latest/todo")
+
+
+description = """
+## Extended ToDo API
+
+### Topcis covered
+- FastAPI
+- Routers
+- HTML Templates
+- Authentication
+- Rate limits
+- Versioning
+"""
+
+app = FastAPI(title="Extended ToDo API",
+    description=description,
+    summary="An extended example for FastAPI",
+    version="0.7.5",
+    terms_of_service="http://example.com/terms/",
+    contact={
+        "name": "Johnny Graber",
+        "url": "https://improveandrepeat.com/about/",
+        "email": "info@improveandrepeat.com",
+    },
+    license_info={
+        "name": "Apache 2.0",
+        "url": "https://www.apache.org/licenses/LICENSE-2.0.html",
+    },)
+
+app.include_router(todo.router, prefix="/api/todo", tags=["tasks"], deprecated=True)
+app.include_router(todo.router, prefix="/api/v1/todo", tags=["tasks"])
+app.include_router(todo.router, prefix="/api/latest/todo", tags=["tasks"])
 
 app.include_router(
     fastapi_users.get_auth_router(auth_backend), prefix="/auth/jwt", tags=["auth"]
