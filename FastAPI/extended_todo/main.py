@@ -16,6 +16,24 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
 
+tags_metadata = [
+    {
+        "name": "auth",
+        "description": "Authentication based on FastAPI Users.",
+    },
+    {
+        "name": "users",
+        "description": "Basic information about users",
+    },
+    {
+        "name": "tasks",
+        "description": "Manage _tasks_ to learn about FastAPI",
+        "externalDocs": {
+            "description": "Blog series on FastAPI",
+            "url": "https://improveandrepeat.com/tag/fastapi/",
+        },
+    },
+]
 
 
 description = """
@@ -40,6 +58,7 @@ app = FastAPI(title="Extended ToDo API",
         "url": "https://improveandrepeat.com/about/",
         "email": "info@improveandrepeat.com",
     },
+    openapi_tags=tags_metadata,
     license_info={
         "name": "Apache 2.0",
         "url": "https://www.apache.org/licenses/LICENSE-2.0.html",
