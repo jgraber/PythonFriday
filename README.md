@@ -65,6 +65,7 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
   * [Python Friday #225: Set a Response Header With FastAPI](https://improveandrepeat.com/2024/05/python-friday-225-set-a-response-header-with-fastapi/)
   * [Python Friday #226: Fine-Tune the OpenAPI Documentation in FastAPI](https://improveandrepeat.com/2024/05/python-friday-226-fine-tune-the-openapi-documentation-in-fastapi/)
   * [Python Friday #228: HTTP Basic Authentication in FastAPI](https://improveandrepeat.com/2024/05/python-friday-228-http-basic-authentication-in-fastapi/)
+  * [Python Friday #229: OAuth2 and JWT to Protect a FastAPI Application](https://improveandrepeat.com/2024/05/python-friday-229-oauth2-and-jwt-to-protect-a-fastapi-application/)
 * [Flask](./Flask)
   * [Python Friday #32: First Steps With Flask](https://improveandrepeat.com/2020/08/python-friday-32-first-steps-with-flask/)
   * [Python Friday #33: Activate Auto-Reload for Flask in VS Code](https://improveandrepeat.com/2020/08/python-friday-33-activate-auto-reload-for-flask-in-vs-code/)
