@@ -141,6 +141,7 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
   * [Python Friday #89: Constraints, Indexes and Default Values in SQLAlchemy ORM](https://improveandrepeat.com/2021/09/python-friday-89-constraints-indexes-and-default-values-in-sqlalchemy-orm/)
   * [Python Friday #90: SQL Server Connection Strings for SQLAlchemy](https://improveandrepeat.com/2021/09/python-friday-90-sql-server-connection-strings-for-sqlalchemy/)
   * [Python Friday #91: Automap for SQLAlchemy ORM](https://improveandrepeat.com/2021/10/python-friday-91-automap-for-sqlalchemy-orm/)
+  * [Python Friday #232: Update SQLAlchemy to Version 2.x](https://improveandrepeat.com/2024/06/python-friday-232-update-sqlalchemy-to-version-2-x/)
 * [Selenium](./Selenium)
   * [Python Friday #142: First Steps With Selenium](https://improveandrepeat.com/2022/09/python-friday-142-first-steps-with-selenium/)
   * [Python Friday #143: Driver Manager for Selenium](https://improveandrepeat.com/2022/10/python-friday-143-driver-manager-for-selenium/)
