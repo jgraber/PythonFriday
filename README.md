@@ -75,6 +75,7 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
   * [Python Friday #237: Static Routes in FastAPI](https://improveandrepeat.com/2024/07/python-friday-237-static-routes-in-fastapi/)
   * [Python Friday #238: Create a Dashboard for FastAPI](https://improveandrepeat.com/2024/08/python-friday-238-create-a-dashboard-for-fastapi/)
   * [Python Friday #239: Asynchronous Tests With Pytest](https://improveandrepeat.com/2024/08/python-friday-239-asynchronous-tests-with-pytest/)
+  * [Python Friday #240: Asynchronous SQLAlchemy With FastAPI](Python Friday #240: Asynchronous SQLAlchemy With FastAPI)
 * [Flask](./Flask)
   * [Python Friday #32: First Steps With Flask](https://improveandrepeat.com/2020/08/python-friday-32-first-steps-with-flask/)
   * [Python Friday #33: Activate Auto-Reload for Flask in VS Code](https://improveandrepeat.com/2020/08/python-friday-33-activate-auto-reload-for-flask-in-vs-code/)
