@@ -1,0 +1,9 @@
+services:
+  app:
+    image: node:20-alpine
+    volumes:
+      - type: bind
+        source: ./data
+        target: /workspace
+    working_dir: /workspace
+    command: sh -c 'while true; do sleep 30; done'
