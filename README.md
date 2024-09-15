@@ -79,6 +79,7 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
   * [Python Friday #241: Filters for SQLAlchemy and FastAPI](https://improveandrepeat.com/2024/08/python-friday-241-filters-for-sqlalchemy-and-fastapi/)
   * [Python Friday #242: API Versioning in FastAPI](https://improveandrepeat.com/2024/08/python-friday-242-api-versioning-in-fastapi/)
   * [Python Friday #243: Rate Limit in FastAPI](https://improveandrepeat.com/2024/09/python-friday-243-rate-limit-in-fastapi/)
+  * [Python Friday #244: Integrate FastAPI Users Into the To-Do Application](https://improveandrepeat.com/2024/09/python-friday-244-integrate-fastapi-users-into-the-to-do-application/)
 * [Flask](./Flask)
   * [Python Friday #32: First Steps With Flask](https://improveandrepeat.com/2020/08/python-friday-32-first-steps-with-flask/)
   * [Python Friday #33: Activate Auto-Reload for Flask in VS Code](https://improveandrepeat.com/2020/08/python-friday-33-activate-auto-reload-for-flask-in-vs-code/)
