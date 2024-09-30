@@ -1,0 +1,10 @@
+site_name: Python Friday
+site_description: an example blog set up following the tutorial
+site_url: http://www.example.com
+
+theme:
+  name: material
+  
+plugins:
+  - blog:
+      blog_dir: .
