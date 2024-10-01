@@ -4,6 +4,9 @@ site_url: http://www.example.com
 
 theme:
   name: material
+  palette:
+    primary: red
+    accent: amber
   
 plugins:
   - blog:
