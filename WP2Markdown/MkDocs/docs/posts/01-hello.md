@@ -1,8 +1,10 @@
 ---
 date:
   created: 2024-08-31
-tags: hello; start
 category: writing
+tags: 
+  - hello
+  - start
 ---
 
 # Hello world!

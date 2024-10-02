@@ -2,8 +2,9 @@
 date:
   created: 2024-09-20
 title: One more post
-tags: mkdocs
 category: writing
+tags: 
+  - mkdocs
 ---
 
 One more post to explore MkDocs.

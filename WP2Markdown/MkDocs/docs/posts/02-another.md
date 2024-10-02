@@ -1,9 +1,10 @@
 ---
 date:
   created: 2024-09-10
-title: A nother post
-tags: mkdocs
 category: writing
+title: Another post
+tags: 
+  - mkdocs
 ---
 
 Another post to explore MkDocs.

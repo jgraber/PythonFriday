@@ -7,7 +7,10 @@ theme:
   palette:
     primary: red
     accent: amber
+    - navigation.expand
   
 plugins:
   - blog:
       blog_dir: .
+  - tags:
+      tags_file: tags.md
