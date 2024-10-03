@@ -1,10 +1,11 @@
 ---
 date:
-  created: 2024-08-31
-category: writing
+  created: 2024-08-31 21:02:00
 tags: 
   - hello
   - start
+categories: 
+  - writing
 ---
 
 # Hello world!

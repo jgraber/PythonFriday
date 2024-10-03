@@ -1,10 +1,11 @@
 ---
 date:
-  created: 2024-09-10
-category: writing
+  created: 2024-09-10 11:00:00
 title: Another post
 tags: 
   - mkdocs
+categories: 
+  - writing
 ---
 
 Another post to explore MkDocs.

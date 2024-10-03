@@ -7,10 +7,13 @@ theme:
   palette:
     primary: red
     accent: amber
+  features:
+    - navigation.indexes
     - navigation.expand
   
 plugins:
   - blog:
       blog_dir: .
+      categories_toc: true
   - tags:
       tags_file: tags.md
