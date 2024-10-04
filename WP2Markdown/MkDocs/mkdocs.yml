@@ -10,6 +10,11 @@ theme:
   features:
     - navigation.indexes
     - navigation.expand
+
+extra_css:
+  - stylesheets/extra.css
+extra_javascript:
+  - javascripts/extra.js
   
 plugins:
   - blog:
