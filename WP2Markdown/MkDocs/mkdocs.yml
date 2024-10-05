@@ -10,6 +10,7 @@ theme:
   features:
     - navigation.indexes
     - navigation.expand
+    - navigation.footer
 
 extra_css:
   - stylesheets/extra.css
