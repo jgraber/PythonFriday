@@ -1,6 +1,7 @@
 site_name: Python Friday
 site_description: an example blog set up following the tutorial
 site_url: http://www.example.com
+site_author: info@improveandrepeat.com (Johnny Graber)
 
 theme:
   name: material
@@ -23,3 +24,18 @@ plugins:
       categories_toc: true
   - tags:
       tags_file: tags.md
+  - rss:
+      date_from_meta:
+        as_creation: "date.created"
+        as_update: "date.updated"
+        datetime_format: "%Y-%m-%d %H:%M:%S"
+        default_time: "20:00"
+        default_timezone: Europe/Paris
+      enabled: true
+      length: 20
+      match_path: "posts/*"
+      url_parameters:
+        utm_source: "PythonFriday"
+        utm_medium: "RSS"
+        utm_campaign: "feed-syndication"
+      use_git: false
