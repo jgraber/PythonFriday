@@ -22,6 +22,7 @@ plugins:
   - blog:
       blog_dir: .
       categories_toc: true
+  - search
   - tags:
       tags_file: tags.md
   - rss:
