@@ -185,6 +185,7 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
   * [Python Friday #158: Extract the Audio of an MP4 Video](https://improveandrepeat.com/2023/01/python-friday-158-extract-the-audio-of-an-mp4-video/)
 * [WP2Markdown](./WP2Markdown)
   * [Python Friday #247: Static Site Generators for a Blog?](https://improveandrepeat.com/2024/10/python-friday-247-static-site-generators-for-a-blog/)
+  * [Python Friday #248: MkDocs for a Blog](https://improveandrepeat.com/2024/10/python-friday-248-mkdocs-for-a-blog/)
 * [Web](./Web)
   * [Python Friday #137: HTTP With Requests](https://improveandrepeat.com/2022/08/python-friday-137-http-with-requests/)
   * [Python Friday #138: Parsing HTML With Beautiful Soup](https://improveandrepeat.com/2022/09/python-friday-138-parsing-html-with-beautiful-soup/)
