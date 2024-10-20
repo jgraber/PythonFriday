@@ -186,6 +186,7 @@ A place to put the code samples of my [Python Friday](https://improveandrepeat.c
 * [WP2Markdown](./WP2Markdown)
   * [Python Friday #247: Static Site Generators for a Blog?](https://improveandrepeat.com/2024/10/python-friday-247-static-site-generators-for-a-blog/)
   * [Python Friday #248: MkDocs for a Blog](https://improveandrepeat.com/2024/10/python-friday-248-mkdocs-for-a-blog/)
+  * [Python Friday #249: Migrate from WordPress to Markdown](https://improveandrepeat.com/2024/10/python-friday-249-migrate-from-wordpress-to-markdown/)
 * [Web](./Web)
   * [Python Friday #137: HTTP With Requests](https://improveandrepeat.com/2022/08/python-friday-137-http-with-requests/)
   * [Python Friday #138: Parsing HTML With Beautiful Soup](https://improveandrepeat.com/2022/09/python-friday-138-parsing-html-with-beautiful-soup/)
