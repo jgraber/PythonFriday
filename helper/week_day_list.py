@@ -4,24 +4,24 @@ from dateutil.relativedelta import *
 
 locale.setlocale(locale.LC_ALL, 'de_DE')
 
-year = date(2024,1,1)
+# year = date(2024,1,1)
 
-tuesday = year + relativedelta(day=2)
+# tuesday = year + relativedelta(day=2)
 
-while tuesday.year == year.year:
-    print(f'Sitzung vom {tuesday.strftime("%#d %B %Y")}')
-    tuesday = tuesday + relativedelta(weeks=1)
+# while tuesday.year == year.year:
+#     print(f'Sitzung vom {tuesday.strftime("%#d %B %Y")}')
+#     tuesday = tuesday + relativedelta(weeks=1)
 
 #exit()
 
 
-year = date(2024,1,1)
+year = date(2025,1,1)
 
-tuesday = year + relativedelta(day=2)
-friday = year + relativedelta(day=5)
+tuesday = year + relativedelta(day=7)
+friday = year + relativedelta(day=3)
 counter = 0
 previous_month = ""
-python_friday = 208
+python_friday = 260
 
 def print_day(day, number, previous_month, text):
     number = number + 1
@@ -37,8 +37,8 @@ def print_day(day, number, previous_month, text):
     return number, day, previous_month
 
 while tuesday.year == year.year or friday.year == year.year:
-    counter, tuesday, previous_month = print_day(tuesday, counter, previous_month, "")
     counter, friday, previous_month = print_day(friday, counter, previous_month, f"PF {python_friday}")
+    counter, tuesday, previous_month = print_day(tuesday, counter, previous_month, "")
     python_friday = python_friday + 1
 
 
