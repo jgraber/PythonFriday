@@ -8,7 +8,7 @@ d = {'Date': [date(2024, 10, 29), date(2024, 10, 30), date(2024, 10, 31)],
 df = pd.DataFrame(data=d)
 print(df)
 
-df = df.rename({'Jetpack (Visitors)': 'Jetpack', 
+df = df.rename({'JetPack (Visitors)': 'JetPack', 
                 'WP Statistics (Visitors)': 'WP Statistics'}, 
                 axis=1)
 print(df)
