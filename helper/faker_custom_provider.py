@@ -1,7 +1,6 @@
 from typing import OrderedDict
 from faker.providers import BaseProvider
 from faker import Faker
-# import random
 
 class UniversityProvider(BaseProvider):
     university_names = [
