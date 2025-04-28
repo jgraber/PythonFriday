@@ -28,7 +28,8 @@ if results.detections:
 
 end = time.time()
 print("Detection time: {:.2f} s".format(end - start))
-print(f"Faces found: {len(results.detections)}")
+print(f"Faces found: {len(results.detections) if results and results.detections else 0}")
+
 
 # Show the result
 cv2.imshow('MediaPipe Face Detection', image)
