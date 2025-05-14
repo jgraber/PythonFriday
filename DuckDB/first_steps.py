@@ -32,3 +32,20 @@ print("#" * 50)
 
 duckdb.sql("SELECT 42").write_parquet("out.parquet")
 duckdb.sql("SELECT 42").write_csv("out.csv")  
+
+
+
+
+
+duckdb.sql("SELECT * FROM duckdb_tables()").show()
+duckdb.sql("SELECT table_schema, table_name, table_type FROM information_schema.tables;").show()
+duckdb.sql("SELECT * FROM 'file_example_CSV_5000.csv' WHERE Country = 'Great Britain'").show()
+
+
+duckdb.sql("SELECT Country, Gender, count(*) FROM 'people.csv' GROUP BY ALL ORDER BY Country").show()
+
+
+result = duckdb.sql("SELECT Country, count(*) FROM 'people.csv' GROUP BY Country ORDER BY Country")
+countries = result.fetchall()
+for country in countries:
+    print(f"{country[0]} - {country[1]}")
