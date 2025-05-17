@@ -1,4 +1,216 @@
 Published,Type,Conference,Title,Speaker,Duration,DurationInMinutes,Link
+2 days ago,talk,NDC Melbourne 2025,Who tests their cloud code anyway?,Lars Klint,58:27,58,https://youtube.com/watch?v=-bwSG_ys_4s
+2 days ago,talk,NDC Melbourne 2025,Inside the Breach: Secrets Exposed,Troy Hunt,59:07,59,https://youtube.com/watch?v=Og-cFpwqjQ4
+4 days ago,talk,NDC Melbourne 2025,"Keynote: The past, present, and future of AI for application developers",Steve Sanderson,59:12,59,https://youtube.com/watch?v=Xyios5mdkIM
+4 days ago,talk,NDC Melbourne 2025,How Rome2Rio split up their monolith and moved to the cloud,Lachlan Barclay,43:03,43,https://youtube.com/watch?v=_8Vf_G8Lv-c&pp=0gcJCY0JAYcqIYzv
+4 days ago,talk,NDC Melbourne 2025,"Mirror, mirror: LLMs and the illusion of humanity",Jodie Burchell,56:09,56,https://youtube.com/watch?v=RSS1a8ngGRU
+4 days ago,talk,NDC Melbourne 2025,What's new in .NET 9 & C# 13,Filip Ekberg,1:00:32,61,https://youtube.com/watch?v=snPgTcxH8-s&pp=0gcJCY0JAYcqIYzv
+4 days ago,talk,NDC Melbourne 2025,Design Engineering: The next era of Software Design,Diana Mounter,57:06,57,https://youtube.com/watch?v=3fu3nvOYs8Q
+4 days ago,talk,NDC Melbourne 2025,Correcting Common Async/Await Mistakes in .NET 9,Brandon Minnick,1:01:19,61,https://youtube.com/watch?v=6frfLI3HqKI&pp=0gcJCY0JAYcqIYzv
+3 weeks ago,talk,NDC Porto 2024,Mobile App Architecture: How to Conquer the Giant!,Heather Downing,1:03:51,64,https://youtube.com/watch?v=617jDXMShuc
+3 weeks ago,talk,NDC Porto 2024,"Team Temperature: How to Control High Engagement, Prevent Burnout and ...",Tomas Lekavičius,28:31,29,https://youtube.com/watch?v=FEqZyVT6dSo
+3 weeks ago,talk,NDC Porto 2024,Your developer’s intelligence isn’t artificial,Hannes Lowette,1:03:34,64,https://youtube.com/watch?v=WnrgjVQtJag
+3 weeks ago,talk,NDC Porto 2024,The Power of Dev Containers and GitHub Codespaces,Chris Ayers,1:13:47,74,https://youtube.com/watch?v=wzIhoopguPY
+3 weeks ago,talk,NDC Porto 2024,The Blazor Multiverse: get to know the different Blazor frameworks,Anjuli Jhakry,52:28,52,https://youtube.com/watch?v=GpkkoAPGV2w
+3 weeks ago,talk,NDC Porto 2024,A Developer Goes to the Movies,Simon Painter,1:03:44,64,https://youtube.com/watch?v=znaTn-pFqmM
+3 weeks ago,talk,NDC Porto 2024,From Code to Customer,Tobias Mende,53:36,54,https://youtube.com/watch?v=OJjO-xtX1JE
+3 weeks ago,talk,NDC Porto 2024,Navigating the GitOps ecosystem: The principles and in-depth look at Argo and Flux,Stas Lebedenko,55:48,56,https://youtube.com/watch?v=sXyHTJGGmF8
+1 month ago,talk,NDC Porto 2024,Build RAG from Scratch,Phil Nash,44:18,44,https://youtube.com/watch?v=wkvGcbsZmPo
+1 month ago,talk,NDC Porto 2024,Test-Driven Leadership: Crafting Testable Strategies,Andrew Murphy,49:06,49,https://youtube.com/watch?v=wcLhyRMsG9g
+1 month ago,talk,NDC Porto 2024,Writing (in)efficient C#,Callum Whyte,58:47,59,https://youtube.com/watch?v=s5xNMWkYPwQ
+1 month ago,talk,NDC Porto 2024,Less is more—a build pipeline for the modern age,Adam Ralph,44:33,45,https://youtube.com/watch?v=aJnd_PGDR4Y
+1 month ago,talk,NDC Porto 2024,Hearing and Being Heard - Getting the Entire Team to Speak,Daniel Ward,33:09,33,https://youtube.com/watch?v=9-7IwgTg7BU
+1 month ago,talk,NDC Porto 2024,Turbocharged: Writing High-Performance C# and .NET Code,Steve Gordon,1:03:45,64,https://youtube.com/watch?v=2EGzAPhz2nE
+1 month ago,talk,NDC Porto 2024,SQL Server vs Azure Cosmos DB,Hasan Savran,54:55,55,https://youtube.com/watch?v=28GqHEtApeU
+1 month ago,talk,NDC Porto 2024,Building Operable Software with TDD (but not the way you think),Martin Thwaites,55:58,56,https://youtube.com/watch?v=vzr4HiQZhdY&pp=0gcJCY0JAYcqIYzv
+1 month ago,talk,NDC Porto 2024,"CQRS, DDD and GraphQL, a perfect fit?",Michael Staib,52:29,52,https://youtube.com/watch?v=QXGJCn-1VEo
+1 month ago,talk,NDC London 2025,Modern Observability and Event Driven Architectures,Martin Thwaites & Ian Cooper,1:04:49,65,https://youtube.com/watch?v=DgW1kAazN80
+1 month ago,talk,NDC London 2025,Advanced Cloud Native Development with .NET Aspire,Scott Hunter & Maddy Montaquila,1:01:21,61,https://youtube.com/watch?v=izLJ7Ztf-BM
+1 month ago,talk,NDC London 2025,Locknote: Confessions of an Imposter,Rendle .,52:39,53,https://youtube.com/watch?v=fL2poAw2cb0
+1 month ago,talk,NDC London 2025,"Where next, C#?",Mads Torgersen,1:00:21,60,https://youtube.com/watch?v=78dwlqFUTP4
+1 month ago,talk,NDC London 2025,On Becoming a Space-Faring Civilization -,Unknown,1:00:18,60,https://youtube.com/watch?v=GIaPk4d1yBU&pp=0gcJCY0JAYcqIYzv
+1 month ago,talk,NDC London 2025,You Don’t Know Git,Edward Thomson,1:01:56,62,https://youtube.com/watch?v=DZI0Zl-1JqQ
+1 month ago,talk,NDC London 2025,Practical advice for building glorious monoliths,Glenn F. Henriksen,1:03:43,64,https://youtube.com/watch?v=3wrwrFNZFv4
+1 month ago,talk,NDC London 2025,Getting to 300 million requests a month with a one man AI/Dev-Ops team,Rob Frelow,54:05,54,https://youtube.com/watch?v=ZFQq5Djd5JY&pp=0gcJCY0JAYcqIYzv
+1 month ago,talk,NDC Security 2025,Floki: Defining Agentic Workflows for Security,Roberto Rodriguez,1:08:45,69,https://youtube.com/watch?v=bOFe2MZfb4o
+1 month ago,talk,NDC Security 2025,TPMs and the Linux Kernel: unlocking a better path to hardware security,Ignat Korchagin,54:21,54,https://youtube.com/watch?v=Msa9nq5kgjU
+1 month ago,talk,NDC Security 2025,AI and the SOC Engineer: The Evolving Human Element in Security,Victoria Almazova,1:00:58,61,https://youtube.com/watch?v=CaZbsbKnOho
+1 month ago,talk,NDC Security 2025,Inside Google's Discovery and Remediation of a Critical CPU Vulnerability,Yousif Hussin,44:59,45,https://youtube.com/watch?v=Ix1oBc0jp9Q
+1 month ago,talk,NDC Security 2025,Optimistic Security,Niall Merrigan,53:05,53,https://youtube.com/watch?v=pbIdEPbZGho
+1 month ago,talk,NDC Security 2025,Improve your threat modelling through the science of simplicity,Dave Soldera,1:00:30,61,https://youtube.com/watch?v=G88hFlId_aM
+1 month ago,talk,NDC Security 2025,Navigating complexity in event-driven architectures: A domain-driven approach,David Boyne,55:17,55,https://youtube.com/watch?v=HpFWRpyyvrk
+1 month ago,talk,NDC Security 2025,Building a lightning fast Firewall with Java & eBPF,Johannes Bechberger,47:21,47,https://youtube.com/watch?v=16Rv7IWGoDk
+1 month ago,talk,NDC Security 2025,Hack the Planet! What Movies can Teach Us about InfoSec,Simon Painter,56:00,56,https://youtube.com/watch?v=hKHf9Ko9SY4
+1 month ago,talk,NDC Security 2025,Linux containers in (less than) 100 lines of shell,Michael Kerrisk,1:15:10,75,https://youtube.com/watch?v=4RUiVAlJE2w
+1 month ago,talk,NDC Security 2025,Keynote: Maturing Your Application Security Program,Tanya Janca,57:25,57,https://youtube.com/watch?v=SfBRx7WVyKQ
+1 month ago,talk,NDC Security 2025,Content Security Policy: From newbie to advanced,Halvor Sakshaug,59:57,60,https://youtube.com/watch?v=eFbFMqaqSAk
+1 month ago,talk,NDC Security 2025,Plants vs thieves: Automated Tests in the World of Web Security,Ramona Schwering,55:22,55,https://youtube.com/watch?v=zq1pnFMwHE4
+1 month ago,talk,NDC Security 2025,Spoofing Commands - Can You Trust Process Creation Logs?,Tristan Bennett,54:40,55,https://youtube.com/watch?v=cjKpZ1JmlU8
+1 month ago,talk,NDC Security 2025,Tales of OAuth2/OIDC in the wild,Anders Abel,40:35,41,https://youtube.com/watch?v=SWz88aYrd84
+1 month ago,talk,NDC Security 2025,Challenges and Opportunities from Quantum-Safe Cryptography,Tjerand Silde,1:04:43,65,https://youtube.com/watch?v=Ph8yoeN6ZwE
+1 month ago,talk,NDC Security 2025,From DevSecOops to Security Success: The Bug Bounty Effect at FINN.no,Emil Vaagland,36:35,37,https://youtube.com/watch?v=4JHjGu-Jo6I&pp=0gcJCY0JAYcqIYzv
+1 month ago,talk,NDC Security 2025,Cybersecurity in the Era of AI and Quantum Computing,Tudor Damian,1:03:33,64,https://youtube.com/watch?v=C9IgEfYCwFo
+1 month ago,talk,NDC Security 2025,Building antifragile systems using Secure by Design,Anders Kofoed & Eivind Jahr Kirkeby,57:59,58,https://youtube.com/watch?v=sV_UOqe7x-o
+1 month ago,talk,NDC Security 2025,Hacking History: The first computer worm,Håvard Opheim,40:19,40,https://youtube.com/watch?v=D52nDuLlJC0
+1 month ago,talk,NDC Security 2025,Secure System Integrations,Tobias Ahnoff,48:45,49,https://youtube.com/watch?v=1SmAINCaj-c
+1 month ago,talk,NDC Security 2025,RCE via legacy dependency in Python,Andrea Brambilla,29:04,29,https://youtube.com/watch?v=yr2Zj_mSj0c
+1 month ago,talk,NDC Security 2025,Security Champion Worst Practices,Tanya Janca,1:01:04,61,https://youtube.com/watch?v=qsHqOb9hpS4
+1 month ago,talk,NDC Security 2025,GitHub Actions: A Cloudy Day for Security,Sofia Lindqvist,56:55,57,https://youtube.com/watch?v=J6VUAef7pjM
+1 month ago,talk,NDC Security 2025,Breaking and securing OAuth 2.0 in frontends at NDC Security,Philippe De Ryck,1:00:09,60,https://youtube.com/watch?v=S5HV1iPhbT4
+1 month ago,talk,NDC Security 2025,Crypto Heist: The Aftermath of a Government Website Cryptojacking Attack,Scott Helme,1:01:36,62,https://youtube.com/watch?v=-LkuTS0ELzE
+1 month ago,talk,NDC Security 2025,Flipping Bits: Your Credentials Are Certainly Mine,Stök & Joohoi,54:50,55,https://youtube.com/watch?v=NuHh_mR6pY0
+1 month ago,talk,NDC Security 2025,"Using developer-centric data to predict, prioritize, and improve App Security Outcomes",Laura Bell,57:08,57,https://youtube.com/watch?v=PaqZTvAmhcs
+1 month ago,talk,NDC Security 2025,"Using GenAI on your code, what could possibly go wrong? -",Unknown,51:06,51,https://youtube.com/watch?v=krDJlrw5mM0
+1 month ago,talk,NDC Security 2025,"I don't need privacy, I got confidentiality!",Kim Wuyts,52:51,53,https://youtube.com/watch?v=aRYLVFp_z6g
+1 month ago,talk,NDC Security 2025,Practical cryptography with Tink,Neil Madden,42:41,43,https://youtube.com/watch?v=peumD3MY8So&pp=0gcJCY0JAYcqIYzv
+1 month ago,talk,NDC Security 2025,Securing React: Prompt Engineering for Robust and Secure Code Generation,Jim Manico,59:47,60,https://youtube.com/watch?v=_yKIVpwb9kQ
+1 month ago,talk,NDC London 2025,Null & Void - Everything about Nothing in .NET,Stefan Pölz,1:05:43,66,https://youtube.com/watch?v=7_yc9mfyCqk
+1 month ago,talk,NDC London 2025,Useful and Beautiful Developer Docs and How to Create Them,Johannes Dienst,47:40,48,https://youtube.com/watch?v=2qa5Il4kMTU
+1 month ago,talk,NDC London 2025,Speech Technologies for a Multilingual World,Jessica Rose,31:59,32,https://youtube.com/watch?v=nVG2SnQS9T4
+1 month ago,talk,NDC London 2025,The subtle art of supporting mature products,Flavia Circiumaru,42:05,42,https://youtube.com/watch?v=Anm0K3Y3QKc
+1 month ago,talk,NDC London 2025,82 Bugs I Collected in a Year You Won’t Believe Made It to Production -,Unknown,50:50,51,https://youtube.com/watch?v=QeGKr8n-CLY&pp=0gcJCY0JAYcqIYzv
+1 month ago,talk,NDC London 2025,"Open Source, Open Mind: The Cost of Free Software",Dylan Beattie,1:03:48,64,https://youtube.com/watch?v=0kQqONqMeLQ&pp=0gcJCY0JAYcqIYzv
+1 month ago,talk,NDC London 2025,Can you trust your (large language) model?,Jodie Burchell,1:04:45,65,https://youtube.com/watch?v=xoBPzIt1nsA
+1 month ago,talk,NDC London 2025,The Philosophy of Architecture,Barry O'Reilly,51:34,52,https://youtube.com/watch?v=2Ki12Pi3hnc
+1 month ago,talk,NDC London 2025,"Keynote: The past, present, and future of AI for application developers",Steve Sanderson,57:46,58,https://youtube.com/watch?v=awztkr8n0AA
+1 month ago,talk,NDC London 2025,NDC Party: A Brief History of Computer Art,Anders Norås,46:38,47,https://youtube.com/watch?v=k8CVP7t1At4
+1 month ago,talk,NDC London 2025,"Write Uno Time, Run Everywhere with the Uno Platform",Joseph Guadagno,58:05,58,https://youtube.com/watch?v=vyR38vxo4ug
+1 month ago,talk,NDC London 2025,Secure your Modular Monolith by pretending it's a cat,William Brander,43:08,43,https://youtube.com/watch?v=nazDBr1Wywk
+1 month ago,talk,NDC London 2025,"Building a modern, native app for Windows: Which UI framework should you choose?",Alvin Ashcraft,56:37,57,https://youtube.com/watch?v=tB32vhWq3iU
+1 month ago,talk,NDC London 2025,So Long Secure Coding - Practical Steps for Securing the entire SDLC,Laura Bell,51:50,52,https://youtube.com/watch?v=-bFAeTfvMjo
+1 month ago,talk,NDC London 2025,Demystify cloud-native development with .NET Aspire -,Unknown,1:01:29,61,https://youtube.com/watch?v=vAtGEoOf9WY
+1 month ago,talk,NDC London 2025,Effective Data Visualization,David Giard,1:00:42,61,https://youtube.com/watch?v=6c0RyP-R12w
+1 month ago,talk,NDC London 2025,We are the Guardians of our Future,Tess Ferrandez-Norlander,1:01:07,61,https://youtube.com/watch?v=KYiuswpFtRA
+1 month ago,talk,NDC London 2025,Fine-Grained Authorization for Modern Applications,Ashish Jha,54:25,54,https://youtube.com/watch?v=L7dOmOEUleQ
+1 month ago,talk,NDC London 2025,So You Want to Maintain a Reliable Event-Driven System,James Eastham,49:10,49,https://youtube.com/watch?v=hBYNFnt3QMs
+1 month ago,talk,NDC London 2025,Build RAG from Scratch,Phil Nash,53:10,53,https://youtube.com/watch?v=cwxH9cxW-wQ
+1 month ago,talk,NDC London 2025,Securing your cloud applications with identity & private networking best practices,Paul Yuknewicz,1:02:05,62,https://youtube.com/watch?v=AKD1nP7TXPI&pp=0gcJCY0JAYcqIYzv
+2 months ago,talk,NDC London 2025,The Definition Of Insanity,Sam Newman,56:12,56,https://youtube.com/watch?v=I6SvnCYRm50&pp=0gcJCY0JAYcqIYzv
+2 months ago,talk,NDC London 2025,Build Your Own Game Engine in the Browser,David Whitney,50:13,50,https://youtube.com/watch?v=zP5zTEeYlys
+2 months ago,talk,NDC London 2025,Performance loop—A practical guide to profiling and benchmarking,Daniel Marbach,1:02:38,63,https://youtube.com/watch?v=EY6BNuVKeRY
+2 months ago,talk,NDC London 2025,Architecture isn't Kubernetes,Diana Montalion,57:56,58,https://youtube.com/watch?v=yMU6wbXtFso
+2 months ago,talk,NDC London 2025,OPFS: Next evolution in web storage or just another buzzword?,Piyush Gupta,53:15,53,https://youtube.com/watch?v=o1VEsCVZi4A
+2 months ago,talk,NDC London 2025,Cracking the Furby code: The path to evolve an icon,Luke McNeice,53:10,53,https://youtube.com/watch?v=gKVTpRTpaT8
+2 months ago,talk,NDC Security 2025,Start covering your bases & Stop chasing APT headlines,Avishay Zawoznik,52:07,52,https://youtube.com/watch?v=gYv_PEncvRk
+2 months ago,talk,NDC London 2025,Using GPT Visual Capabilities to Solve a Wordle Puzzle,Jennifer Marsman,53:03,53,https://youtube.com/watch?v=sfpk4wQeS_g
+2 months ago,talk,NDC London 2025,C#'s Functional Journey,Mads Torgersen,59:48,60,https://youtube.com/watch?v=abPa5AagcwY
+2 months ago,talk,NDC London 2025,"Beyond The Hype: Every Day, Real World Uses for Copilot",Rob Conery,58:41,59,https://youtube.com/watch?v=kkCw-M4zoUA
+2 months ago,talk,NDC London 2025,"Keynote: AI without the BS, for humans",Scott Hanselman,59:00,59,https://youtube.com/watch?v=kYUicaho5k8
+2 months ago,talk,NDC London 2025,Develop a Second Brain,Michela Bertaina,42:41,43,https://youtube.com/watch?v=6KSVDvPnUpU
+2 months ago,talk,NDC London 2025,Post-quantum cryptography for .NET developers,Filip W.,59:13,59,https://youtube.com/watch?v=AsKq9XZL83Y
+2 months ago,talk,NDC London 2025,Mobile App Architecture: How to Conquer the Giant!,Heather Downing,1:00:25,60,https://youtube.com/watch?v=j3aknrlO7_Q
+2 months ago,talk,NDC London 2025,The Forgotten AI of Video Games,Layla Porter,1:00:30,61,https://youtube.com/watch?v=w30cK2ga42M
+2 months ago,talk,NDC London 2025,Dungeons Dragons & Developers,Matt Brunt,45:24,45,https://youtube.com/watch?v=UuXs7OUnafc
+2 months ago,talk,NDC London 2025,Codex: The Impact of English on Programming Languages,Guy Royse,49:31,50,https://youtube.com/watch?v=wwwSFFhxJ3U&pp=0gcJCY0JAYcqIYzv
+2 months ago,talk,NDC London 2025,Adventures in Spacetime,Kevlin Henney,1:02:48,63,https://youtube.com/watch?v=AMkzXZKRlvE
+2 months ago,talk,NDC London 2025,How to Modernize Your Legacy ASP.NET Apps Gradually,"Jonathan ""J."" Tower",1:02:07,62,https://youtube.com/watch?v=TcRIRJGwWkY
+2 months ago,talk,NDC London 2025,Thinking Like an Architect,Gregor Hohpe,1:02:15,62,https://youtube.com/watch?v=xtxfrxf0mfE
+2 months ago,talk,NDC London 2025,Leadership and the Power of Regret: Turning Emotions into Action,Arthur Doler,56:40,57,https://youtube.com/watch?v=wLVrutnpHU8
+2 months ago,talk,NDC London 2025,Unveiling .NET Secrets with the World's Smallest C# Program,Steve Gordon,59:42,60,https://youtube.com/watch?v=FB8YbAh2el8
+2 months ago,talk,NDC London 2025,When will you learn? A Teacher’s Guide to Developer Learning,Emma Burstow,1:02:22,62,https://youtube.com/watch?v=b29BXhCbapo
+2 months ago,talk,NDC London 2025,How building a portable escape room made me a better developer,William Brander,53:11,53,https://youtube.com/watch?v=A5ht-tjdvKc&pp=0gcJCY0JAYcqIYzv
+2 months ago,talk,NDC London 2025,20 year old cloud native apps with .NET,Scott Hanselman,59:36,60,https://youtube.com/watch?v=w6tRA8qWKQc&pp=0gcJCY0JAYcqIYzv
+2 months ago,talk,NDC London 2025,Consistency and Agreements in Distributed Systems,Jimmy Bogard,1:01:30,62,https://youtube.com/watch?v=FZ-1dbtQXYY
+2 months ago,talk,NDC London 2025,Thirteen ways of looking at a Turtle,Scott Wlaschin,1:05:56,66,https://youtube.com/watch?v=fOF3rriiR3U
+2 months ago,talk,NDC London 2025,Surviving Long Event History,Vagif Abilov,1:02:55,63,https://youtube.com/watch?v=11MGL3DCO_0
+2 months ago,talk,NDC London 2025,Building a Browser Based Code Editor,Jo Franchetti,34:33,35,https://youtube.com/watch?v=PM7a5m1_lx8
+2 months ago,talk,NDC London 2025,How I built a ZX Spectrum emulator from scratch using C# and Blazor,Jimmy Engström,50:16,50,https://youtube.com/watch?v=4I9K-YHqcZ0
+2 months ago,talk,NDC London 2025,Testing First - Getting The How,Stacy Cashmore,1:01:54,62,https://youtube.com/watch?v=rwjEP-DMtqI
+2 months ago,talk,NDC London 2025,You’re Doing Exceptions Wrong,Matt Burke,57:00,57,https://youtube.com/watch?v=oWvX-hdIAQo&pp=0gcJCY0JAYcqIYzv
+2 months ago,talk,NDC London 2025,Could a Co-Pilot be an Aircraft Co-Pilot,Clifford Agius,55:25,55,https://youtube.com/watch?v=qRTd4F_34AI
+2 months ago,talk,NDC London 2025,"Microservices, Where Did It All Go Wrong",Ian Cooper,55:10,55,https://youtube.com/watch?v=d8NDgwOllaI
+2 months ago,talk,NDC London 2025,"Those ""Business People"" - they just don't get me! how to talk IT to non-IT leaders",Hanna Engel,48:46,49,https://youtube.com/watch?v=EDhtgrJ-Ghc
+2 months ago,talk,NDC London 2025,How to become a go-to person,Hila Fox,51:38,52,https://youtube.com/watch?v=By3LpJhZhqA&pp=0gcJCY0JAYcqIYzv
+2 months ago,talk,NDC London 2025,Building the NDC London Mobile App Live! with .NET MAUI,Gerald Versluis,1:04:05,64,https://youtube.com/watch?v=e9cmDeD9EVI
+2 months ago,talk,NDC London 2025,Blazor-testing from A to Z,Egil Hansen,58:34,59,https://youtube.com/watch?v=p-H5fEMCB8s
+2 months ago,talk,NDC London 2025,"Building a Robot Arm with .NET 8, Raspberry Pi, Blazor and SignalR",Peter Gallagher,47:17,47,https://youtube.com/watch?v=BctYy1XlyN0
+2 months ago,talk,NDC London 2025,"Coder, Coach, Catalyst - using questions to make people grow",Martin Mazur,1:09:31,70,https://youtube.com/watch?v=cSKKuQLh__Q
+2 months ago,talk,NDC London 2025,Reading Code,Marit van Dijk,56:59,57,https://youtube.com/watch?v=8xKQ2cX-h5E
+2 months ago,talk,NDC London 2025,The Unsung Hero of Modern Software: Asynchronous Messaging,Irina Dominte,1:01:07,61,https://youtube.com/watch?v=wsfk_us3DJ4
+2 months ago,talk,NDC London 2025,Digital Spit-Fire Interface Rage: How to Calm the Savage User,Dean Schuster,57:23,57,https://youtube.com/watch?v=5MQm0BX9POc
+2 months ago,talk,NDC London 2025,AI vs Humans: Rewriting the Rules of Success,Michelle Frost,54:17,54,https://youtube.com/watch?v=O4Rjdt6lZa8
+2 months ago,talk,NDC London 2025,.NET Aspire and AWS: a match made in heaven,David Pallmann,1:00:46,61,https://youtube.com/watch?v=8WxvA_xCt2c&pp=0gcJCY0JAYcqIYzv
+2 months ago,talk,NDC London 2025,Exposing the not-so-secret practices of the cult of DDD,Chris Klug,1:02:48,63,https://youtube.com/watch?v=ESPnfFT6iD0
+2 months ago,talk,NDC London 2025,Build Trust with Your Users Through UX,Tetiana Gulei,44:54,45,https://youtube.com/watch?v=v8AAYVCchYY
+2 months ago,talk,NDC London 2025,"The future of UI is ""open""",Brecht De Ruyte,47:24,47,https://youtube.com/watch?v=-mNiqhYCGpU
+2 months ago,talk,NDC London 2025,(Guitar) strings attached: from UTF-8 to EADGBE,Hannes Lowette,59:10,59,https://youtube.com/watch?v=IV4TwAHS_Pg
+2 months ago,talk,NDC London 2025,If .NET brewed beer…,Shaun Lawrence,55:30,56,https://youtube.com/watch?v=LNAkXoH_8F4&pp=0gcJCY0JAYcqIYzv
+2 months ago,talk,NDC London 2025,Can Gen AI make the world Disability inclusive?,Dennie Declercq,56:52,57,https://youtube.com/watch?v=y7ntbgkuBcY
+2 months ago,talk,NDC London 2025,Speak your users’ language: what to look out for when going global,Robin Martijn,57:09,57,https://youtube.com/watch?v=hGXJ91EeOl0&pp=0gcJCY0JAYcqIYzv
+2 months ago,talk,NDC London 2025,Design for Developers,Lex Lofthouse,1:02:06,62,https://youtube.com/watch?v=eGQCGxsM6uQ
+2 months ago,talk,NDC London 2025,Prove going for a walk makes you more productive by measuring CO2 with an IoT device.,Jim Bennett,55:48,56,https://youtube.com/watch?v=upEgSfqDTIg
+2 months ago,talk,NDC London 2025,Inside Google's Discovery and Remediation of a Critical CPU Vulnerability,Yousif Hussin,44:02,44,https://youtube.com/watch?v=Tr6AyvfwSsY
+2 months ago,talk,NDC Security 2025,LIVE DEMO: Supply Chain Attacks in the Terraform Registry,Kyle Kotowick,47:01,47,https://youtube.com/watch?v=BZavu1e9eag
+2 months ago,talk,NDC Security 2025,SEVEN things about API security,Philippe De Ryck,1:00:16,60,https://youtube.com/watch?v=bQnbM2tFxAo
+2 months ago,talk,NDC Security 2025,Privilege Escalation in Microsoft Azure,Christian August Holm Hansen,58:16,58,https://youtube.com/watch?v=2vMrtFkqmQc
+2 months ago,talk,NDC Security 2025,Navigating the Security and Privacy Landscape of Modern AI,Vera Rimmer,1:05:02,65,https://youtube.com/watch?v=_VWITdRbdTw
+2 months ago,talk,NDC Security 2025,Homoglyph-Based Attacks: Circumventing LLM Detectors,Aldan Creo -NDC Security 2025,55:35,56,https://youtube.com/watch?v=F2RGYKKoqp0
+2 months ago,talk,NDC Security 2025,Chrome Browser Exploitation: from zero to heap sandbox escape,Matteo Malvica,48:51,49,https://youtube.com/watch?v=RL2po1swXO4
+2 months ago,talk,NDC Security 2025,RAG Against the Machine,Brennan Lodge,58:32,59,https://youtube.com/watch?v=wPfpwp2zJIw
+2 months ago,talk,NDC Security 2025,Incoherent Code: How Code Quality Impacts Security,Tav Herzlich,58:05,58,https://youtube.com/watch?v=fqdJ0fBwGiw
+2 months ago,talk,NDC Security 2025,(Ab)user Experience: The Dark side of Product and Security,"L. Potter, J. Watkins NDC Security 2025",56:40,57,https://youtube.com/watch?v=j2KVkgUc_0g
+2 months ago,talk,NDC Security 2025,You Gotta Fight For Your Right To Third Party,Mathew Caplan,53:19,53,https://youtube.com/watch?v=KVc3-iOpPe0
+4 months ago,talk,NDC Porto 2024,Basics Designs and How We Got Them Wrong,Adam Furmanek,1:01:59,62,https://youtube.com/watch?v=WkaQoiF16d0
+4 months ago,talk,NDC Porto 2024,"How Simple Is ""As Simple As Possible""?",Rendle .,1:06:34,67,https://youtube.com/watch?v=WfUQHpcLKF4
+4 months ago,talk,NDC Porto 2024,Using developer-centric data to improve Application Security Outcomes,Laura Bell Main,54:00,54,https://youtube.com/watch?v=EudNG_IjyQw
+4 months ago,talk,NDC Porto,The performance loop—A practical guide to profiling and benchmarking,Daniel Marbach,1:02:45,63,https://youtube.com/watch?v=owoY7jd2oIg
+4 months ago,talk,NDC Porto,"Orchestration vs. Choreography: The good, the bad, and the trade-offs",Laila Bougria,59:12,59,https://youtube.com/watch?v=p8NTe7NFhH8
+4 months ago,talk,NDC Porto 2024,Ten Key Steps for Enhanced Web App Security,Ben Dechrai,1:03:06,63,https://youtube.com/watch?v=pN2AegJnfwI
+4 months ago,talk,NDC Porto 2024,Improving your dev experience with .NET Aspire,Chris Klug,57:59,58,https://youtube.com/watch?v=ykj4Xyj89cQ&pp=0gcJCY0JAYcqIYzv
+4 months ago,talk,NDC Porto 2024,"Open Source, Open Mind: The Cost of Free Software",Dylan Beattie,1:04:13,64,https://youtube.com/watch?v=mWg_PFqCMlY
+4 months ago,talk,NDC Porto 2024,Understanding Nuclear Power,Richard Campbell,1:02:07,62,https://youtube.com/watch?v=EG0JtGqgDh0
+4 months ago,talk,NDC Porto 2024,"Platforms: Build abstractions, not illusions",Gregor Hohpe,58:27,58,https://youtube.com/watch?v=JAouLQRyNHQ
+4 months ago,talk,NDC Porto 2024,An Introduction to Residuality Theory, Barry O'Reilly,54:17,54,https://youtube.com/watch?v=PzRZLFWH1fY
+4 months ago,talk,NDC Porto 2024,What's new in .NET 9 & C# 13,Filip Ekberg,1:02:38,63,https://youtube.com/watch?v=8XZr3KVjNJw
+4 months ago,talk,NDC Porto 2024,Keynote: Start Here: Mindset Shifts and Tools for Building Career Confidence,Denise Jacobs,1:08:17,68,https://youtube.com/watch?v=LL_LNfPYu1s
+4 months ago,talk,NDC Porto 2024,Locknote: The Albatross Project,Rendle .,39:57,40,https://youtube.com/watch?v=-PGIeiivuZk
+4 months ago,talk,NDC Porto 2024,Keynote: Can you trust your (large language) model?,Jodie Burchell,54:17,54,https://youtube.com/watch?v=fh8jDBgORRU
+4 months ago,talk,NDC Porto 2024,Keynote: Tidy First? A Daily Exercise in Empirical Design,Kent Beck,52:43,53,https://youtube.com/watch?v=A9vRp9T8pkU
+4 months ago,talk,NDC TechTown 2024,A bird's eye view of a compiler,Joakim Lier,52:22,52,https://youtube.com/watch?v=qvk1Uv6Nl9o
+4 months ago,talk,NDC TechTown 2024,Linux user namespaces: a blessing and a curse,Ignat Korchagin,46:57,47,https://youtube.com/watch?v=UfoT88iE-TY
+4 months ago,talk,NDC TechTown 2024,C++ Under the Hood: (Internal Class Mechanisms),Chris Ryan,1:26:29,86,https://youtube.com/watch?v=m0uQF2E6D0M
+4 months ago,talk,NDC TechTown 2024,Test architecture is a real thing,James Westfall,53:29,53,https://youtube.com/watch?v=EKkrv0sc1xg
+4 months ago,talk,NDC TechTown 2024,Contrasting Embedded Software Development for the Space Shuttle and the Orion MPCV,Darrel Raines,1:06:58,67,https://youtube.com/watch?v=yR6Jkkch4fo
+4 months ago,talk,NDC TechTown 2024,Not your GrandParent’s C++,Phil Nash,55:25,55,https://youtube.com/watch?v=Ny5nkjn2v5E
+4 months ago,talk,NDC TechTown 2024,Introduction to eBPF,Martin Ertsås,49:40,50,https://youtube.com/watch?v=WVy6CtDbpR4
+4 months ago,talk,NDC TechTown 2024,Not getting lost in translations,Daniela Engert,58:16,58,https://youtube.com/watch?v=rxBQIQFQirE
+4 months ago,talk,NDC TechTown 2024,Using Edge Machine Learning to save power and development time,Eirik Midttun,44:47,45,https://youtube.com/watch?v=-kL5e62ELjs
+4 months ago,talk,NDC TechTown 2024,"Crash and test failure analysis with AI... no wait, ehm, with regexes!",Jan Wegger & Thomas Hanssen,48:49,49,https://youtube.com/watch?v=1QPrrTawuws
+4 months ago,talk,NDC TechTown 2024,Beyond unit tests,Oyvind Tonsberg,41:01,41,https://youtube.com/watch?v=Snt5xoPCI-0
+4 months ago,talk,NDC TechTown 2024,Remote blinky on nRF52 using Rust,Eivind Bergem,47:53,48,https://youtube.com/watch?v=GDLOdp2x74A
+4 months ago,talk,NDC TechTown 2024,Metal-In Test-Driven Development: A Dual-Target TDD approach,Fran Climent,1:00:08,60,https://youtube.com/watch?v=Ps8pzxQ1hpQ
+4 months ago,talk,NDC TechTown 2024,Mutation Testing in Python with Cosmic Ray,Austin Bingham,56:48,57,https://youtube.com/watch?v=HBqhjLaZejA
+4 months ago,talk,NDC TechTown 2024,Monadic Operations in Modern C++: A Practical Approach,Vitaly Fanaskov,54:18,54,https://youtube.com/watch?v=RRJ71mTwB1Y
+4 months ago,talk,NDC TechTown 2024,A clean slate,Giles Chamberlin,45:10,45,https://youtube.com/watch?v=F1CZcsP5U2c
+4 months ago,talk,NDC TechTown 2024,Path coverage in gcc,Jørgen Kvalsvik,1:00:46,61,https://youtube.com/watch?v=kkAsakZCCAY&pp=0gcJCY0JAYcqIYzv
+4 months ago,talk,NDC TechTown 2024,Design Patterns - The Most Common Misconceptions (2 of N),Klaus Iglberger,47:08,47,https://youtube.com/watch?v=DEtne_KZ74Y
+4 months ago,talk,NDC TechTown 2024,The Aging Programmer,Kate Gregory,1:03:08,63,https://youtube.com/watch?v=mVWQQeSOD0M
+4 months ago,talk,NDC TechTown 2024,Why Iterators Got It All Wrong — and what we should use instead,Arno Schoedl,31:19,31,https://youtube.com/watch?v=dalJCNHJA0w
+4 months ago,talk,NDC TechTown 2024,"Omg, how do I write software that isn't a ticking timebomb!?",Eivind Jahren,42:50,43,https://youtube.com/watch?v=QSh3DO0PTJM
+4 months ago,talk,NDC TechTown 2024,Bootable applications - an introduction,Michael Odden,1:03:17,63,https://youtube.com/watch?v=k1usJC0cuoc
+4 months ago,talk,NDC TechTown 2024,An (In-)Complete Guide to C++ Object Lifetimes,Jonathan Müller,57:31,58,https://youtube.com/watch?v=e1TpikjdO1g
+4 months ago,talk,NDC TechTown 2024,Memory Model: Get your shared data under control,Jana Machutová,51:27,51,https://youtube.com/watch?v=CBGFbK_6twQ
+4 months ago,talk,NDC TechTown 2024,The Two Memory Models,Anders Schau Knatten,1:01:58,62,https://youtube.com/watch?v=rZaPQkpuEeM
+4 months ago,talk,NDC TechTown 2024,Memory Safety: Rust vs. C,Robert Seacord,1:00:54,61,https://youtube.com/watch?v=YofBgJ2zpBs
+4 months ago,talk,NDC TechTown 2024,TPMs and the Linux Kernel: unlocking a better path to hardware security,Ignat Korchagin,47:06,47,https://youtube.com/watch?v=g8b4K5FQUj8
+4 months ago,talk,NDC TechTown 2024,My favorite (constexpr) data structures,Hana Dusíková,48:42,49,https://youtube.com/watch?v=UMD2_KWc2gA
+4 months ago,talk,NDC TechTown 2024,Speedrun through Splicing Sockets with Sockmap,Jakub Sitnicki,47:23,47,https://youtube.com/watch?v=BMsfIu-UywY
+4 months ago,talk,NDC TechTown 2024,Unleashing 🦀 The Ferris Within,Victor Ciura,1:00:43,61,https://youtube.com/watch?v=-ZFeappKc8s
+4 months ago,talk,NDC TechTown 2024,The Magic of a Trace,Theodor Thornhill,58:38,59,https://youtube.com/watch?v=2usGeZq8xr8
+4 months ago,talk,NDC TechTown 2024,Using vcpkg in anger,Martin Hořeňovský,41:46,42,https://youtube.com/watch?v=Q8s2zrkwwSM
+4 months ago,talk,NDC TechTown 2024,Getting Started with Embedded Linux Security,Simon Goda,58:43,59,https://youtube.com/watch?v=WbJuE5JzsmU
+4 months ago,talk,NDC TechTown 2024,"Core and other guidelines. The good, the bad, the... questionable?",Arne Mertz,50:27,50,https://youtube.com/watch?v=Jcdmqsn4CPM
+4 months ago,talk,NDC TechTown 2024,C++ Horizons,Bryce Adelstein Lelbach,52:49,53,https://youtube.com/watch?v=UMJGyasVJaA
+4 months ago,talk,NDC TechTown 2024,Exploring Dependency Injection and Reflection in Modern C++,Mikhail Svetkin,55:37,56,https://youtube.com/watch?v=iIizAdyorOQ
+4 months ago,talk,NDC TechTown 2024,"Demystifying Process Address Space: Heap, Stack, and Beyond",Piotr Wierciński,58:40,59,https://youtube.com/watch?v=pI-HRRh7-dU
+4 months ago,talk,NDC TechTown 2024,How To Use `constexpr` In C++23,Jason Turner,59:53,60,https://youtube.com/watch?v=MUOAovwQbFA
+4 months ago,talk,NDC TechTown 2024,Green Programming,Hendrik Niemeyer & Tina Ulbrich,50:49,51,https://youtube.com/watch?v=9qs3VItLS2I
+4 months ago,talk,NDC TechTown 2024,The existential threat against C++ and where to go from here,Helge Penne,44:36,45,https://youtube.com/watch?v=gG4BJ23BFBE&pp=0gcJCY0JAYcqIYzv
+4 months ago,talk,NDC TechTown 2024,Hello Operator: Making The Call for C,Björkus Dorkus,1:05:15,65,https://youtube.com/watch?v=dCTyu3awI1A
+4 months ago,talk,NDC TechTown 2024,Locknote: Local Reasoning in C++,Sean Parent,1:09:13,69,https://youtube.com/watch?v=bhizxAXQlWc
+4 months ago,talk,NDC TechTown 2024,The Carbon Language: Road to 0.1,Chandler Carruth,1:07:27,67,https://youtube.com/watch?v=bBvLmDJrzvI
+4 months ago,talk,NDC TechTown 2024,Naming is Hard: Let's Do Better,Kate Gregory,1:01:59,62,https://youtube.com/watch?v=aiy5TrU-Hwc
+4 months ago,talk,NDC TechTown 2024,Cache friendly data + functional + ranges = ❤️,Björn Fahller,57:18,57,https://youtube.com/watch?v=s4R_k1rK7pI
 2 days ago,talk,NDC TechTown 2024,Deep dive with Blueye underwater drones,Jonas Follesø,1:00:35,61,https://youtube.com/watch?v=LJCQA4UhS58
 2 days ago,talk,NDC TechTown 2024,Correct Use of Integers in Safety-critical Systems,Robert Seacord,57:51,58,https://youtube.com/watch?v=E8p5ASNglKc
 2 days ago,talk,NDC TechTown 2024,Keynote: How To Address 7 Major C++ Pain Points with Tools,Anastasiia Kazakova,57:26,57,https://youtube.com/watch?v=U3I3eaRKDBk
