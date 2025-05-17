@@ -153,8 +153,8 @@ Published,Type,Conference,Title,Speaker,Duration,DurationInMinutes,Link
 4 months ago,talk,NDC Porto 2024,Basics Designs and How We Got Them Wrong,Adam Furmanek,1:01:59,62,https://youtube.com/watch?v=WkaQoiF16d0
 4 months ago,talk,NDC Porto 2024,"How Simple Is ""As Simple As Possible""?",Rendle .,1:06:34,67,https://youtube.com/watch?v=WfUQHpcLKF4
 4 months ago,talk,NDC Porto 2024,Using developer-centric data to improve Application Security Outcomes,Laura Bell Main,54:00,54,https://youtube.com/watch?v=EudNG_IjyQw
-4 months ago,talk,NDC Porto,The performance loop—A practical guide to profiling and benchmarking,Daniel Marbach,1:02:45,63,https://youtube.com/watch?v=owoY7jd2oIg
-4 months ago,talk,NDC Porto,"Orchestration vs. Choreography: The good, the bad, and the trade-offs",Laila Bougria,59:12,59,https://youtube.com/watch?v=p8NTe7NFhH8
+4 months ago,talk,NDC Porto 2024,The performance loop—A practical guide to profiling and benchmarking,Daniel Marbach,1:02:45,63,https://youtube.com/watch?v=owoY7jd2oIg
+4 months ago,talk,NDC Porto 2024,"Orchestration vs. Choreography: The good, the bad, and the trade-offs",Laila Bougria,59:12,59,https://youtube.com/watch?v=p8NTe7NFhH8
 4 months ago,talk,NDC Porto 2024,Ten Key Steps for Enhanced Web App Security,Ben Dechrai,1:03:06,63,https://youtube.com/watch?v=pN2AegJnfwI
 4 months ago,talk,NDC Porto 2024,Improving your dev experience with .NET Aspire,Chris Klug,57:59,58,https://youtube.com/watch?v=ykj4Xyj89cQ&pp=0gcJCY0JAYcqIYzv
 4 months ago,talk,NDC Porto 2024,"Open Source, Open Mind: The Cost of Free Software",Dylan Beattie,1:04:13,64,https://youtube.com/watch?v=mWg_PFqCMlY
@@ -222,8 +222,8 @@ Published,Type,Conference,Title,Speaker,Duration,DurationInMinutes,Link
 6 days ago,talk,Copenhagen Developers Festival 2024,How to be a problem solver?,Carolina Pascale Campos,56:39,57,https://youtube.com/watch?v=uyVzUjrVOzs
 6 days ago,talk,Copenhagen Developers Festival 2024,Supercharging OAuth 2.0 Security,Philippe De Ryck,59:33,60,https://youtube.com/watch?v=WGz42L7jo4A
 6 days ago,talk,Copenhagen Developers Festival 2024,Fine Grained Authorisation with Relationship-Based Access Control,Ben Dechrai,49:06,49,https://youtube.com/watch?v=pg0nl2uM2K0
-6 days ago,talk,Copenhagen Developers Festival 2024,"Faster, Cheaper, Greener: Pick Three,Lea Mladineo,58:27,58,https://youtube.com/watch?v=W4IqhLX7ftE
-6 days ago,talk,Copenhagen Developers Festival 2024,"From IL Weaving to Source Generators, the Realm story,Ferdinando Papale,38:53,39,https://youtube.com/watch?v=D4shwbxeXUE
+6 days ago,talk,Copenhagen Developers Festival 2024,"Faster, Cheaper, Greener: Pick Three",Lea Mladineo,58:27,58,https://youtube.com/watch?v=W4IqhLX7ftE
+6 days ago,talk,Copenhagen Developers Festival 2024,"From IL Weaving to Source Generators, the Realm story",Ferdinando Papale,38:53,39,https://youtube.com/watch?v=D4shwbxeXUE
 6 days ago,talk,Copenhagen Developers Festival 2024,Debug Like a Scientist!,Maciej Rząsa,42:53,43,https://youtube.com/watch?v=-mMbjFnaPP0
 6 days ago,talk,Copenhagen Developers Festival 2024,Basics Designs and How We Got Them Wrong,Adam Furmanek,58:21,58,https://youtube.com/watch?v=SOM6cUz4d5I
 6 days ago,talk,Copenhagen Developers Festival 2024,XR Demystified: Separating Facts from Fiction in 2024,Rafał Legiędź,59:14,59,https://youtube.com/watch?v=YPw2wpbCSVA
@@ -794,7 +794,7 @@ Published,Type,Conference,Title,Speaker,Duration,DurationInMinutes,Link
 8 months ago,talk,Copenhagen DevFest 2023,Optimize for the Cloud – Lightning-speed .NET Container Apps,Martin Ullrich,59:27,59,https://youtube.com/watch?v=BY7w2YKMZOc
 8 months ago,talk,Copenhagen DevFest 2023,Practical OpenTelemetry for .NET,Martin Thwaites,1:01:06,61,https://youtube.com/watch?v=tctadmNTHfU
 8 months ago,talk,Copenhagen DevFest 2023,Caching the uncacheable: delivering personalized experiences without sacrificing performance,Thijs Feryn,58:18,58,https://youtube.com/watch?v=UFfiraRmXAE
-8 months ago,talk,Copenhagen DevFest 2023,Automating Accessibility Assurance,Sandi Barr,,52:36,53,https://youtube.com/watch?v=kUcHguRrFAg
+8 months ago,talk,Copenhagen DevFest 2023,Automating Accessibility Assurance,Sandi Barr,52:36,53,https://youtube.com/watch?v=kUcHguRrFAg
 8 months ago,talk,Copenhagen DevFest 2023,Your code is just a detail,Damian Brady,1:00:38,61,https://youtube.com/watch?v=sp4YnZvXjXU
 8 months ago,talk,Copenhagen DevFest 2023,A Practical Guide for Crafting Resilient UI Components,Glenn Reyes,43:33,44,https://youtube.com/watch?v=HROWMlxj2No
 8 months ago,talk,Copenhagen DevFest 2023,How to use Chrome DevTools to improve accessibility of your webpage,Dominika Zając,42:33,43,https://youtube.com/watch?v=yuzCQBeJiao
@@ -1385,7 +1385,7 @@ Published,Type,Conference,Title,Speaker,Duration,DurationInMinutes,Link
 9 months ago,talk,NDC Melbourne 2022,"DevOps Pitfalls, Beyond The Technology",Emad Alashi,10:44,11,https://youtube.com/watch?v=I7n797EMeJU
 9 months ago,talk,NDC Melbourne 2022,Avoiding DNS Pain,Kieran Jacobsen,9:56,10,https://youtube.com/watch?v=0_ZhiNnxEsA
 9 months ago,talk,NDC Melbourne 2022,210 x 297   UX Design for the Physical World,Rebecca Platt,13:06,13,https://youtube.com/watch?v=CwTFVvSC2N0
-9 months ago,talk,NDC Melbourne 202,eXential XSS (Cross Site Scripting),Alex Mackey,1:02:06,62,https://youtube.com/watch?v=bl7wFMwboBM
+9 months ago,talk,NDC Melbourne 2022,eXential XSS (Cross Site Scripting),Alex Mackey,1:02:06,62,https://youtube.com/watch?v=bl7wFMwboBM
 9 months ago,talk,NDC Melbourne 2022,Coding in the Cloud with GitHub Codespaces,Damian Brady,57:39,58,https://youtube.com/watch?v=dgyk7zkttHI
 9 months ago,talk,NDC Melbourne 2022,Entity Framework Core Unchained  Getting the Best Performance from Your ORM,Dan Mallott,1:00:40,61,https://youtube.com/watch?v=zyjwHJwzHB8
 9 months ago,talk,NDC Melbourne 2022,IP Allow lists suck  Secure your staging environments with Cloudflare workers,Klee Thomas,55:58,56,https://youtube.com/watch?v=2tizzywjIUw
@@ -1393,7 +1393,7 @@ Published,Type,Conference,Title,Speaker,Duration,DurationInMinutes,Link
 9 months ago,talk,NDC Melbourne 2022,Unleash the Power of Visual Studio Code,Aaron Powell,59:21,59,https://youtube.com/watch?v=I5kx__o4S3k
 9 months ago,talk,NDC Melbourne 2022,Refactoring Components,Erin Zimmer,49:36,50,https://youtube.com/watch?v=qSFBC5X72_c
 9 months ago,talk,NDC Melbourne 2022,Banking on Australia as a tech nation,James Wilson,58:14,58,https://youtube.com/watch?v=4W_LnDLigds
-9 months ago,talk,NDC Melbourne 202,Practical Pipelines  A Houseplant Soil Alerting System with ksqlDB,Danica Fine,52:41,53,https://youtube.com/watch?v=qz_ulWea7nc
+9 months ago,talk,NDC Melbourne 2022,Practical Pipelines  A Houseplant Soil Alerting System with ksqlDB,Danica Fine,52:41,53,https://youtube.com/watch?v=qz_ulWea7nc
 9 months ago,talk,NDC Melbourne 2022,Space in the 2020's,Richard Campbell,1:10:06,70,https://youtube.com/watch?v=o6cK-m-2stg
 9 months ago,talk,NDC Melbourne 2022,Defensive Coding Bootcamp,Heather Downing,50:59,51,https://youtube.com/watch?v=avEHsz9y918
 9 months ago,talk,NDC Melbourne 2022,NET Everything,Melissa Houghton,49:50,50,https://youtube.com/watch?v=_tRa4Mg3sqg
@@ -1631,7 +1631,7 @@ Published,Type,Conference,Title,Speaker,Duration,DurationInMinutes,Link
 1 year ago,talk,NDC Porto 2022,Actors can rule your DDD world,Hannes Lowette,58:42,59,https://youtube.com/watch?v=WDd1QSZBjHI
 1 year ago,talk,NDC Porto 2022,.NET Rocks Live – Modernizing .NET Applications,"Richard Campbell, Carl Franklin & Mark Rendle",1:00:06,60,https://youtube.com/watch?v=8AUa-48LaVs
 1 year ago,talk,NDC Porto 2022,Automate yourself out of a job with Roslyn,Mark Rendle,1:16:07,76,https://youtube.com/watch?v=0oXAZQBHH70
-1 year ago,other,NDC Oslo 2022,NDC Oslo,26-30 Sept 2022 | Conference for Software Developers,0:33,1,https://youtube.com/watch?v=Fnb_i7aLrWo
+1 year ago,other,NDC Oslo 2022,26-30 Sept 2022 | Conference for Software Developers,NDC Oslo,0:33,1,https://youtube.com/watch?v=Fnb_i7aLrWo
 1 year ago,talk,NDC Porto 2022,Lean & Lego: Building the Millennium Falcon Redux,James Lewis,49:06,49,https://youtube.com/watch?v=UAsrW-fgAsg
 1 year ago,talk,NDC Porto 2022,Hustle and Flow,Ian Cooper,58:53,59,https://youtube.com/watch?v=p0bKMuBdpL8
 1 year ago,talk,NDC Porto 2022,Back to Basics: Efficient Async and Await,Filip Ekberg,1:02:00,62,https://youtube.com/watch?v=XEeeYTG3hUg
