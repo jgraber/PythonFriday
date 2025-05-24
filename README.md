@@ -1,6 +1,8 @@
 # Python Friday examples
 A place to put the code samples of my [Python Friday](https://pythonfriday.dev/) blog series:
 
+* [AI](./AI)
+  * [#277: Access Local LLMs Through LM Studio](https://pythonfriday.dev/2025/05/277-access-local-llms-through-lm-studio/)
 * [AsyncAwait](./AsyncAwait)
   * [#215: Async & Await](https://pythonfriday.dev/2024/02/215-async-await/)
 * [Audio](./audio/)
