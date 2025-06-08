@@ -10,12 +10,12 @@ engine.setProperty('rate', 160)     # set new voice rate
 
 # VOICE
 voices = engine.getProperty('voices')  # get installed voices
-for voice in voices:
-    print(voice.id)
+for i, voice in enumerate(voices):
+    print(f"{i} - {voice.id}")
 
 engine.setProperty('voice', voices[1].id) # set a specific voice
 
-engine.say("Welcome to Python Friday, a weekly post on Python.")
+engine.say("Welcome to Python Friday, a weekly blog on Python.")
 engine.runAndWait()
 
 engine.save_to_file('Hello World', 'test.mp3')
