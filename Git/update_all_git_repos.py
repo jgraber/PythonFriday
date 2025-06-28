@@ -7,8 +7,12 @@ def run_git_fetch_all(root_path):
         if os.path.isdir(subdir_path):
             print(f"Running 'git fetch --all' in: {subdir_path}")
             try:
-                result = subprocess.run(["git", "fetch", "--all"], cwd=subdir_path, capture_output=True, text=True)
-                print(result.stdout)
+                result = subprocess.run(["git", "fetch", "--all", "--verbose"], cwd=subdir_path, check=True)
+                if result.stdout == None:
+                    print("done\n\n")
+                else:
+                    print(result.stdout)
+                
                 if result.stderr:
                     print("Errors:", result.stderr)
             except Exception as e:
@@ -16,4 +20,4 @@ def run_git_fetch_all(root_path):
 
 
 if __name__ == "__main__":
-    run_git_fetch_all(r"C:\_GIT_BACKUP")
+    run_git_fetch_all(r"/home/jg/Backup_GIT/")
