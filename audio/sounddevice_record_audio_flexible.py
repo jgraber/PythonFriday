@@ -45,4 +45,4 @@ with wave.open(file_name, 'wb') as wf:
     wf.setframerate(sample_rate)
     wf.writeframes(audio_data.tobytes())
 
-print(f"Saved recording as {sample_rate}")
+print(f"Saved recording as {file_name}")
