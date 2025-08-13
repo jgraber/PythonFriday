@@ -1,7 +1,7 @@
 Question,Answer
 "What is Python Friday?","Python Friday is a weekly blog series created by Johnny Graber — an ongoing lab journal of hands‑on Python experiments, mini‑tutorials, and code snippets on practical topics and tools."
 "Who writes it, and why did it start?","Johnny Graber began posting weekly in early 2020 (on his original blog Improve & Repeat), then moved the series to its own site when it surpassed 250 episodes — driven by a goal to learn something new each Friday."
-"How often are new blog posts published?","New posts are published roughly once every Friday (i.e. one new Python Friday post per workweek), with occasional skips around holidays and travel (as noted in the #52 retrospective)."
+"How often are new blog posts published?","New posts are published roughly once every Friday (i.e. one new Python Friday post per workweek), with occasional skips around public holidays."
 "What topics does Python Friday cover?","The blog spans a wide spectrum: categories include AI, API, analytics, async, testing, web, data‐visualisation, development, security, and more — covering libraries like Flask, FastAPI, pandas, pytest, Docker, and LLMs."
 "How are topics organized on the site?","Each post is tagged with specific keywords (e.g. flask, docker, pandas) and categorized under broader buckets like web, testing, AI, analytics, and async, helping readers filter by interest."
 "Is Python Friday suitable for beginners or more advanced users?","It’s aimed at both: some ‘basics’ and education posts walk through fundamentals, while other posts use advanced features like async, Docker, testing frameworks, database persistence, and LLM integrations."
