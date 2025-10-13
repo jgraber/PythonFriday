@@ -13,7 +13,7 @@ llm = ChatOpenAI(
 
 # 2. Define a prompt that includes chat history + user input
 prompt = ChatPromptTemplate.from_messages([
-    ("system", "You are a helpful assistant. Keep responses concise."),
+    ("system", "You are a Python expert. Provide accurate and concise responses."),
     MessagesPlaceholder(variable_name="history"),   # stores past conversation
     ("human", "{input}")                            # current user message
 ])
@@ -37,7 +37,7 @@ chat_with_history = RunnableWithMessageHistory(
     history_messages_key="history"
 )
 
-# 6. Simple REPL loop
+# 6. Loop for questions
 session_id = "user1"
 
 while True:
