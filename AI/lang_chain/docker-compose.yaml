@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+        context: .
+        dockerfile: Dockerfile
+    volumes:
+      - type: bind
+        source: .
+        target: /workspace
+    working_dir: /workspace
+    command: sh -c 'while true; do sleep 30; done'
