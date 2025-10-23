@@ -4,4 +4,9 @@ RUN apt-get update -qq
 
 WORKDIR /workspace
 
-RUN pip install -U langchain langchain-community langchain-openai langchain_experimental pandas seaborn tabulate
+COPY csv_requirements.txt /workspace/csv_requirements.txt
+COPY csv_agent.py /workspace/csv_agent.py
+
+RUN pip install -U -r csv_requirements.txt
+
+CMD ["/bin/bash"]
