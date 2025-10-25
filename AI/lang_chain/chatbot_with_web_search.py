@@ -1,7 +1,7 @@
 from langchain_community.utilities import DuckDuckGoSearchAPIWrapper
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
-from langchain.schema.runnable import RunnableLambda
+from langchain_core.runnables import RunnableLambda
 
 # 1. Setup the search with DuckDuckGo
 search = DuckDuckGoSearchAPIWrapper(max_results=5)
@@ -14,7 +14,7 @@ def fetch_duckduckgo_results(query: str):
     formatted = "\n\n".join(
         [f"Title: {r['title']}\nSnippet: {r['snippet']}\nURL: {r['link']}" for r in results]
     )
-    print(formatted)
+    # print(formatted)
     return {"snippets": formatted, "query": query}
 
 fetch_results = RunnableLambda(fetch_duckduckgo_results)

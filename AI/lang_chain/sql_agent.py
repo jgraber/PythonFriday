@@ -55,7 +55,7 @@ while True:
         break
 
     try:
-        answer = agent_executor.run(query)
-        print(f"💬 Answer: {answer}\n")
+        answer = agent_executor.invoke({"input": query})
+        print(f"💬 Answer: {answer["output"]}\n")
     except Exception as e:
         print(f"⚠️ Error: {e}\n")
