@@ -24,7 +24,7 @@ print(vectorized_questions)
 
 print("FAQ Bot is ready. Type your question or 'exit' to quit.")
 while True:
-    user_input = input("Question?")
+    user_input = input("Question? ")
     if user_input.lower() == 'exit':
         print("Exiting the chat. Goodbye!")
         break
