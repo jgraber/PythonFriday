@@ -1,0 +1,14 @@
+[project]
+name = "coinflip-yesno"
+version = "0.1.0"
+description = "A minimal CLI tool that flips a coin and answers yes or no"
+authors = [{name = "Johnny Graber"}]
+readme = "README.md"
+requires-python = ">=3.9"
+
+[project.scripts]
+coinflip = "coinflip.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
