@@ -19,3 +19,19 @@ print(http_error(401))
 print(http_error(403))
 
 
+# ----------------------------------------------
+
+def classify_number(n):
+    match n:
+        case x if x < 0:
+            return f"negative: {x}"
+        case 0:
+            return "zero"
+        case x if x > 0:
+            return f"positive: {x}"
+
+
+print(classify_number(-10))
+print(classify_number(0))
+print(classify_number(23))
+
