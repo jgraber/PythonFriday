@@ -35,3 +35,21 @@ print(classify_number(-10))
 print(classify_number(0))
 print(classify_number(23))
 
+# ----------------------------------------------
+
+
+def handle_event(event):
+    match event:
+        case {"type": "user_created", "user_id": user_id}:
+            print(f"User created: {user_id}")
+
+        case {"type": "user_deleted", "user_id": user_id}:
+            print(f"User deleted: {user_id}")
+
+        case _:
+            print("Unknown event")
+
+
+handle_event({"type": "user_created", "user_id": 11, "email": "info@..."})
+handle_event({"type": "user_deleted", "user_id": 6, "date": "2026-01-02 16:19:29"})
+
