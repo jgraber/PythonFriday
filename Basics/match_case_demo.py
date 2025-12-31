@@ -53,3 +53,17 @@ def handle_event(event):
 handle_event({"type": "user_created", "user_id": 11, "email": "info@..."})
 handle_event({"type": "user_deleted", "user_id": 6, "date": "2026-01-02 16:19:29"})
 
+# ----------------------------------------------
+
+def parse_coordinates(value):
+    match value:
+        case [x, y]:
+            return f"2D point: {x}, {y}"
+        case [x, y, z]:
+            return f"3D point: {x}, {y}, {z}"
+        case _:
+            return "Invalid coordinates"
+
+print(parse_coordinates((1)))
+print(parse_coordinates((1,2)))
+print(parse_coordinates((1,2,3)))
