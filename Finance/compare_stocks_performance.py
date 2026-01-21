@@ -11,10 +11,9 @@ def plot_closing_prices(data):
     plt.show()
     
     
-start = "2024-01-01"
+start = "2025-01-01"
 end = "2025-12-31"
-stocks = ["NVDA", "MSFT","GOOG"]
+stocks = ["AAPL", "MSFT", "NVDA", "AMZN", "GOOGL"]
 
 historic_prices = yf.Tickers(stocks).history(start=start, end=end)
-# print(historic_prices)
 plot_closing_prices(historic_prices)
