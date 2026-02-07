@@ -75,6 +75,65 @@ class BollingerBandsStrategy(TradingStrategy):
 
         return None
     
+
+class MovingAverageCrossoverStrategy(TradingStrategy):
+    def __init__(
+        self,
+        fast_window=50,
+        slow_window=200,
+        ma_type="SMA"  # "SMA" or "EMA"
+    ):
+        self.fast_window = fast_window
+        self.slow_window = slow_window
+        self.ma_type = ma_type.upper()
+
+    def prepare_indicators(self, df):
+        df = df.copy()
+
+        if self.ma_type == "EMA":
+            df['MA_fast'] = df['Close'].ewm(
+                span=self.fast_window,
+                adjust=False
+            ).mean()
+            df['MA_slow'] = df['Close'].ewm(
+                span=self.slow_window,
+                adjust=False
+            ).mean()
+        else:  # SMA default
+            df['MA_fast'] = df['Close'].rolling(
+                self.fast_window
+            ).mean()
+            df['MA_slow'] = df['Close'].rolling(
+                self.slow_window
+            ).mean()
+
+        return df
+
+    def generate_signal(self, df, i, position):
+        fast = df['MA_fast'].iloc[i]
+        fast_prev = df['MA_fast'].iloc[i - 1]
+
+        slow = df['MA_slow'].iloc[i]
+        slow_prev = df['MA_slow'].iloc[i - 1]
+
+        # BUY: fast MA crosses above slow MA
+        if (
+            position == 0
+            and fast_prev < slow_prev
+            and fast > slow
+        ):
+            return "BUY"
+
+        # SELL: fast MA crosses below slow MA
+        if (
+            position > 0
+            and fast_prev > slow_prev
+            and fast < slow
+        ):
+            return "SELL"
+
+        return None
+
 # --------------------------------------------------------
 class StrategyTester:
     def __init__(self, initial_cash=10_000):
@@ -174,8 +233,10 @@ END_DATE = "2025-12-31"
 df = load_price_data(TICKER, START_DATE, END_DATE)
 
 # Initialise classes
-strategy = BollingerBandsStrategy(window=20, num_std=2)
-strategy_name = "Bollinger Bands"
+# strategy = BollingerBandsStrategy(window=20, num_std=2)
+strategy = MovingAverageCrossoverStrategy(12, 26, "SMA")
+# strategy_name = "Bollinger Bands"
+strategy_name = "Moving Average Crossover"
 tester = StrategyTester(initial_cash=10_000)
 
 # Benchmark
