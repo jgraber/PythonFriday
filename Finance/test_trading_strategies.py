@@ -75,6 +75,51 @@ class BollingerBandsStrategy(TradingStrategy):
 
         return None
     
+class MACDStrategy(TradingStrategy):
+    def __init__(
+        self,
+        fast=12,
+        slow=26,
+        signal=9
+    ):
+        self.fast = fast
+        self.slow = slow
+        self.signal = signal
+
+    def prepare_indicators(self, df):
+        df = df.copy()
+
+        df['EMA_fast'] = df['Close'].ewm(span=self.fast, adjust=False).mean()
+        df['EMA_slow'] = df['Close'].ewm(span=self.slow, adjust=False).mean()
+        df['MACD'] = df['EMA_fast'] - df['EMA_slow']
+        df['MACD_signal'] = df['MACD'].ewm(span=self.signal, adjust=False).mean()
+
+        return df
+
+    def generate_signal(self, df, i, position):
+        macd = df['MACD'].iloc[i]
+        macd_prev = df['MACD'].iloc[i - 1]
+
+        signal = df['MACD_signal'].iloc[i]
+        signal_prev = df['MACD_signal'].iloc[i - 1]
+
+        # BUY: MACD crosses above signal
+        if (
+            position == 0
+            and macd_prev < signal_prev
+            and macd > signal
+        ):
+            return "BUY"
+
+        # SELL: MACD crosses below signal
+        if (
+            position > 0
+            and macd_prev > signal_prev
+            and macd < signal
+        ):
+            return "SELL"
+
+        return None
 
 class MovingAverageCrossoverStrategy(TradingStrategy):
     def __init__(
@@ -234,9 +279,11 @@ df = load_price_data(TICKER, START_DATE, END_DATE)
 
 # Initialise classes
 # strategy = BollingerBandsStrategy(window=20, num_std=2)
-strategy = MovingAverageCrossoverStrategy(12, 26, "SMA")
+# strategy = MovingAverageCrossoverStrategy(12, 26, "SMA")
+strategy = MACDStrategy()
 # strategy_name = "Bollinger Bands"
-strategy_name = "Moving Average Crossover"
+# strategy_name = "Moving Average Crossover"
+strategy_name = "MACD"
 tester = StrategyTester(initial_cash=10_000)
 
 # Benchmark
