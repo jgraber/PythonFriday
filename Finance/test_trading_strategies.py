@@ -300,3 +300,15 @@ plot_results(
     title=f"{TICKER} – {strategy_name} Strategy"
 )
 
+
+
+strategies = {
+    "Bollinger Bands": BollingerBandsStrategy(20, 2),
+    "MACD": MACDStrategy(),
+    "MA Crossover": MovingAverageCrossoverStrategy(12, 26, "SMA")
+}
+
+for name, strategy in strategies.items():
+    tester = StrategyTester(initial_cash=10_000)
+    res = tester.run(df, strategy)
+    print(f"{name:20s} | Return: {res['return_pct']:6.2f}% | Trades: {len(res['trades'])}")
