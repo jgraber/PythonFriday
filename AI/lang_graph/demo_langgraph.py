@@ -30,7 +30,6 @@ builder.add_edge("llm", END)
 
 # 5. compile the graph and use it
 graph = builder.compile()
-
 result = graph.invoke({
     "messages": [HumanMessage(content="What is the capital city of Switzerland?")]
 })
