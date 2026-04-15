@@ -1,2 +1,5 @@
 langgraph==1.1.4
 openai==2.30.0
+grandalf==0.8
+jupyterlab==4.5.6
+mermaid-py==0.8.4
