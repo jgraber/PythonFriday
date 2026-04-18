@@ -15,13 +15,13 @@ locale.setlocale(locale.LC_ALL, 'de_DE')
 #exit()
 
 
-year = date(2025,1,1)
+year = date(2026,1,1)
 
-tuesday = year + relativedelta(day=7)
-friday = year + relativedelta(day=3)
+tuesday = year + relativedelta(day=6)
+friday = year + relativedelta(day=2)
 counter = 0
 previous_month = ""
-python_friday = 260
+python_friday = 312
 
 def print_day(day, number, previous_month, text):
     number = number + 1
