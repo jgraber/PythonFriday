@@ -51,13 +51,16 @@ def greeter(state: State, *, store: BaseStore) -> dict:
 
 
 store = load_store()
-graph = (
-    StateGraph(State)
-    .add_node("greeter", greeter)
-    .add_edge(START, "greeter")
-    .add_edge("greeter", END)
-    .compile(checkpointer=InMemorySaver(), store=store)
-)
+
+workflow = StateGraph(State)
+
+workflow.add_node("greeter", greeter)
+
+workflow.add_edge(START, "greeter")
+workflow.add_edge("greeter", END)
+
+# Use the configured memory object
+graph = workflow.compile(checkpointer=InMemorySaver(), store=store)
 
 
 def main() -> None:
