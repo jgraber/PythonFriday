@@ -20,12 +20,29 @@ from langchain_openai import ChatOpenAI
 from langgraph.checkpoint.sqlite import SqliteSaver
 from langgraph.graph import START, END, StateGraph
 
+# 1. set values
 sys.stdout.reconfigure(encoding="utf-8")
 
 DB_FILE = "resume_demo.sqlite"
 THREAD_ID = "resume-demo"
 TOPIC = "the productivity benefits of standing desks"
 
+# 2. guard clause on parameters
+arg = sys.argv[1] if len(sys.argv) > 1 else None
+
+if arg not in {"start", "resume", "reset", "inspect"}:
+    print(__doc__)
+    sys.exit(1)
+
+if arg == "reset":
+    Path(DB_FILE).unlink(missing_ok=True)
+    print(f"Deleted {DB_FILE}.")
+    sys.exit(0)
+
+SIMULATE_CRASH = arg == "start"
+
+
+# 3. connect to local LLM
 llm = ChatOpenAI(
     base_url="http://localhost:1234/v1",
     api_key="lm-studio",
@@ -33,7 +50,7 @@ llm = ChatOpenAI(
     temperature=0.1,
 )
 
-
+# 4. define state and nodes
 class State(TypedDict):
     topic: str
     research: str
@@ -67,22 +84,11 @@ def summarize(state: State) -> dict:
     return {"summary": response.content}
 
 
-arg = sys.argv[1] if len(sys.argv) > 1 else None
-
-if arg not in {"start", "resume", "reset", "inspect"}:
-    print(__doc__)
-    sys.exit(1)
-
-if arg == "reset":
-    Path(DB_FILE).unlink(missing_ok=True)
-    print(f"Deleted {DB_FILE}.")
-    sys.exit(0)
-
-SIMULATE_CRASH = arg == "start"
-
+# 5. initialise SQLite as memory store
 conn = sqlite3.connect(DB_FILE, check_same_thread=False)
 checkpointer = SqliteSaver(conn)
 
+# 6. build workflow
 workflow = StateGraph(State)
 
 workflow.add_node("research", research)
@@ -95,10 +101,22 @@ workflow.add_edge("fetch_metric", "summarize")
 workflow.add_edge("summarize", END)
 
 graph = workflow.compile(checkpointer=checkpointer)
+png_bytes = graph.get_graph().draw_mermaid_png()
+with open("resume_failed.png", "wb") as f:
+    f.write(png_bytes)
 
-
+# 7. interact with workflow
 def main() -> None:
     config = {"configurable": {"thread_id": THREAD_ID}}
+
+    if arg == "start":
+        try:
+            graph.invoke({"topic": TOPIC}, config)
+        except Exception as e:
+            print("*" * 60)
+            print(f"ERROR: {e}")
+            print("*" * 60)
+        return
 
     if arg == "inspect":
         state = graph.get_state(config)
@@ -111,15 +129,6 @@ def main() -> None:
         for i, snap in enumerate(graph.get_state_history(config)):
             source = snap.metadata.get("source") if snap.metadata else None
             print(f"[{i}] next={snap.next}  source={source}  values keys={list(snap.values.keys())}")
-        return
-
-    if arg == "start":
-        try:
-            graph.invoke({"topic": TOPIC}, config)
-        except Exception as e:
-            print("*" * 60)
-            print(f"ERROR: {e}")
-            print("*" * 60)
         return
 
     print("Resuming from saved checkpoint at fetch_metric ...")
