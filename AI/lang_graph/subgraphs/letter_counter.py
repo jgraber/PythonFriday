@@ -5,7 +5,7 @@ task in a tiny LangGraph subgraph you can import and drop into ANY graph. The
 LLM only does the fuzzy parsing (pull the letter and word out of free-form
 text); Python does the exact counting, so the answer is always right.
 
-`make_letter_counter(input_key, output_key)` is a factory: it builds the
+`make_letter_counter(llm, input_key, output_key)` is a factory: it builds the
 subgraph with a dynamically-constructed `TypedDict`, so the boundary keys
 match whatever state keys the parent graph already uses. A ready-made
 `letter_counter_subgraph` (keys `question`/`answer`) is exported for the
