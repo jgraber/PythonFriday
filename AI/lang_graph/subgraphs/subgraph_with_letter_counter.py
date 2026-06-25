@@ -68,7 +68,7 @@ workflow.add_edge("chat", END)
 
 graph = workflow.compile()
 png_bytes = graph.get_graph(xray=1).draw_mermaid_png()
-with open("subgraph_reusable.png", "wb") as f:
+with open("subgraph_with_letter_counter.png", "wb") as f:
     f.write(png_bytes)
 
 
