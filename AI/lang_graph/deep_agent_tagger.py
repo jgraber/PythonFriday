@@ -8,9 +8,7 @@ to the console and retries once with all fenced code blocks stripped.
 
 Run:
     uv pip install deepagents langchain-openai python-frontmatter
-    uv run deep_agent_tagger.py                  # tag the bundled sample_note.md
     uv run deep_agent_tagger.py path/to/note.md  # tag a real file in place
-    uv run deep_agent_tagger.py reset            # delete sample_note.md
 
 Important:
     The local model must support OpenAI-compatible tool calling because the
@@ -43,7 +41,6 @@ llm = ChatOpenAI(
     temperature=0.1,
 )
 
-SAMPLE_FILE = Path("sample_note.md")
 TAG_COUNT = 5
 MAX_ATTEMPTS = 3
 
