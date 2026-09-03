@@ -79,7 +79,7 @@ app = workflow.compile(checkpointer=memory, interrupt_before=["tools"])
 
 # Print the visual structure
 png_bytes = app.get_graph().draw_mermaid_png()
-with open("tools_toolnode.png", "wb") as f:
+with open("hitl.png", "wb") as f:
     f.write(png_bytes)
 
 # 9. Set a thread ID (required for checkpoints)
